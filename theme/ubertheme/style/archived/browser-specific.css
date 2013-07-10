@@ -1,0 +1,19 @@
+/** Side Blocks **/
+
+body.ie6 .block_tree li.contains_branch p.root_node span {
+		padding-left: 18px
+			}
+
+/** Topic Outline **/
+
+body.ie6 #page-content #region-main-box .section_add_menus select {
+		visibility: visible
+			}
+
+/** Course List **/
+
+body.ie6 .categorylist .course .name img,
+body.ie7 .categorylist .course .name img {
+		float: none;
+		margin: 0 5px 0 0;
+		}

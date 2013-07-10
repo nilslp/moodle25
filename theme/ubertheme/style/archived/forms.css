@@ -1,0 +1,51 @@
+
+
+/** Forms
+-----------------------------------------------------------------------------*/
+
+.mform fieldset {
+		border-bottom: 1px dotted #666;
+		margin: 0 0 2em 0;
+		padding: 0 0 2em 0;
+			}
+
+		.mform fieldset legend {
+				font-weight: bold;
+				padding: 0 0 1em 0;
+				text-transform: uppercase;
+					}
+
+		.mform fieldset div {
+				margin: 0
+					}
+
+.mform fieldset.felement {
+		padding: 0
+			}
+
+.mform .fitem {
+		margin-top: 10px
+			}
+
+		.mform .fitem .fitemtitle,
+		.mform .fitem .felement {
+				margin-bottom: 5px
+					}
+
+		.mform .fitem .fitemtitle {
+
+					}
+
+		.mform .fitem .felement {
+				width: auto
+					}
+
+.mform span.error {
+		background: #FCC url([[pix:theme|bg_pointer_left]]) left center no-repeat;
+		color: #600;
+		display: block;
+		float: right;
+		font-weight: bold;
+		padding: 5px 10px 5px 60px;
+			}
+

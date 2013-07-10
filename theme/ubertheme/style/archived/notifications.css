@@ -1,0 +1,52 @@
+** Notifications **/
+
+.notifysuccess,
+.notifyfailure,
+.notifycancel,
+.notifyproblem,
+#notice {
+		background: #FCD66D url([[pix:theme|icon_attention]]) 10px 10px no-repeat;
+		border: 1px solid #C77E00;
+		font-weight: normal;
+		margin-bottom: 2em;
+		padding: 10px 10px 10px 30px;
+			}
+
+.notifysuccess {
+		background: #CFC url([[pix:theme|icon_success]]) 10px center no-repeat;
+		border-color: #090;
+		font-weight: bold;
+			}
+
+.notifyfailure {
+		background: #F99 url([[pix:theme|icon_failure]]) 10px center no-repeat;
+		border-color: #900;
+		font-weight: bold;
+			}
+
+.notifyproblem {
+		background: #F99 url([[pix:theme|icon_failure]]) 10px center no-repeat;
+		border-color: #900;
+		font-weight: bold;
+			}
+
+.notifycancel {
+		background: #F99 url([[pix:theme|icon_failure]]) 10px center no-repeat;
+		border-color: #900;
+		font-weight: bold;
+			}
+
+/** ---------------------------------------------------------------------------
+		Override Notification **/
+
+.form-overridden {
+		background: #FCD66D none;
+		border: 1px solid #C77E00;
+		border-radius: 5px;
+		display: block;
+		font-size: 0.85em;
+		margin-top: 1em;
+		padding: 0.75em;
+		text-align: center;
+			}
+

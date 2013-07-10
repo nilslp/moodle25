@@ -1,0 +1,109 @@
+
+
+/** Blogs and Forums
+-----------------------------------------------------------------------------*/
+
+.path-blog	.addbloglink {
+		float: right;
+		margin: 0 0 10px 20px;
+		position: relative;
+		z-index: 100;
+			}
+
+.path-blog .addbloglink a {
+		background: #EEE none;
+		border: 1px solid #EEE;
+		border-color: #EEE #999 #666 #CCC;
+		border-radius: 5px;
+		display: block;
+		font-weight: bold;
+		padding: 4px 20px;
+			}
+
+.path-blog .addbloglink a:hover {
+		background-color: #666;
+		color: #FFF;
+			}
+
+.blog_entry,
+.forumpost {
+		border: none;
+		border-bottom: 1px solid #CCC;
+		clear: right;
+			}
+
+		.blog_entry .content .comment-list {
+				font-size: 1em
+					}
+
+				.blog_entry .content .comment-list .no-overflow {
+						padding-top: 1em
+							}
+
+				.blog_entry .content .comment-list li {
+						border-bottom: 1px dotted #CCC;
+						padding: 0.5em 0;
+							}
+
+		.blog_entry .content .no-overflow,
+		.blog_entry .content .commands {
+				padding-bottom: 1em
+					}
+
+		.blog_entry .content .tags {
+				padding-bottom: 1em
+					}
+
+		.forumpost .row .topic,
+		.forumpost .row .content-mask,
+		.forumpost .row .options {
+				margin-left: 46px
+					}
+
+		.blog_entry .audience {
+				color: #666;
+				font-size: 0.7693em;
+				padding: 0 0 1em 1em;
+				text-transform: uppercase;
+				xfloat: right;
+					}
+
+		.forumpost .row .left {
+				padding: 2px;
+				width: 40px;
+					}
+
+		.blog_entry .subject,
+		.forumpost .subject {
+				font-size: 1.2308em;
+				font-weight: bold;
+				padding-bottom: 0.5em;
+					}
+
+		.blog_entry .author,
+		.forumpost .author {
+				color: #666;
+				font-size: 0.7693em;
+				text-transform: uppercase;
+					}
+
+.path-mod-forum .forumheaderlist {
+		border: none
+			}
+
+		.path-mod-forum .forumheaderlist tr.r0 td {
+				background: #EEE none
+					}
+
+		.path-mod-forum .forumheaderlist thead {
+				background: [[setting:primebgc]] none;
+				color: [[setting:primetc]];
+				font-size: 0.7692em;
+				text-transform: uppercase;
+					}
+
+		.path-mod-forum .forumheaderlist th,
+		.path-mod-forum .forumheaderlist td {
+				border: none
+					}
+

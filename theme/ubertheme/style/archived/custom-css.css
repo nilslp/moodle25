@@ -1,0 +1,16 @@
+/** Custom CSS **/
+[[setting:customcss]]
+
+/**/
+
+section{
+	background: #e6e6e6;
+		}
+	
+article{
+	background: #666;
+		}
+
+aside{
+	background: #c00;
+		}

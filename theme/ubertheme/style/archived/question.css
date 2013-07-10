@@ -1,0 +1,284 @@
+
+
+/* Question */
+
+.questionbank h2 {
+		margin-top: 0
+			}
+
+.questioncategories h3 {
+		margin-top: 0
+			}
+
+#chooseqtypebox {
+		margin-top: 1em
+			}
+
+#chooseqtype h3 {
+		margin: 0 0 0.3em
+			}
+
+#chooseqtype .instruction {
+		display: none
+			}
+
+#chooseqtype .fakeqtypes {
+		border-top: 1px solid silver
+			}
+
+#chooseqtype .qtypeoption {
+		margin-bottom: 0.5em
+			}
+
+#chooseqtype label {
+		display: block
+			}
+
+#chooseqtype .qtypename img {
+		padding: 0 0.3em
+			}
+
+#chooseqtype .qtypesummary {
+		display: block;
+		margin: 0 2em;
+			}
+
+#chooseqtype .submitbuttons {
+		margin: 0.7em 0;
+		text-align: center;
+			}
+
+#qtypechoicecontainer {
+		display: none
+			}
+
+		#qtypechoicecontainer #chooseqtypehead h3 {
+				margin: 0
+					}
+
+		#qtypechoicecontainer #chooseqtype {
+				width: 30em
+					}
+
+				#qtypechoicecontainer #chooseqtype .qtypeoption {
+						margin-bottom: 0;
+						padding: 0.2em 0 0.2em 0.3em;
+							}
+
+						#qtypechoicecontainer #chooseqtype .qtypeoption img {
+								vertical-align: middle
+									}
+
+				#qtypechoicecontainer #chooseqtype .instruction,
+				#qtypechoicecontainer #chooseqtype .qtypesummary {
+						background-color: white;
+						border-left: 1px solid grey;
+						bottom: 0px;
+						display: none;
+						left: 60%;
+						margin: 0;
+						padding: 0.3em 0.5em;
+						position: absolute;
+						right: 0px;
+						top: 0px;
+							}
+
+				#qtypechoicecontainer #chooseqtype .qtypeoption {
+						padding-right: 0.3em
+							}
+
+				#qtypechoicecontainer #chooseqtype .instruction,
+				#qtypechoicecontainer #chooseqtype .selected .qtypesummary {
+						display: block
+							}
+
+				#qtypechoicecontainer #chooseqtype .qtypes {
+						border-bottom: 1px solid grey;
+						padding: 0.24em 0;
+						position: relative;
+							}
+
+body.jsenabled #qtypechoicecontainer {
+		display: block
+			}
+
+#qtypechoicecontainer {
+		background: white
+			}
+
+#categoryquestions {
+		margin: 0
+			}
+
+		#categoryquestions td,
+		#categoryquestions th {
+				padding: 0 0.2em
+					}
+
+.questionbank .singleselect {
+		margin: 0
+			}
+
+/* Question editing form */
+
+#combinedfeedbackhdr div.fhtmleditor {
+		padding: 0
+			}
+
+#combinedfeedbackhdr div.fcheckbox {
+		margin-bottom: 1em
+			}
+
+.que {
+		clear: left;
+		margin: 0 auto 1.8em auto;
+		text-align: left;
+			}
+
+		.que .partiallycorrect {
+				background-color: #ff9
+					}
+
+		.que .specificfeedback,
+		.que .generalfeedback,
+		.que .rightanswer,
+		.que .im-feedback,
+		.que .feedback,
+		.que p {
+				margin: 0 0 0.5em
+					}
+
+		.que .validationerror {
+				color: #a00
+					}
+
+		.que .formulation {
+				background: #e4f1fa
+					}
+
+		.que .formulation,
+		.que .outcome,
+		.que .comment,
+		.que .history {
+				margin: 0 0 0.5em;
+				padding: 0.5em;
+					}
+
+				.que .history .current {
+						font-weight: bold
+							}
+
+				.que .history table {
+						margin: 0;
+						width: 100%;
+							}
+
+		.que .im-controls {
+				margin-top: 0.5em;
+				text-align: left;
+					}
+
+		.que .notanswered,
+		.que .incorrect {
+				background-color: #faa
+					}
+
+		.que span.qno {
+				font-size: 1.5em;
+				font-weight: bold;
+					}
+
+		.que .outcome {
+				background: #fff3bf
+					}
+
+		.que .comment {
+				background: #e0ffe0
+					}
+
+		.que .grading,
+		.que .comment,
+		.que .commentlink,
+		.que .history {
+				margin-top: 0.5em
+					}
+
+		.que .content {
+				margin: 0 0 0 7.5em
+					}
+
+		.que .correct {
+				background-color: #afa
+					}
+
+		.que .history {
+				background: #eee
+					}
+
+		.que .ablock {
+				margin: 0.7em 0 0.3em 0
+					}
+
+		.que .qtext {
+				margin-bottom: 1.5em
+					}
+
+		.que .state,
+		.que .grade,
+		.que .editquestion {
+				font-size: 0.8em;
+				margin-top: 0.7em;
+					}
+
+		.que .info {
+				background: #eee;
+				float: left;
+				margin-bottom: 1.8em;
+				padding: 0.5em;
+				width: 6em;
+					}
+
+				.que .info .questionflag {
+						margin-right: 1em;
+						margin-top: 1em;
+						text-align: center;
+							}
+
+		.que h2.no {
+				font-size: 0.8em;
+				line-height: 1;
+				margin: 0;
+					}
+
+.dir-rtl .que {
+		text-align: right
+			}
+
+		.dir-rtl .que .im-controls {
+				text-align: right
+					}
+
+.que .history h3 {
+		font-size: 1em;
+		margin: 0 0 0.2em;
+			}
+
+.importerror {
+		border-bottom: 1px solid #555;
+		margin-top: 10px;
+			}
+
+.mform .que.comment .fitemtitle {
+		width: 20%
+			}
+
+/** Overide for RTL layout **/
+
+.dir-rtl #qtypechoicecontainer #chooseqtype .instruction,
+.dir-rtl #qtypechoicecontainer #chooseqtype .qtypesummary {
+		border-left: 0;
+		border-right: 1px solid grey;
+		left: 0%;
+		right: 60%;
+			}
+

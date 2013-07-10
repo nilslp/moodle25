@@ -1,0 +1,21 @@
+/** Cycling Banners **/
+
+#page-header .banner ul {
+		height: 100%;
+		list-style: none;
+		margin: 0;
+		overflow: hidden;
+		position: relative;
+			}
+
+		#page-header .banner ul li {
+				left: 0;
+				line-height: 0;
+				position: absolute;
+				top: 0;
+					}
+
+x#page-header .banner ul li.hide {
+		display: none
+			}
+

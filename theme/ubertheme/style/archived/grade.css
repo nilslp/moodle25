@@ -1,0 +1,133 @@
+
+
+/*** Grades ***/
+
+.allcoursegrades {
+		padding: 4px 0px 5px 0px;
+		text-align: right;
+		width: 100%;
+			}
+
+.path-grade-edit .buttons {
+		text-align: center
+			}
+
+.path-grade-edit-tree .idnumber {
+		margin-left: 15px
+			}
+
+.path-grade-edit-tree .movetarget {
+		height: 16px;
+		position: relative;
+		width: 80px;
+			}
+
+.path-grade-edit-tree ul#grade_tree {
+		width: auto
+			}
+
+		.path-grade-edit-tree ul#grade_tree li.category {
+				margin-bottom: 6px
+					}
+
+		.path-grade-edit-tree ul#grade_tree li {
+				list-style: none
+					}
+
+.path-grade-edit-tree .iconsmall {
+		margin-left: 4px
+			}
+
+#grade-report-toggles {
+		text-align: center
+			}
+
+#grade-aggregation-help dt {
+		margin-top: 15px
+			}
+
+#grade-aggregation-help dd.example {
+		margin-top: 7px
+			}
+
+#grade-aggregation-help code {
+		display: block;
+		margin-top: 7px;
+			}
+
+.gradeexportlink {
+		padding: 2em;
+		text-align: center;
+			}
+
+.gradetreebox {
+		margin-top: 10px;
+		overflow-x: auto;
+		overflow-y: hidden;
+			}
+
+		.gradetreebox #gradetreesubmit {
+				margin-bottom: 1em;
+				text-align: center;
+					}
+
+		.gradetreebox span.actionlink {
+				color: blue
+					}
+
+		.gradetreebox span.actionlink:hover {
+				cursor: pointer;
+				text-decoration: underline;
+					}
+
+		.gradetreebox img.iconsmall {
+				margin-left: 4px
+					}
+
+		.gradetreebox th.actions {
+				white-space: nowrap;
+				width: 80px;
+					}
+
+		.gradetreebox td.colspan,
+		.gradetreebox tr.category .cell {
+				background-color: #DDD
+					}
+
+		.gradetreebox img.icon {
+				margin-right: 5px
+					}
+
+		.gradetreebox td.range {
+				white-space: nowrap
+					}
+
+		.gradetreebox .hidden {
+				display: none
+					}
+
+		.gradetreebox td.name {
+				white-space: nowrap
+					}
+
+				.gradetreebox td.name h4 {
+						display: inline
+							}
+
+		.gradetreebox table {
+				font-size: 0.8em;
+				width: 100%;
+					}
+
+/*adjustments to grader report (with static student cols) to make things line up in IE and Safari*/
+
+#page-grade-report-grader-index .right_scroller #user-grades td {
+		padding-bottom: 2px;
+		padding-top: 0;
+			}
+
+#page-grade-report-grader-index #fixed_column td {
+		padding-bottom: 2px;
+		padding-top: 0;
+			}
+

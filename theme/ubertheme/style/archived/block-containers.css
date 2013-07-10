@@ -1,0 +1,301 @@
+
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block Containers 
+/*-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------*/
+
+/*	Blocks
+/*-----------------------------------------------------------------------------------*/
+
+.block {
+		border: none;
+		overflow: hidden;
+		padding: 0;
+			}
+
+		.block .content {
+				background: #FFF none;
+				border: 1px solid #CCC;
+				border-top-width: 0;
+				padding: 0;
+					}
+
+				.block .content .tree_item {
+						margin: 0;
+						padding-bottom: 2px;
+							}
+
+		.block .header {
+				background-color: [[setting:sbbgc]];
+				color: [[setting:sbtc]];
+				padding: 5px 10px;
+					}
+
+				.block .header .block_action {
+						margin: 0
+							}
+
+						.block .header .block_action img,
+						.block .header .block_action input {
+								float: left;
+								margin-left: 2px;
+									}
+
+				.block .header h2 {
+						font-size: 1.0em;
+						margin: 0;
+							}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block Style -> Basic
+/*-----------------------------------------------------------------------------------*/
+
+.sideblock-basic .block .header {
+		/* Chrome,Safari4+ */
+		/* Chrome10+,Safari5.1+ */
+		/* FF3.6+ */
+		/* IE10+ */
+		/* IE6-9 */
+		/* Old browsers */
+		/* Opera 11.10+ */
+		/* W3C */
+		[[setting: blockgrad]]background: -moz-linear-gradient(top, [[setting:sbtbgc]] 0%, [[setting:sbbgc]] 100%);
+		[[setting: blockgrad]]background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:sbtbgc]]), color-stop(100%,[[setting:sbbgc]]));
+		[[setting: blockgrad]]background: -webkit-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		[[setting: blockgrad]]background: -o-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		[[setting: blockgrad]]background: -ms-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		[[setting: blockgrad]]background: linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		[[setting: blockgrad]]filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:sbtbgc]]', endColorstr='[[setting:sbbgc]]',GradientType=0 );
+		background: [[setting:sbbgc]];
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+			}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block Style -> Plain 
+/*-----------------------------------------------------------------------------------*/
+
+.sideblock-plain .block .content {
+		background: [[setting:sbbgc]] none;
+		border-top: /* 1px solid [[setting:sbtc]]*/;;
+		color: [[setting:sbtc]];
+			}
+
+/*-----------------------------------------------------------------------------------*/
+
+/*	Block Style -> Minimal
+/*-----------------------------------------------------------------------------------*/
+
+.sideblock-minimal .block {
+		border-bottom: 1px solid [[setting:sbtc]];
+		box-shadow: none !important;
+			}
+
+		.sideblock-minimal .block .content {
+				background: transparent none;
+				color: [[setting:sbtc]];
+				padding: 5px 0 15px 0;
+					}
+
+.sideblock-minimal .header {
+		background: #F5F5F5;
+		padding: 5px 0;
+			}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block Style -> Sticky Note
+/*-----------------------------------------------------------------------------------*/
+
+.sideblock-sticky .block .content {
+		/* Chrome,Safari4+ */
+		/* Chrome10+,Safari5.1+ */
+		/* FF3.6+ */
+		/* IE10+ */
+		/* IE6-9 */
+		/* Old browsers */
+		/* Opera 11.10+ */
+		/* W3C */
+		background: [[setting:sbbgc]];
+		background: -moz-linear-gradient(top, [[setting:sbtbgc]] 0%, [[setting:sbbgc]] 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:sbtbgc]]), color-stop(100%,[[setting:sbbgc]]));
+		background: -webkit-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		background: -o-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		background: -ms-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		background: linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		color: [[setting:sbtc]];
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:sbtbgc]]', endColorstr='[[setting:sbbgc]]',GradientType=0 );
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+		nowhitespace: afterproperty;
+			}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block - Login 
+/*-----------------------------------------------------------------------------------*/
+
+.block_login .content,
+.block_lp_login .content {
+		background: [[setting:sbbgc]] none;
+		border: none;
+		color: [[setting:sbtc]];
+			}
+
+		.block_login .content form .btn input,
+		.block_lp_login .content form .btn input {
+				height: 30px;
+				line-height: 24px;
+				padding: 0 10px;
+					}
+
+		.block_login .content form .fld input,
+		.block_lp_login .content form .fld input {
+				border-width: 1px;
+				padding: 2px 1%;
+				width: 97%;
+					}
+
+		.block_login .content form .c1,
+		.block_lp_login .content form .c1,
+		.block_lp_login .content .footer div {
+				padding-bottom: 5px
+					}
+
+/*-----------------------------------------------------------------------------------*/
+
+/*	Block - Latest News
+/*-----------------------------------------------------------------------------------*/
+
+.block_news_items .newlink,
+.block_news_items .footer {
+		background: #EEE none;
+		border: 1px solid #999;
+		border-color: #EEE #666 #333 #CCC;
+		border-radius: 5px;
+		font-size: 0.7692em;
+		font-weight: bold;
+		margin: 5px 0;
+		padding: 5px 0;
+		text-align: center;
+		text-transform: uppercase;
+			}
+
+.block_news_items li.post {
+		padding: 8px 0
+			}
+
+		.block_news_items li.post .head {
+				font-size: 0.7692em;
+				line-height: 1.2em;
+				margin-bottom: 2px;
+					}
+
+		.block_news_items li.post .info {
+				font-weight: bold
+					}
+
+				.block_news_items li.post .info a {
+						display: block;
+						float: right;
+						font-weight: normal;
+							}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block - My Profile 
+/*-----------------------------------------------------------------------------------*/
+
+.block_myprofile .content .picture {
+		float: left;
+		margin: 0 10px 10px 0;
+			}
+
+.block_myprofile .content img.profilepicture {
+		height: 35px;
+		width: 35px;
+			}
+
+.block_myprofile .content .fullname {
+		font-size: 1.2em
+			}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block - HTML Block
+/*-----------------------------------------------------------------------------------*/
+
+.block.block_html .content .no-overflow {
+		padding: 10px
+			}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block - Recent Blogs
+/*-----------------------------------------------------------------------------------*/
+
+.block_blog_recent .content ul.list {
+		margin-left: 20px
+			}
+
+.block_blog_recent .content li {
+		font-weight: bold;
+		list-style: disc outside none;
+		padding: 4px 0;
+			}
+
+/*-----------------------------------------------------------------------------------*/
+
+/*	Block - RSS
+/*-----------------------------------------------------------------------------------*/
+
+.block_rss_client .content ul {
+		: 
+			}
+
+.block_rss_client .content li {
+		padding: 4px 0
+			}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Block - Upcoming Events
+/*-----------------------------------------------------------------------------------*/
+
+.block_calendar_upcoming .content .event {
+		padding: 1em 0
+			}
+
+		.block_calendar_upcoming .content .event .date a {
+				font-weight: normal
+					}
+
+		.block_calendar_upcoming .content .event a {
+				font-weight: bold
+					}
+
+.block_calendar_upcoming .content hr {
+		margin: 0
+			}
+
+.block_calendar_upcoming .content .footer {
+		border-top: 1px solid #CCC;
+		padding-top: 1em;
+			}
+

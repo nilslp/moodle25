@@ -1,0 +1,108 @@
+<?php
+
+$frm = new stdClass();
+
+if (empty($frm->username)) {
+		if (!empty($_GET["username"])) {
+				$frm->username = clean_param($_GET["username"], PARAM_RAW); // we do not want data from _POST here
+		} else {
+				$frm->username = get_moodle_cookie();
+		}
+		$frm->password = "";
+}
+
+if (!isset($CFG->thirdpartyreg)) { $CFG->thirdpartyreg = false; }
+$login_title						= (get_string("login_box_title",'theme_ubertheme') != '.') ? get_string("login_box_title",'theme_ubertheme') : false;
+$show_guest_login			 = ($CFG->guestloginbutton and !isguestuser());
+$self_reg							 = ($CFG->registerauth == 'email');
+#$third_party_reg				= ($CFG->auth);
+$third_party_reg				= (strpos($CFG->auth, 'thirdparty') !== false);
+$loginusing_label			 = (get_string('loginusing') != '.') ? get_string('loginusing') : false;
+$cookiesenabled_label	 = (get_string('cookiesenabled') != '.') ? get_string('cookiesenabled') : false;
+
+// TEST
+#$show_guest_login = false;
+#$self_reg = false;
+#$third_party_reg = false;
+//
+
+$add_dc = '';
+if ($third_party_reg) { $add_dc = 'tpre'; }
+
+// Check for required secure login
+$pattern = 'http://';
+$replacement = ($CFG->loginhttps) ? 'https://' : false;
+$login_action = ($replacement) ? str_ireplace($pattern, $replacement, $CFG->httpswwwroot) : $CFG->httpswwwroot;
+
+?>
+
+<div class="loginbox clearfix">
+		
+		<div class="loginpanel <?= $add_dc ?>">
+		
+				<?php
+					if (!empty($errormsg)) { echo '<div class="loginerrors">'.$OUTPUT->error_text($errormsg).'</div>';}
+				?>
+				<form action="<?php echo $login_action; ?>/login/index.php" method="post" id="login">
+						<?php if ($login_title) { ?>
+						<h2><?= $login_title ?></h2>
+						<? } ?>
+						<?php if ($loginusing_label) { ?>
+						<p class="desc"><?= print_string("loginusing"); ?></p>
+						<?php } ?>
+						<?php if ($cookiesenabled_label) { ?>
+						<p class="cookies">
+							<?php
+								echo '('.get_string("cookiesenabled").')';
+								echo $OUTPUT->help_icon('cookiesenabled');
+							 ?>
+						</p>
+						<?php } ?>
+						<fieldset class="username">
+								<label for="username"><?php print_string("username") ?></label>
+								<input type="text" name="username" id="username" placeholder="<?php print_string("username") ?>" value="<?php p($frm->username) ?>"/>
+						</fieldset>
+						<fieldset class="password">
+								<label for="password"><?php print_string("password") ?></label>
+								<input type="password" name="password" id="password" placeholder="<?= print_string("password") ?>" size="15" />
+						</fieldset>
+						<fieldset class="submit">
+								<button type="submit" id="loginbtn"><span><?php print_string("login") ?></span></button>
+								<?php if (isset($CFG->rememberusername) and $CFG->rememberusername == 2) { ?>
+								<label class="rememberme"><input type="checkbox" name="rememberusername" id="rememberusername" value="1" <?php if ($frm && $frm->username) {echo 'checked="checked"';} ?> /> <?php print_string('rememberusername', 'admin') ?></label>
+								<?php } ?>
+						</fieldset>
+						<fieldset class="forgot">
+								<div class="forgotpwd">
+										<a href="<?php echo $CFG->httpswwwroot; ?>/login/forgot_password.php"><?php print_string("forgotten") ?></a>
+								</div>
+						</fieldset>
+				</form>
+				<div class="add-btns">
+						<?php if ($show_guest_login) {	?>
+						<div class="guest">
+								<form action="<?php echo $CFG->httpswwwroot; ?>/login/index.php" method="post" id="guestlogin">
+										<input type="hidden" name="username" value="guest" />
+										<input type="hidden" name="password" value="guest" />
+										<button type="submit" title="<?php print_string("someallowguest") ?>"><span><?php print_string("loginguest") ?></span></button>
+								</form>
+						</div>
+						<?php } ?>
+						<?php if ($self_reg) { ?>
+						<div class="register">
+								<form action="<?php echo $CFG->httpswwwroot; ?>/login/signup.php" method="get">
+										<button type="submit"><span><?php print_string("startsignup", "theme_ubertheme") ?></span></button>
+								</form>
+						</div>
+						<?php } ?>
+						<?php if ($third_party_reg) { ?>
+						<div class="third-party-reg">
+								<form action="<?php echo $CFG->httpswwwroot; ?>/auth/thirdparty/signup/signup.php" method="get">
+										<button type="submit"><span><?php print_string("third_party_reg", 'theme_ubertheme') ?></span></button>
+								</form>
+						</div>
+						<?php } ?>
+				</div>
+		</div>
+
+</div>

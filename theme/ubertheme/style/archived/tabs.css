@@ -1,0 +1,155 @@
+
+
+/** Tab Rows
+-----------------------------------------------------------------------------*/
+
+/*
+*/
+
+.tabtree {
+		border-bottom: 1px solid #CCC;
+		height: 30px;
+		text-align: center;
+			}
+
+		.tabtree .tabrow1 li.first,
+		.tabtree .tabrow1 li.last {
+				border-radius: 0
+					}
+
+		.tabtree .tabrow1 li.here,
+		.tabtree .tabrow1 li.selected {
+				background-color: #333
+					}
+
+		.tabtree .tabrow2 li.here,
+		.tabtree .tabrow2 li.selected {
+				background-color: #000
+					}
+
+		.tabtree .tabrow1 li {
+				background-color: #666;
+				border-radius: 0;
+				margin: 0;
+				padding: 0 10px;
+					}
+
+				.tabtree .tabrow1 li a {
+
+							}
+
+		.tabtree .tabrow2 li {
+				background-color: #333;
+				border-radius: 0;
+				margin: 0;
+				padding: 0 10px;
+					}
+
+		.tabtree .tabrow0 li {
+				background-color: #999
+					}
+
+		.tabtree .tabrow0 li:hover,
+		.tabtree .tabrow0 li.here,
+		.tabtree .tabrow0 li.selected {
+				background-color: #666
+					}
+
+		.tabtree li.first {
+				xborder-radius: 5px 0 0 0
+					}
+
+		.tabtree li.last {
+				xborder-radius: 0 5px 0 0
+					}
+
+		.tabtree ul {
+				margin: 0;
+				white-space: nowrap;
+					}
+
+				.tabtree ul li.here ul {
+						left: 0
+							}
+
+		.tabtree li {
+				background-color: #999;
+				border-radius: 5px 5px 0 0;
+				float: left;
+				margin-right: 1px;
+				padding: 0 9px 0 10px;
+					}
+
+				.tabtree li a {
+						color: #FFF;
+						display: block;
+						font-weight: bold;
+						line-height: 30px;
+						overflow: hidden;
+						text-align: center;
+							}
+
+				.tabtree li a:hover,
+				.tabtree li.selected a {
+						background: transparent none;
+						border: none;
+						color: #FFF;
+							}
+
+/** Tabs
+.tabtree { margin: 0; padding: 1em 0; 	}
+.tabtree ul { margin: 0; text-align: center; border-top: 1px solid #CCC; 	}
+.tabtree ul li a { position: relative; display: inline; top: -10px; padding: 5px 10px; font-size: 0.7692em; text-transform: uppercase; background: #CCC none; border-right: 1px solid #FFF; cursor: pointer; 	}
+.tabtree ul li a:hover,
+.tabtree ul li.selected a { color: #FFF; background: #666 none; 	}
+.tabtree ul li.first a{ border-radius: 10px 0 0 10px; 	}
+.tabtree ul li.last a { border-radius: 0 10px 10px 0; 	}
+ **/
+
+/** Tabs **/
+
+#cp-detail .cp-header .filters {
+		clear: both;
+		padding-top: 20px;
+			}
+
+#cp-detail .cp-header ul.group {
+		border-bottom: 1px solid #CCC;
+		height: 0.75em;
+		margin: 0;
+		text-align: center;
+			}
+
+		#cp-detail .cp-header ul.group li.hover {
+				border-color: #FFF;
+				box-shadow: 0 0 5px rgba(0,0,0,0.65);
+				z-index: 10;
+					}
+
+		#cp-detail .cp-header ul.group li.hover,
+		#cp-detail .cp-header ul.group li.active {
+				background: #666 none;
+				color: #FFF;
+					}
+
+		#cp-detail .cp-header ul.group li {
+				background: #EEE none;
+				border: 1px solid #EEE;
+				border-color: #EEE #CCC #CCC #EEE;
+				cursor: pointer;
+				display: inline;
+				font-size: 0.7692em;
+				list-style: none;
+				padding: 5px 10px;
+				position: relative;
+				z-index: 9;
+					}
+
+		#cp-detail .cp-header ul.group li:first-child {
+				border-radius: 5px 0 0 5px
+					}
+
+		#cp-detail .cp-header ul.group li:last-child {
+				border-radius: 0 5px 5px 0
+					}
+

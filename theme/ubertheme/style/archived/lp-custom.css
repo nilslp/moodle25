@@ -1,0 +1,67 @@
+
+
+/** Ticker **/
+
+#ticker {
+		clear: both;
+		margin-left: 10px;
+		margin-right: 10px;
+			}
+
+/** Report Builder
+		-------------------------------------------------------------------------*/
+
+/** My Course Progress
+		-------------------------------------------------------------------------*/
+
+body#page-admin-blocks-lp_reportbuilder-index .reportbuilder-navbuttons,
+body#page-admin-blocks-lp_reportbuilder-index .reportbuilder-navbuttons .singlebutton {
+		float: right
+			}
+
+.meter {
+		background: [[setting:mcpnot]];
+		background: -moz-linear-gradient(top,	[[setting:mcpnot]] 0%, [[setting:mcpnotb]] 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:mcpnot]]), color-stop(100%,[[setting:mcpnotb]]));
+		background: -webkit-linear-gradient(top, [[setting:mcpnot]] 0%,[[setting:mcpnotb]] 100%);
+		background: -o-linear-gradient(top,	[[setting:mcpnot]] 0%,[[setting:mcpnotb]] 100%);
+		background: -ms-linear-gradient(top,	[[setting:mcpnot]] 0%,[[setting:mcpnotb]] 100%);
+		background: linear-gradient(top,	[[setting:mcpnot]] 0%,[[setting:mcpnotb]] 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:mcpnot]]', endColorstr='[[setting:mcpnotb]]',GradientType=0 );
+			}
+
+		.meter .not-attempted {
+				background: [[setting:mcpnot]];
+				background: -moz-linear-gradient(top,	[[setting:mcpnot]] 0%, [[setting:mcpnotb]] 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:mcpnot]]), color-stop(100%,[[setting:mcpnotb]]));
+				background: -webkit-linear-gradient(top, [[setting:mcpnot]] 0%,[[setting:mcpnotb]] 100%);
+				background: -o-linear-gradient(top,	[[setting:mcpnot]] 0%,[[setting:mcpnotb]] 100%);
+				background: -ms-linear-gradient(top,	[[setting:mcpnot]] 0%,[[setting:mcpnotb]] 100%);
+				background: linear-gradient(top,	[[setting:mcpnot]] 0%,[[setting:mcpnotb]] 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:mcpnot]]', endColorstr='[[setting:mcpnotb]]',GradientType=0 );
+					}
+
+		.incomplete .meter .level,
+		.meter .incomplete {
+				background: [[setting:mcpinc]];
+				background: -moz-linear-gradient(top, [[setting:mcpinc]] 0%, [[setting:mcpincb]] 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:mcpinc]]), color-stop(100%,[[setting:mcpincb]]));
+				background: -webkit-linear-gradient(top,	[[setting:mcpinc]] 0%,[[setting:mcpincb]] 100%);
+				background: -o-linear-gradient(top,	[[setting:mcpinc]] 0%,[[setting:mcpincb]] 100%);
+				background: -ms-linear-gradient(top,	[[setting:mcpinc]] 0%,[[setting:mcpincb]] 100%);
+				background: linear-gradient(top,	[[setting:mcpinc]] 0%,[[setting:mcpincb]] 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:mcpinc]]', endColorstr='[[setting:mcpincb]]',GradientType=0 );
+					}
+
+		.complete .meter .level,
+		.meter .complete {
+				background: [[setting:mcpcom]];
+				background: -moz-linear-gradient(top,	[[setting:mcpcom]] 0%, [[setting:mcpcomb]] 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:mcpcom]]), color-stop(100%,[[setting:mcpcomb]]));
+				background: -webkit-linear-gradient(top,	[[setting:mcpcom]] 0%,[[setting:mcpcomb]] 100%);
+				background: -o-linear-gradient(top,	[[setting:mcpcom]] 0%,[[setting:mcpcomb]] 100%);
+				background: -ms-linear-gradient(top,	[[setting:mcpcom]] 0%,[[setting:mcpcomb]] 100%);
+				background: linear-gradient(top,	[[setting:mcpcom]] 0%,[[setting:mcpcomb]] 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:mcpcom]]', endColorstr='[[setting:mcpcomb]]',GradientType=0 );
+					}
+

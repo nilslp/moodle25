@@ -1,0 +1,80 @@
+/*-----------------------------------------------------------------------------------*/
+/* Section Comment
+/*-----------------------------------------------------------------------------------*/
+
+/* Sub-Section Comment ***********************/
+
+/* Standard Comment */
+
+
+ul,
+ol {
+	padding: 0;
+	margin: 0 0 10px 25px;
+	}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+	}
+li {
+	line-height: 20px;
+	}
+ul.unstyled,
+ol.unstyled {
+	margin-left: 0;
+	list-style: none;
+	}
+ul.inline,
+ol.inline {
+	margin-left: 0;
+	list-style: none;
+	}
+ul.inline > li,
+ol.inline > li {
+	display: inline-block;
+	*display: inline;
+	/* IE7 inline-block hack */
+
+	*zoom: 1;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+dl {
+	margin-bottom: 20px;
+	}
+dt,
+dd {
+	line-height: 20px;
+	}
+dt {
+	font-weight: bold;
+	}
+dd {
+	margin-left: 10px;
+	}
+.dl-horizontal {
+	*zoom: 1;
+	}
+.dl-horizontal:before,
+.dl-horizontal:after {
+	display: table;
+	content: "";
+	line-height: 0;
+	}
+.dl-horizontal:after {
+	clear: both;
+	}
+.dl-horizontal dt {
+	float: left;
+	width: 160px;
+	clear: left;
+	text-align: right;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	}
+.dl-horizontal dd {
+	margin-left: 180px;
+	}

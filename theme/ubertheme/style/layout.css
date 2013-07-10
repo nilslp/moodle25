@@ -1,0 +1,344 @@
+/*-----------------------------------------------------------------------------------*/
+/* Section Comment
+/*-----------------------------------------------------------------------------------*/
+
+/* Sub-Section Comment **********/
+
+/* Standard Comment */
+
+html,
+body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	}
+
+body{
+	[[setting: pagebggrad]]background: -moz-linear-gradient(top, [[setting:pagebgc]] 0%, [[setting:pagebbgc]] 100%);
+	[[setting: pagebggrad]]background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:pagebgc]]), color-stop(100%,[[setting:pagebbgc]]));
+	[[setting: pagebggrad]]background: -webkit-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
+	[[setting: pagebggrad]]background: -o-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
+	[[setting: pagebggrad]]background: -ms-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
+	[[setting: pagebggrad]]background: linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
+	[[setting: pagebggrad]]filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:pagebgc]]', endColorstr='[[setting:pagebbgc]]',GradientType=0 );
+	background: [[setting:pagebbgc]];
+	padding: 0;
+	text align: center;
+	width: auto;
+	}
+
+#page{
+	/*[[setting: pagefixedwidth]]width: 960px;*/
+	background: #FFF;
+	height: auto;
+	margin: 0 auto -300px;
+	min-height: 100%;
+	min-width: 300px;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	}
+
+#section-header,
+#page-content,
+#section-footer{
+	text-align: center;
+	width: 100%;
+	}
+	
+.push{
+	display: block !important;
+	height: 300px;
+	}
+	
+#section-footer{
+	background: #e6e6e6;
+	display: inline-block;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	}
+
+#page-header,
+#region-main-box,
+#zone-footer{
+	display: inline-block;
+	text-align: left;
+	transition: all 0.3s ease-in-out 0s;
+	}
+	
+.meta,
+.banner,
+.custommenu,
+#ticker,
+.navbar{
+	background: #e6e6e6;
+	height: 30px;
+	margin-bottom: 3px;
+	overflow: hidden !important;
+	}
+	
+#page-content > div{
+	padding: 0;
+	overflow: hidden !important;
+	}
+
+	#page-content #region-main-wrap{
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		}
+
+	#page-content #region-main{
+		background: #E6E6E6;
+		display: inline-block;
+		padding: 0 5%;
+		position: relative;
+		vertical-align: top;
+		width: 90%;
+		}
+
+	#page-content #region-pre{
+		background: #999;
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		}
+
+	#page-content #region-post{
+		background: #999;
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Mobile Screen | < 760px - Media Queries 
+/*-----------------------------------------------------------------------------------*/
+
+/* Both Sidebars **********/
+
+@media all and (min-device-width: 340px){
+
+#page-header,
+#region-main-box,
+#zone-footer{
+	background: #000;
+	margin: 0 2%;
+	width: 96%;
+	}
+
+#page-content #region-main-wrap{
+	width: 100%;
+	}
+
+#page-content #region-pre{
+	width: 100%;
+	}
+
+#page-content #region-post{
+	width: 100%;
+	}
+	
+/* One Sidebar Only **********/
+
+.side-pre-only #page-content #region-main-wrap,
+.side-post-only #page-content #region-main-wrap{
+
+	}
+
+/* First Sidebar Only **********/
+
+.side-pre-only #page-content #region-main{
+
+	}
+
+/* Second Sidebar Only **********/
+
+.side-post-only #page-content #region-main{
+
+	}
+
+/* No Sidebars **********/
+
+.content-only #page-content #region-main-wrap{
+
+	}
+
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Narrow Screen | 760px - Media Queries 
+/*-----------------------------------------------------------------------------------*/
+
+/* Both Sidebars **********/
+
+@media all and (min-width: 756px) and (min-device-width: 756px), (max-device-width: 800px) and (min-width: 756px) and (orientation:landscape){
+
+#page-header,
+#region-main-box,
+#zone-footer{
+	background: #FC0;
+	margin: 0 10px;
+	width: 736px;
+	}
+	
+#page-content #region-main-wrap{
+	width: 398px;
+	}
+
+#page-content #region-pre{
+	width: 169px;
+	}
+
+#page-content #region-post{
+	width: 169px;
+	}
+	
+/* One Sidebar Only **********/
+
+.side-pre-only #page-content #region-main-wrap,
+.side-post-only #page-content #region-main-wrap{
+	width: 552px;
+	}
+
+/* First Sidebar Only **********/
+
+.side-pre-only #page-content #region-main{
+	padding: 0 0 0 5%;
+	}
+
+/* Second Sidebar Only **********/
+
+.side-post-only #page-content #region-main{
+	padding: 0 5% 0 0;
+	}
+
+/* No Sidebars **********/
+
+.content-only #page-content #region-main-wrap{
+	width: 736px;
+	}
+
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Normal Screen | 960px - Media Queries 
+/*-----------------------------------------------------------------------------------*/
+
+/* Both Sidebars **********/
+
+@media all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape){
+
+#page-header,
+#region-main-box,
+#zone-footer{
+	background: #C00;
+	margin: 0 10px;
+	width: 940px;
+	}
+
+#page-content #region-main-wrap{
+	width: 500px;
+	}
+
+#page-content #region-pre{
+	width: 220px;
+	}
+
+#page-content #region-post{
+	width: 220px;
+	}
+	
+/* One Sidebar Only **********/
+
+.side-pre-only #page-content #region-main-wrap,
+.side-post-only #page-content #region-main-wrap{
+	width: 690px;
+	}
+
+/* First Sidebar Only **********/
+
+.side-pre-only #page-content #region-main{
+	padding: 0 0 0 5%;
+	}
+
+/* Second Sidebar Only **********/
+
+.side-post-only #page-content #region-main{
+	padding: 0 5% 0 0;
+	}
+
+/* No Sidebars **********/
+
+.content-only #page-content #region-main-wrap{
+	width: 940px;
+	}
+	
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Wide Screen | 1200px - Media Queries 
+/*-----------------------------------------------------------------------------------*/
+
+/* Wide **********/
+
+@media all and (min-width: 1200px) and (min-height: 760px){
+
+#page-header,
+#region-main-box,
+#zone-footer{
+	background: #3C0;
+	margin: 0 10px;
+	width: 1180px;
+	}
+
+#page-content #region-main-wrap{
+	width: 620px;
+	}
+
+#page-content #region-pre{
+	width: 280px;
+	}
+
+#page-content #region-post{
+	width: 280px;
+	}
+	
+/* One Sidebar Only **********/
+
+.side-pre-only #page-content #region-main-wrap,
+.side-post-only #page-content #region-main-wrap{
+	width: 900px;
+	}
+
+/* First Sidebar Only **********/
+
+.side-pre-only #page-content #region-main{
+	padding: 0 0 0 5%;
+	}
+
+/* Second Sidebar Only **********/
+
+.side-post-only #page-content #region-main{
+	padding: 0 5% 0 0;
+	}
+
+/* No Sidebars **********/
+
+.content-only #page-content #region-main-wrap{
+	width: 1180px;
+	}
+
+}
+
+	
+
+

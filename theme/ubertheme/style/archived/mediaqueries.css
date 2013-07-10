@@ -1,0 +1,126 @@
+
+
+@media screen and (max-width: 980px) { 
+		html #page {
+				width: auto
+					}
+
+		html #page-header .meta {
+				height: auto
+					}
+
+		html #page-header .banner {
+				clear: both
+					}
+
+		html #page-header #custommenu {
+				height: auto;
+				min-height: 30px;
+					}
+
+		html #page-content #region-main-wrap {
+				float: none;
+				width: auto;
+					}
+
+		html #page-content #region-main {
+				float: right
+					}
+
+		html #page-content #region-pre {
+				float: left
+					}
+
+		html #page-content #region-post {
+				border-top: 1px solid #CCC;
+				clear: both;
+				float: none;
+				margin-left: 0;
+				margin-top: 2em;
+				padding-top: 2em;
+				width: auto;
+					}
+
+				html #page-content #region-post .skip-block-to {
+						display: none
+							}
+
+				html #page-content #region-post .block {
+						float: left;
+						margin-right: 2%;
+						width: 31%;
+							}
+			}
+
+@media screen and (max-width: 580px) { 
+		html {
+				background: #FFF none !important;
+				padding: 0 !important;
+					}
+
+				html #page-content #region-main {
+						float: left;
+						margin-left: 0;
+						width: 100%;
+							}
+
+				html #page-content #region-pre {
+						border-top: 1px solid #CCC;
+						clear: left;
+						float: none;
+						margin-top: 2em;
+						padding-top: 2em;
+						width: 100%;
+							}
+
+				html #support-widget .wrapper {
+						border-radius: 0;
+						width: 100%;
+							}
+
+						html #support-widget .wrapper ul.tests {
+								display: block;
+								width: 100%;
+									}
+
+								html #support-widget .wrapper ul.tests li.unknown,
+								html #support-widget .wrapper ul.tests li.unknown.hover,
+								html #support-widget .wrapper ul.tests li.passed,
+								html #support-widget .wrapper ul.tests li.passed.hover,
+								html #support-widget .wrapper ul.tests li.failed.hover,
+								html #support-widget .wrapper ul.tests li.failed {
+										border-radius: 0;
+										border-width: 0;
+										padding: 0;
+										width: 25%;
+											}
+
+								html #support-widget .wrapper ul.tests li span {
+										padding: 0 10%;
+										width: 80%;
+											}
+
+				html #page-header .banner .bg {
+						display: none
+							}
+
+				html #page-content .block,
+				html #page-content #region-post .block {
+						float: none;
+						width: 100%;
+							}
+
+				html #page {
+						border-radius: 0 !important;
+						box-shadow: none;
+							}
+
+				html body {
+						padding: 0 !important
+							}
+			}
+
+@media screen and (max-width: 500px) { 
+		
+			}
+

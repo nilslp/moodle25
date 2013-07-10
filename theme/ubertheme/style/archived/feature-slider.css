@@ -1,0 +1,71 @@
+
+
+/** Feature Slider **/
+
+#feature-slider-target {
+		position: relative
+			}
+
+		#feature-slider-target .loading {
+				font-weight: bold;
+				padding: 40px 0;
+				text-align: center;
+					}
+
+#feature-slider {
+		margin-bottom: 2em;
+		position: relative;
+			}
+
+		#feature-slider ul {
+				margin: 0
+					}
+
+				#feature-slider ul li {
+						display: block;
+						height: 100%;
+						left: 0;
+						position: absolute;
+						top: 0;
+						width: 100%;
+							}
+
+						#feature-slider ul li img {
+								display: block;
+								position: absolute;
+									}
+
+						#feature-slider ul li a {
+								bottom: 0;
+								height: 100%;
+								left: 0;
+								position: absolute;
+								width: 100%;
+									}
+
+						#feature-slider ul li a:hover {
+								background: transparent none;
+								border: none;
+									}
+
+								#feature-slider ul li a:hover b {
+										color: #FF0
+											}
+
+						#feature-slider ul li a b {
+								color: #FFC
+									}
+
+						#feature-slider ul li b {
+								background: #000 none;
+								background-color: rgba(0,0,0,0.75);
+								bottom: 0;
+								color: #FFF;
+								left: 0;
+								padding: 20px 5%;
+								position: absolute;
+								width: 90%;
+									}
+
+/** Dev **/
+

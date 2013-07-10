@@ -1,0 +1,76 @@
+
+
+/** Shadow Effect
+-----------------------------------------------------------------------------*/
+
+/** theme setting dependent **/
+
+#page,
+#page-header .custommenu ul ul,
+#helppopupbox,
+.yui3-overlay {
+		[[setting: pageshadow]]box-shadow: 2px 5px 15px rgba(0,0,0,0.65)
+			}
+
+.custommenu {
+		[[setting: menushadow]]box-shadow: 0 2px 5px rgba(0,0,0,0.35)
+			}
+
+.block {
+		[[setting: blockshadow]]box-shadow: 1px 1px 4px rgba(0,0,0,0.35)
+			}
+
+		.block .content {
+				[[setting: blockrounded]]border-radius: 0 0 5px 5px
+					}
+
+		.block,
+		.block .header,
+		.block .content {
+				[[setting: blocksharp]]border-radius: 0
+					}
+
+#dockeditempanel {
+		[[setting: blockshadow]]box-shadow: 5px 5px 5px rgba(0,0,0,0.65)
+			}
+
+		.block > .content,
+		#dockeditempanel .dockeditempanel_bd {
+				[[setting: blockshadow]]border-color: rgba(0,0,0,0)
+					}
+
+/**	**/
+
+#notice,
+.notifysuccess,
+.notifyfailure {
+		box-shadow: 2px 2px 4px rgba(0,0,0,0.35)
+			}
+
+/** Rounded Corners **/
+
+#page {
+		[[setting: pagerounded]]border-radius: 15px
+			}
+
+#page-header .meta {
+		[[setting: pagerounded]]border-radius: 10px 10px 0 0
+			}
+
+.block {
+		[[setting: blockrounded]]border-radius: 5px
+			}
+
+#helppopupbox,
+.yui3-overlay {
+		[[setting: pagerounded]]border-radius: 5px
+			}
+
+#page-footer {
+		[[setting: pagerounded]]border-radius: 0 0 10px 10px
+			}
+
+#dockeditempanel {
+		[[setting: blockrounded]]border-radius: 0 5px 5px 0
+			}
+

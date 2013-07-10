@@ -1,0 +1,145 @@
+
+
+/** Anonymous Home Page **/
+
+body#page-site-index.notloggedin .loginbox {
+		border-radius: 5px;
+		color: [[setting:sbtc]];
+		float: right;
+		margin: 0 0 3% 3%;
+		padding: 2%;
+		position: relative;
+		width: 35%;
+			}
+
+		body#page-site-index.notloggedin .loginbox form fieldset.username input,
+		body#page-site-index.notloggedin .loginbox form fieldset.password input {
+				padding: 2%;
+				width: 95%;
+					}
+
+		body#page-site-index.notloggedin .loginbox form fieldset.username label,
+		body#page-site-index.notloggedin .loginbox form fieldset.password label {
+				display: block;
+				font-weight: bold;
+					}
+
+		body#page-site-index.notloggedin .loginbox form fieldset.submit {
+				border-bottom: 1px dotted [[setting:sbtc]];
+				padding-bottom: 1em;
+					}
+
+		body#page-site-index.notloggedin .loginbox form fieldset.forgot {
+				text-align: center
+					}
+
+				body#page-site-index.notloggedin .loginbox form fieldset.forgot a {
+						color: [[setting:sbtc]];
+						padding: 2% 4%;
+							}
+
+				body#page-site-index.notloggedin .loginbox form fieldset.forgot a:hover {
+						background-color: [[setting:sbtc]];
+						border: none;
+						color: [[setting:sbbgc]];
+							}
+
+		body#page-site-index.notloggedin .loginbox .tpre .guest {
+				display: block
+					}
+
+		body#page-site-index.notloggedin .loginbox form button {
+				border: 1px solid #999;
+				border-radius: 5px;
+				color: #333;
+				cursor: pointer;
+				font-weight: bold;
+				margin: 0 5px 5px 0;
+				padding: 10px;
+				xfont-size: 1.1667em;
+					}
+
+		body#page-site-index.notloggedin .loginbox form button:active,
+		body#page-site-index.notloggedin .loginbox form button.active {
+				box-shadow: 0 1px 1px 1px rgba(0,0,0,0.65);
+				color: #000;
+					}
+
+		body#page-site-index.notloggedin .loginbox form button:hover,
+		body#page-site-index.notloggedin .loginbox form button.hover,
+		body#page-site-index.notloggedin .loginbox form button:focus,
+		body#page-site-index.notloggedin .loginbox form button.focus {
+				background: rgb(222,239,255);
+				background: -moz-linear-gradient(top,	rgba(222,239,255,1) 0%, rgba(152,190,222,1) 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(222,239,255,1)), color-stop(100%,rgba(152,190,222,1)));
+				background: -webkit-linear-gradient(top,	rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%);
+				background: -o-linear-gradient(top,	rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%);
+				background: -ms-linear-gradient(top,	rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%);
+				background: linear-gradient(top,	rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#deefff', endColorstr='#98bede',GradientType=0 );
+					}
+
+		body#page-site-index.notloggedin .loginbox form button:hover,
+		body#page-site-index.notloggedin .loginbox form button.hover,
+		body#page-site-index.notloggedin .loginbox form button:focus,
+		body#page-site-index.notloggedin .loginbox form button.focus {
+				background: #666 none;
+				border-color: #CCC;
+				box-shadow: 0 1px 2px 2px rgba(0,0,0,0.35);
+				color: #000;
+					}
+
+		body#page-site-index.notloggedin .loginbox form button {
+				background: rgb(238,238,238);
+				background: -moz-linear-gradient(top,	rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1)));
+				background: -webkit-linear-gradient(top,	rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+				background: -o-linear-gradient(top,	rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+				background: -ms-linear-gradient(top,	rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+				background: linear-gradient(top,	rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+					}
+
+		body#page-site-index.notloggedin .loginbox .add-btns {
+				text-align: center
+					}
+
+		body#page-site-index.notloggedin .loginbox h2 {
+				font-weight: bold;
+				margin: 0;
+				padding: 0 0 1em 0;
+				text-align: left;
+					}
+
+/** Buttons **/
+
+		body#page-site-index.notloggedin .loginbox .guest,
+		body#page-site-index.notloggedin .loginbox .guest form {
+				display: inline
+					}
+
+		body#page-site-index.notloggedin .loginbox .register,
+		body#page-site-index.notloggedin .loginbox .register form {
+				display: inline
+					}
+
+/** Gradients **/
+
+		body#page-site-index.notloggedin .loginbox .third-party-reg,
+		body#page-site-index.notloggedin .loginbox .third-party-reg form {
+				display: inline
+					}
+
+body#page-site-index.notloggedin .loginbox {
+		/* IE6-9 */
+		background: [[setting:sbbgc]];
+		background: -moz-linear-gradient(top, [[setting:sbtbgc]] 0%, [[setting:sbbgc]] 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:sbtbgc]]), color-stop(100%,[[setting:sbbgc]]));
+		background: -webkit-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		background: -o-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		background: -ms-linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		background: linear-gradient(top, [[setting:sbtbgc]] 0%,[[setting:sbbgc]] 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:sbtbgc]]', endColorstr='[[setting:sbbgc]]',GradientType=0 );
+		nowhitespace: afterproperty;
+			}
+

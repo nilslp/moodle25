@@ -1,0 +1,27 @@
+/** YUI Help Box
+-----------------------------------------------------------------------------*/
+
+#helppopupbox,
+.yui3-overlay {
+		xbackground-color: [[setting:primebgc]];
+		xborder-color: [[setting:primetc]];
+		xcolor: [[setting:primetc]];
+			}
+
+		#helppopupbox h1.helpheading,
+		.yui3-overlay h1.helpheading {
+				letter-spacing: 0
+					}
+
+/** YUI
+-----------------------------------------------------------------------------*/
+
+#dateselector-calendar-panel td a:hover {
+		border: none
+			}
+
+#calendar_tooltip_2_panel h2,
+#calendar_tooltip_3_panel h2 {
+		font-size: 1.2308em
+			}
+

@@ -1,0 +1,91 @@
+
+
+/** Calendar 
+-----------------------------------------------------------------------------*/
+
+.path-calendar .maincalendar .controls {
+		border-radius: 10px 10px 0 0;
+		border-top: 10px solid [[setting:primebgc]];
+		padding-top: 20px;
+			}
+
+.maincalendar .cal_courses_flt,
+.maincalendar .cal_courses_flt form,
+.maincalendar .cal_courses_flt form div {
+		display: inline
+			}
+
+.maincalendar h1.current {
+		font-size: 2em;
+		margin: 0;
+			}
+
+.minicalendarblock h3 {
+		margin-bottom: 0
+			}
+
+.maincalendar th,
+.maincalendar td {
+		border: none;
+		border-bottom: 1px solid #CCC;
+		border-right: 1px dashed #CCC;
+		padding: 2px;
+			}
+
+.maincalendar th {
+		color: #666;
+		font-size: 0.7692em;
+		text-transform: uppercase;
+			}
+
+.maincalendar .calendartable {
+		border-left: 1px dashed #CCC;
+		border-top: 1px solid #CCC;
+			}
+
+.calendartable td div.day {
+		padding: 5px 10px;
+		text-align: right;
+			}
+
+.minicalendarblock .calendartable th,
+.minicalendarblock .calendartable td,
+.block_calendar_month table.minicalendar th,
+.block_calendar_month table.minicalendar td {
+		border: none;
+		border-bottom: 1px solid #EEE;
+		font-size: 0.7693em;
+		padding: 0 1px 0 2px;
+			}
+
+		.block_calendar_month table.minicalendar th abbr {
+				border-color: #FFF
+					}
+
+.minicalendarblock .calendartable th,
+.block_calendar_month table.minicalendar th {
+		color: #666;
+		font-weight: normal;
+		text-transform: uppercase;
+		xbackground: #999 none;
+			}
+
+.path-calendar .maincalendar .eventlist .event {
+		border: none;
+		border-top: 1px solid #CCC;
+		margin-top: 20px;
+			}
+
+		.path-calendar .maincalendar .eventlist .event td.topic .name {
+				font-weight: bold
+					}
+
+		.path-calendar .maincalendar .eventlist .event td.description {
+				padding: 10px
+					}
+
+		.path-calendar .maincalendar .eventlist .event td {
+				border: none;
+				padding: 1em 0;
+					}
+

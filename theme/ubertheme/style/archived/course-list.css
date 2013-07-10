@@ -1,0 +1,195 @@
+
+
+.course_category_tree .category_label {
+		padding-left: 20px
+			}
+
+.course_category_tree .category .courses {
+		padding-left: 20px
+			}
+
+		.course_category_tree .category .courses .course_link {
+				background: transparent none;
+				display: inline;
+				padding-left: 0;
+					}
+
+.course_category_tree .category .courses {
+		padding-left: 20px
+			}
+
+.course_category_tree .category .subcategories {
+		padding-left: 20px
+			}
+
+.course_category_tree .category .subcatgories .course {
+		padding-left: 40px
+			}
+
+.course_category_tree .category .course {
+		background: transparent url([[pix:theme|icon_bullet]]) left center no-repeat
+			}
+
+.course_category_tree .category .course {
+		position: relative
+			}
+
+.course_category_tree .category .course_info {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: auto;
+			}
+
+		.course_category_tree .category .course_info a,
+		.course_category_tree .category .course_info div {
+				float: right;
+				height: 16px;
+				width: 16px;
+					}
+
+body#page-course-index.jsenabled .course_category_tree {
+		display: none
+			}
+
+body#page-course-index.jsenabled.course-list-static .course_category_tree,
+body#page-course-index.jsenabled.course-list-collapseable .course_category_tree {
+		display: block
+			}
+
+#page-course-index .region-content h2.main {
+		float: left;
+		margin: 0;
+		padding: 5px 0 17px;
+			}
+
+body#page-course-index #region-main {
+		line-height: 1.75em
+			}
+
+body#page-course-index .region-content .toggle-view,
+body#page-course-index .region-content .az-accordian,
+body#page-course-index .region-content .cat-accordian {
+		background: #CCC none;
+		border: 1px solid #CCC;
+		border-radius: 3px;
+		cursor: pointer;
+		float: right;
+		margin: 0 0 10px 5px;
+		padding: 5px 10px;
+			}
+
+body#page-course-index .region-content .categorybox .category,
+body#page-course-index .region-content	#az-course-list ul {
+		clear: both
+			}
+
+#az-course-list {
+
+			}
+
+		#az-course-list .course,
+		.categorybox .course_category_tree .category,
+		.categorybox .course_category_tree .course {
+				border-top: 1px solid #CCC;
+				font-size: 1.0em;
+					}
+
+				.categorybox .course_category_tree .category .course_info {
+						float: right
+							}
+
+						.categorybox .course_category_tree .category .course_info img {
+								display: block;
+								float: right;
+								margin-left: 5px;
+									}
+
+						.categorybox .course_category_tree .category .course_info a {
+								float: right
+									}
+
+		#az-course-list .course,
+		.course_category_tree .category .course {
+				padding-left: 20px
+					}
+
+		#az-course-list ul {
+				margin: 0
+					}
+
+				#az-course-list ul ul.courses {
+						padding-left: 20px
+							}
+
+				#az-course-list ul ul li {
+						background: transparent url([[pix:theme|icon_bullet]]) left center no-repeat;
+						list-style: none;
+							}
+
+				#az-course-list ul li {
+						list-style: none
+							}
+
+.categorybox .course_category_tree .category {
+
+			}
+
+.categorybox .course_category_tree .course {
+		border-top-style: dashed;
+		font-weight: normal;
+			}
+
+body.course-list-collapseable .categorybox .course_category_tree .category_label {
+		cursor: pointer
+			}
+
+		body.course-list-collapseable .categorybox .course_category_tree .category_label a.category_link {
+				color: #000
+					}
+
+		body.course-list-collapseable .categorybox .course_category_tree .category_label a.category_link:hover {
+				background: transparent none;
+				border: none;
+					}
+
+body.course-list-collapseable .categorybox .course_category_tree .dimmed_category .category_label a.category_link {
+		color: inherit
+			}
+
+.categorybox .course_category_tree .category_label .jumpto {
+		font-weight: normal;
+
+		margin-left: 10px;
+			}
+
+body#page-course-index .categorybox .hover,
+body#page-course-index #az-course-list .hover {
+		background-color: #FF9
+			}
+
+body#page-course-index #coursesearch {
+		clear: both
+			}
+
+body#page-course-index #az-course-list .section .label {
+		background-image: url([[pix:theme|icon_bullet]]);
+		background-repeat: no-repeat;
+		border-top: 1px solid #CCC;
+		font-weight: bold;
+		padding-left: 20px;
+			}
+
+body#page-course-index #az-course-list .section.collapsed .courses {
+		display: none
+			}
+
+body#page-course-index.course-list-collapseable #az-course-list .section .label {
+		background-image: url([[pix:moodle|t/expanded]]);
+		cursor: pointer;
+			}
+
+body#page-course-index.course-list-collapseable #az-course-list .section.collapsed .label {
+		background-image: url([[pix:moodle|t/collapsed]])
+			}
+

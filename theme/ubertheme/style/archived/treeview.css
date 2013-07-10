@@ -1,0 +1,147 @@
+
+
+.treeview li {
+		background: url([[pix:theme|treeview/treeview-default-line]]) 0 0 no-repeat
+			}
+
+.treeview,
+.treeview ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+			}
+
+		.treeview div.lastCollapsable-hitarea,
+		.treeview div.lastExpandable-hitarea {
+				background-position: 0
+					}
+
+		.treeview .expandable-hitarea {
+				background-position: -80px -2px
+					}
+
+		.treeview li.lastCollapsable {
+				background-position: 0 -111px
+					}
+
+		.treeview li.lastCollapsable,
+		.treeview li.lastExpandable {
+				background-image: url([[pix:theme|treeview/treeview-default]])
+					}
+
+		.treeview li.lastExpandable {
+				background-position: -32px -67px
+					}
+
+		.treeview li.collapsable,
+		.treeview li.expandable {
+				background-position: 0 -176px
+					}
+
+		.treeview a.selected {
+				background-color: #eee
+					}
+
+		.treeview .hitarea {
+				background: url([[pix:theme|treeview/treeview-default]]) -64px -24px no-repeat;
+				cursor: pointer;
+				float: left;
+				height: 16px;
+				margin-left: -16px;
+				width: 16px;
+					}
+
+		.treeview li.last {
+				background-position: 0 -1766px
+					}
+
+		.treeview ul {
+				background-color: white;
+				margin-top: 4px;
+					}
+
+		.treeview li {
+				margin: 0;
+				padding: 3px 0pt 3px 16px;
+					}
+
+/* fix for IE6 */
+
+* html .hitarea {
+		display: inline;
+		float: none;
+			}
+
+#treecontrol {
+		display: none;
+		margin: 1em 0;
+			}
+
+/*.treeview .hover { color: red; cursor: pointer; 	}_NO__DOTCOMMA__AFTER___NO__DOTCOMMA__AFTER__*/
+
+.treeview-red li {
+		background-image: url([[pix:theme|treeview-red-line]])
+			}
+
+.treeview-red .hitarea,
+.treeview-red li.lastCollapsable,
+.treeview-red li.lastExpandable {
+		background-image: url([[pix:theme|treeview/treeview-red]])
+			}
+
+.treeview-black li {
+		background-image: url([[pix:theme|treeview-black-line]])
+			}
+
+.treeview-black .hitarea,
+.treeview-black li.lastCollapsable,
+.treeview-black li.lastExpandable {
+		background-image: url([[pix:theme|treeview/treeview-black]])
+			}
+
+.treeview-gray li {
+		background-image: url([[pix:theme|treeview-gray-line]])
+			}
+
+.treeview-gray .hitarea,
+.treeview-gray li.lastCollapsable,
+.treeview-gray li.lastExpandable {
+		background-image: url([[pix:themetreeview/treeview-gray]])
+			}
+
+.treeview-famfamfam li {
+		background-image: url([[pix:theme|treeview-famfamfam-line]])
+			}
+
+.treeview-famfamfam .hitarea,
+.treeview-famfamfam li.lastCollapsable,
+.treeview-famfamfam li.lastExpandable {
+		background-image: url([[pix:theme|treeview/treeview-famfamfam]])
+			}
+
+.filetree li {
+		padding: 3px 0 2px 16px
+			}
+
+.filetree li {
+		padding: 0 0 0 16px
+			}
+
+.filetree span.folder,
+.filetree span.file {
+		display: block;
+		padding: 1px 0 1px 16px;
+			}
+
+.filetree span.folder {
+		background: url([[pix:theme|treeview/folder]]) 0 0 no-repeat
+			}
+
+.filetree li.expandable span.folder {
+		background: url([[pix:theme|treeview/folder-closed]]) 0 0 no-repeat
+			}
+
+.filetree span.file {
+		background: url([[pix:theme|treeview/file]]) 0 0 no-repeat
+			}
+

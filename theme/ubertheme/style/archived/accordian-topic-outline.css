@@ -1,0 +1,102 @@
+
+
+body#page-course-view-accordion .accordion-topics dl {
+		border-bottom: 1px solid #FFF
+			}
+
+body#page-course-view-accordion .accordion-topics dt {
+		[[setting: accordion-grad]]background: -moz-linear-gradient(top, [[setting:accordion-c1]] 0%, [[setting:accordion-c0]] 100%);
+		[[setting: accordion-grad]]background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:accordion-c1]]), color-stop(100%,[[setting:accordion-c0]]));
+		[[setting: accordion-grad]]background: -webkit-linear-gradient(top, [[setting:accordion-c1]] 0%,[[setting:accordion-c0]] 100%);
+		[[setting: accordion-grad]]background: -o-linear-gradient(top, [[setting:accordion-c1]] 0%,[[setting:accordion-c0]] 100%);
+		[[setting: accordion-grad]]background: -ms-linear-gradient(top, [[setting:accordion-c1]] 0%,[[setting:accordion-c0]] 100%);
+		[[setting: accordion-grad]]background: linear-gradient(top, [[setting:accordion-c1]] 0%,[[setting:accordion-c0]] 100%);
+		[[setting: accordion-grad]]filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:accordion-c1]]', endColorstr='[[setting:accordion-c0]]',GradientType=0 );
+		background: [[setting:accordion-c0]];
+		border: 1px solid [[setting:accordion-c0]];
+		color: [[setting:accordion-text]];
+			}
+
+body#page-course-view-accordion .accordion-topics dl.hidden dt {
+		[[setting: accordion-grad]]background: -moz-linear-gradient(top, [[setting:accordion-c3]] 0%, [[setting:accordion-c2]] 100%);
+		[[setting: accordion-grad]]background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:accordion-c3]]), color-stop(100%,[[setting:accordion-c2]]));
+		[[setting: accordion-grad]]background: -webkit-linear-gradient(top, [[setting:accordion-c3]] 0%,[[setting:accordion-c2]] 100%);
+		[[setting: accordion-grad]]background: -o-linear-gradient(top, [[setting:accordion-c3]] 0%,[[setting:accordion-c2]] 100%);
+		[[setting: accordion-grad]]background: -ms-linear-gradient(top, [[setting:accordion-c3]] 0%,[[setting:accordion-c2]] 100%);
+		[[setting: accordion-grad]]background: linear-gradient(top, [[setting:accordion-c3]] 0%,[[setting:accordion-c2]] 100%);
+		[[setting: accordion-grad]]filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:accordion-c3]]', endColorstr='[[setting:accordion-c2]]',GradientType=0 );
+		background: [[setting:accordion-c2]];
+		border: 1px solid [[setting:accordion-c2]];
+		color: [[setting:accordion-c0]];
+			}
+
+body#page-course-view-accordion .accordion-topics dd ul.section {
+		border-top-color: [[setting:accordion-c2]]
+			}
+
+		body#page-course-view-accordion .accordion-topics dd ul.section li {
+				border-color: [[setting:accordion-c2]]
+					}
+
+				body#page-course-view-accordion .accordion-topics dd ul.section li a.dimmed {
+						color: #666
+							}
+
+body#page-course-view-accordion .accordion-topics dd div.section_add_menus {
+		background-color: [[setting:accordion-c3]];
+		border-bottom-color: [[setting:accordion-c2]];
+			}
+
+/** Section 0 - Topic Outline Summary **/
+
+body#page-course-view-accordion .accordion-topics dl#section-0 {
+		background: [[setting:accordion-c5]] none;
+		color: inherit;
+		filter: none;
+			}
+
+		body#page-course-view-accordion .accordion-topics dl#section-0 .toggle {
+				background: [[setting:accordion-c0]];
+				background: -moz-linear-gradient(top, [[setting:accordion-c1]] 0%, [[setting:accordion-c0]] 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:accordion-c1]]), color-stop(100%,[[setting:accordion-c0]]));
+				background: -webkit-linear-gradient(top, [[setting:accordion-c1]] 0%,[[setting:accordion-c0]] 100%);
+				background: -o-linear-gradient(top, [[setting:accordion-c1]] 0%,[[setting:accordion-c0]] 100%);
+				background: -ms-linear-gradient(top, [[setting:accordion-c1]] 0%,[[setting:accordion-c0]] 100%);
+				background: linear-gradient(top, [[setting:accordion-c1]] 0%,[[setting:accordion-c0]] 100%);
+				border: 1px solid [[setting:accordion-c1]];
+				border-radius: 0.5em;
+				color: [[setting:accordion-c4]];
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:accordion-c1]]', endColorstr='[[setting:accordion-c0]]',GradientType=0 );
+					}
+
+		body#page-course-view-accordion .accordion-topics dl#section-0 .toggle:active {
+				background: [[setting:accordion-c0]];
+				background: -moz-linear-gradient(top, [[setting:accordion-c3]] 0%, [[setting:accordion-c2]] 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:accordion-c3]]), color-stop(100%,[[setting:accordion-c2]]));
+				background: -webkit-linear-gradient(top, [[setting:accordion-c3]] 0%,[[setting:accordion-c2]] 100%);
+				background: -o-linear-gradient(top, [[setting:accordion-c3]] 0%,[[setting:accordion-c2]] 100%);
+				background: -ms-linear-gradient(top, [[setting:accordion-c3]] 0%,[[setting:accordion-c2]] 100%);
+				background: linear-gradient(top, [[setting:accordion-c3]] 0%,[[setting:accordion-c2]] 100%);
+				border: 1px solid [[setting:accordion-c1]];
+				border-radius: 0.25em;
+				color: #000;
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:accordion-c3]]', endColorstr='[[setting:accordion-c2]]',GradientType=0 );
+					}
+
+		body#page-course-view-accordion .accordion-topics dl#section-0 .toggle:hover {
+				color: [[setting:accordion-text]]
+					}
+
+		body#page-course-view-accordion .accordion-topics dl#section-0 dt {
+				background: none;
+				color: inherit;
+				filter: none;
+					}
+
+/** IE Legacy Fixes **/
+
+body#page-course-view-accordion.ie6 .accordion-topics dl#section-0 dt,
+body#page-course-view-accordion.ie7 .accordion-topics dl#section-0 dt {
+		color: #000
+			}
+

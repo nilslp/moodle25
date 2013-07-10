@@ -1,0 +1,37 @@
+
+
+/** Columns - 240px wide side columns 
+		-------------------------------------------------------------------------*/
+
+/** Content Columns **/
+
+#page-content {
+		padding: 0 1.04167%
+			}
+
+		#page-content #region-main-wrap {
+				width: 72.3%
+					}
+
+		#page-content #region-main {
+				width: 61.8%
+					}
+
+		#page-content #region-post {
+				width: 25.53%
+					}
+
+		#page-content #region-pre {
+				width: 35.25%
+					}
+
+/** Only side pre **/
+
+body.side-pre-only #page-content #region-main {
+		width: 72.3%
+			}
+
+body.side-pre-only #page-content #region-pre {
+		width: 25.53%
+			}
+

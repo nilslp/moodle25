@@ -1,0 +1,58 @@
+
+
+@media print { 
+		/** Moodle Examples - http://docs.moodle.org/dev/Print_style **/
+
+		html,
+		body {
+				filter: none;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+					}
+
+				body #page-content {
+						margin: 0;
+						padding-left: 0;
+						padding-right: 0;
+						width: 95%;
+							}
+
+		body {
+				background: #FFFFFF;
+				color: #000000;
+					}
+
+		div.tabtree,
+		div#header,
+		div.navbar,
+		div.headermenu,
+		div.paging,
+		div#footer,
+		div.datapreferences {
+				display: none
+					}
+
+		table {
+				text-align: left
+					}
+
+		/** Hidden Elements **/
+
+		#page-header,
+		#page-content #region-pre,
+		#page-content #region-post,
+		#page-footer,
+		#support-widget {
+				display: none
+					}
+
+		/** Full Width **/
+
+		body #page,
+		body #page #page-content #region-main {
+				float: none;
+				width: 100%;
+					}
+			}
+

@@ -1,0 +1,323 @@
+
+
+/* 
+		Document	 : totara.css
+		Created on : 05-Sep-2012, 08:40:36
+		Author		 : dan
+		Description:
+				Purpose of the stylesheet follows.
+*/
+
+/** ---------------------------------------------------------------------------
+		Totara Overrides **/
+
+/** core.css **/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+		color: inherit
+			}
+
+.mform fieldset {
+		border-bottom: 1px dotted #666;
+		padding: 0 0 2em 0;
+			}
+
+		.mform fieldset div {
+				margin: 0
+					}
+
+.mform .fitem .felement {
+		width: auto
+			}
+
+.mform .fitem .fitemtitle {
+		text-align: right;
+		width: 20%;
+			}
+
+body.path-course .generalbox {
+		border-bottom: 1px solid #CCC;
+		margin-bottom: 2em;
+			}
+
+body.path-course .courseboxes .coursebox {
+		margin-bottom: 10px
+			}
+
+/** ---------------------------------------------------------------------------
+		Totara Custom **/
+
+/** Course/Program - selection page **/
+
+body.path-course #page .coursebox {
+		border: 1px solid #CCCCCC;
+		border-radius: 0;
+		padding: 1%;
+		position: relative;
+		width: 98%;
+			}
+
+body.path-course .coursebox .info {
+		float: left;
+		padding-bottom: 35px;
+			}
+
+		body.path-course .coursebox .info img.iconsmall {
+				height: 30px;
+				width: 38px;
+					}
+
+body.path-course .coursebox .summary {
+		float: right;
+		width: 48%;
+			}
+
+		body.path-course .coursebox .summary .enrolmenticons {
+				left: 5px;
+				position: absolute;
+				top: 45px;
+					}
+
+				body.path-course .coursebox .summary .enrolmenticons img.iconsmall {
+						height: 16px;
+						width: 16px;
+							}
+
+body.path-course #region-main .coursebox .summary .category {
+		font-family: inherit;
+		font-size: 1em;
+		padding: 30px 10px 0 0;
+		text-align: right;
+		text-transform: none;
+			}
+
+/** Course/Program - category list **/
+
+.cell {
+		padding: 0.5em
+			}
+
+.path-course	.totaratable .toolbar-top td.toolbar {
+		background-color: transparent;
+		border: none;
+			}
+
+/** Program page **/
+
+#program-content fieldset,
+#view-program-content fieldset {
+		border: 1px solid #CCCCCC;
+		border-radius: 0;
+		clear: left;
+		margin-top: 1em;
+		padding: 0.5em;
+			}
+
+		#program-content fieldset legend,
+		#view-program-content fieldset legend {
+				color: inherit;
+				font-size: 1.1em;
+				font-weight: bold;
+				margin-left: 10px;
+				padding: 0 6px;
+					}
+
+#program-content .nextsetoperator img.iconsmall,
+#view-program-content .nextsetoperator img.iconsmall {
+		height: 16px;
+		width: 16px;
+			}
+
+/** My Reports **/
+
+#page-my-reports #myreports_section {
+		float: left;
+		width: 49%;
+			}
+
+#page-my-reports #scheduledreports_section {
+		float: right;
+		width: 49%;
+			}
+
+		#page-my-reports #scheduledreports_section table#scheduled_reports th.header,
+		#page-my-reports #scheduledreports_section table#scheduled_reports td {
+				border-left: 1px solid #E2E2E2;
+				padding: 5px 10px;
+				text-transform: none;
+					}
+
+/** My Reports - reportmanager table left **/
+
+#page-course-categorylist .boxaligncenter,
+#page-my-reports table.reportmanager {
+		width: 100%
+			}
+
+		#page-my-reports table.reportmanager tbody tr.r1 td {
+				background: #FAFAFA
+					}
+
+		#page-my-reports table.reportmanager td.text {
+				padding-top: 0
+					}
+
+		#page-my-reports table.reportmanager td.icon {
+				width: 40px
+					}
+
+		#page-my-reports table.reportmanager td {
+				padding: 3px 0 0 3px;
+				text-align: left;
+				vertical-align: middle;
+					}
+
+/** My Reports - reportmanager table right **/
+
+#page-my-reports #scheduledreports_section_inner {
+		padding: 10px
+			}
+
+/** My Reports - reportbuilder **/
+
+#page-totara-reportbuilder-report .mform fieldset legend {
+		border: none;
+		font-size: 1.2em;
+		text-transform: none;
+			}
+
+#page-totara-reportbuilder-report .mform .fitem .fitemtitle {
+		font-weight: normal
+			}
+
+#page-totara-reportbuilder-report .paging {
+		margin-bottom: 10px
+			}
+
+#page-totara-reportbuilder-report .reportbuilder-table {
+		border-left: 1px solid #DBDBDB
+			}
+
+		#page-totara-reportbuilder-report .reportbuilder-table th.header {
+				background-color: #FFFFFF
+					}
+
+		#page-totara-reportbuilder-report .reportbuilder-table th,
+		#page-totara-reportbuilder-report .reportbuilder-table td {
+				border-right: 1px solid #DBDBDB
+					}
+
+		#page-totara-reportbuilder-report .reportbuilder-table th {
+				text-transform: none;
+				white-space: normal;
+					}
+
+		#page-totara-reportbuilder-report .reportbuilder-table td {
+				font-size: 0.9em
+					}
+
+table.reportbuilder-table tbody tr.r0 td,
+table.generaltable tbody tr.r0 td,
+table tbody tr.r0 td {
+		background-color: #FAFAFA
+			}
+
+table.reportbuilder-table tbody tr.r1 td,
+table.generaltable tbody tr.r1 td,
+table tbody tr.r1 td {
+		background-color: #EEEEEE
+			}
+
+/** Tab styles **/
+
+.tabtree .tabrow0 li,
+.tabtree .tabrow1 li,
+.tabtree .tabrow2 li,
+.tabtree .tabrow0 li a,
+.tabtree .tabrow1 li a,
+.tabtree .tabrow2 li a {
+		background: #E8E8E8;
+		border: none;
+		color: #666666;
+		margin: 0;
+		padding: 0;
+		xborder-radius: 0;
+			}
+
+		.tabtree .tabrow0 li a:hover,
+		.tabtree .tabrow1 li a:hover,
+		.tabtree .tabrow2 li a:hover {
+				background: #FFFFFF;
+				border: none;
+				border-radius: 0;
+				color: #000000;
+					}
+
+.tabtree .tabrow0 li:hover,
+.tabtree .tabrow1 li:hover,
+.tabtree .tabrow1 li:hover {
+		background: #EEEEEE
+			}
+
+.tabtree .tabrow0 li,
+.tabtree .tabrow1 li,
+.tabtree .tabrow2 li {
+		border: 1px solid #AAAAAA;
+		border-bottom: none;
+			}
+
+.tabtree .tabrow0 li.selected,
+.tabtree .tabrow0 li.active,
+.tabtree .tabrow1 li.selected,
+.tabtree .tabrow1 li.active,
+.tabtree .tabrow2 li.selected,
+.tabtree .tabrow2 li.active {
+		background: #FFFFFF
+			}
+
+		.tabtree .tabrow0 li.selected a,
+		.tabtree .tabrow0 li.active a,
+		.tabtree .tabrow0 li.active a:hover,
+		.tabtree .tabrow0 li.selected a:hover,
+		.tabtree .tabrow1 li.active a:hover,
+		.tabtree .tabrow1 li.selected a:hover,
+		.tabtree .tabrow2 li.active a:hover,
+		.tabtree .tabrow2 li.selected a:hover {
+				border: none
+					}
+
+		.tabtree .tabrow0 li.active ul li > a {
+				color: #666666
+					}
+
+/** Totara Blocks **/
+
+		.tabtree .tabrow0 li.active ul li > a:hover {
+				text-decoration: none
+					}
+
+.block .header h2 {
+		font-size: 1em;
+		line-height: 20px;
+			}
+
+.block .header .block_action img,
+.block .header .block_action input {
+		margin: 1px 2px 0
+			}
+
+/** My Learning Plans **/
+
+#dp-plan-content #dp-plans-description .instructional_text {
+		width: 70%
+			}
+
+#dp-plan-content #dp-plans-description .dp-add-plan-link {
+		width: 28%
+			}
+
