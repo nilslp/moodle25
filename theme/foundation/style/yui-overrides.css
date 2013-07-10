@@ -1,0 +1,43 @@
+
+
+/** YUI Overrides 
+    ------------------------------------------------------*/
+
+/** Widget Mask **/
+
+body.yui3-skin-sam .yui3-widget-mask {
+    background: transparent url([[pix:theme|yui/bg_widget_mask]])
+    }
+
+/** Treeview **/
+
+.ygtv-checkbox .ygtv-highlight0 .ygtvcontent {
+    background-image: url([[pix:theme|yui/check0]]) !important;
+    padding-left: 20px !important;
+    }
+
+.ygtv-checkbox .ygtv-highlight1 .ygtvcontent {
+    background-image: url([[pix:theme|yui/check1]]) !important;
+    padding-left: 20px !important;
+    }
+
+.ygtv-checkbox .ygtv-highlight2 .ygtvcontent {
+    background-image: url([[pix:theme|yui/check2]]) !important;
+    padding-left: 20px !important;
+    }
+
+.ygtvfocus {
+    background-color: transparent !important
+    }
+
+/** Tabs **/
+
+.ui-tabs .ui-tabs-hide {
+    display: none
+    }
+
+body.yui3-skin-sam .yui3-panel-content .yui3-widget-hd {
+    background: #FFFFFF none;
+    filter: none;
+    }
+

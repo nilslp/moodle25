@@ -1,0 +1,60 @@
+
+
+/** Paging **/
+
+.paging {
+    margin: 0
+    }
+
+    .paging li.disabled a,
+    .paging li.disabled span {
+        background-color: #CCC;
+        color: #999;
+        cursor: default;
+        }
+
+    .paging li.hover a,
+    .paging li.active span {
+        background: #666;
+        border-color: #666;
+        color: #FFF;
+        }
+
+    .paging li.hover a {
+        border: 1px solid #FFF;
+        box-shadow: 0 0 5px rgba(0,0,0,0.65);
+        z-index: 10;
+        }
+
+    .paging li {
+        display: inline;
+        list-style: none;
+        }
+
+    .paging li:first-child a,
+    .paging li:first-child span {
+        border-radius: 10px 0 0 10px
+        }
+
+    .paging li:last-child a,
+    .paging li:last-child span {
+        border-radius: 0 10px 10px 0
+        }
+
+    .paging ul {
+        margin: 1em 0
+        }
+
+    .paging a,
+    .paging span {
+        background: #CCC none;
+        border: 1px solid #CCC;
+        color: #000;
+        display: block;
+        float: left;
+        margin-right: 1px;
+        padding: 0 4px;
+        position: relative;
+        text-decoration: none;
+        }
+

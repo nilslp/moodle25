@@ -1,0 +1,77 @@
+
+
+/** YUI Carousel **/
+
+.yui-carousel-container {
+    background: url([[pix:theme|carousel_container]]) center center no-repeat;
+    overflow: hidden;
+    xvisibility: hidden;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    }
+
+    .yui-carousel-container .carousel-controls,
+    .yui-carousel-container .carousel-images {
+        visibility: hidden
+        }
+
+/** Carousel Controls **/
+
+.carousel-controls .carousel-prev,
+.carousel-controls .carousel-next {
+    position: absolute;
+    bottom: 0;
+    width: 35px;
+    height: 37px;
+    cursor: pointer;
+    z-index: 10;
+    }
+
+.carousel-controls .carousel-prev {
+    left: 10%;
+    background: transparent url([[pix:theme|btn-prev]]) center center no-repeat;
+    }
+
+.carousel-controls .carousel-next {
+    right: 10%;
+    background: transparent url([[pix:theme|btn-next]]) center center no-repeat;
+    }
+
+.carousel-controls a.carousel-prev:hover,
+.carousel-controls a.carousel-next:hover {
+    background-color: transparent;
+    border: none;
+    }
+
+/** Carousel Images **/
+
+.yui-carousel-container .carousel-images a.yui-carousel-images {
+    display: block
+    }
+
+.yui-carousel-container .carousel-images a.yui-carousel-images:hover {
+    border: none
+    }
+
+.yui-carousel-container .carousel-images a.yui-carousel-images span {
+    background: transparent;
+    color: #FFFFFF;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 12;
+    }
+
+.yui-carousel-container .carousel-images a.yui-carousel-images img {
+    max-height: 100%;
+    max-width: 100%;
+    }
+

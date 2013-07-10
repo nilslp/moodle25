@@ -1,0 +1,36 @@
+
+
+/** Server Error Page **/
+
+body#page-404 #region-main .region-content {
+    margin-bottom: 2em;
+    padding: 4em 2em;
+    }
+
+    body#page-404 #region-main .region-content #coursesearch {
+        margin: 0 0 0 2%
+        }
+
+    body#page-404 #region-main .region-content .copy,
+    body#page-404 #region-main .region-content #coursesearch {
+        float: left;
+        margin-right: 2%;
+        width: 48%;
+        }
+
+/** Course Search Form **/
+
+body#page-404 #coursesearch label {
+    font-weight: bold
+    }
+
+body#page-404 #coursesearch input {
+    font-weight: bold;
+    padding: 4px 10px;
+    }
+
+body#page-404 #coursesearch #coursesearchbox {
+    font-weight: normal;
+    padding: 4px;
+    }
+

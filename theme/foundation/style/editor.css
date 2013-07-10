@@ -1,0 +1,20 @@
+
+
+body {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif
+    }
+
+/* yui carousel */
+
+.yui-carousel-container .carousel-images {
+    opacity: 0
+    }
+
+.yui-carousel-container.show {
+    background: transparent url([[pix:theme|carousel_container]]) no-repeat center center
+    }
+
+.yui-carousel-container.hide {
+    display: none
+    }
+

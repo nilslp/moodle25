@@ -1,0 +1,162 @@
+
+
+/** Columns
+    -------------------------------------------------------------------------*/
+
+#page-content {
+    position: relative
+    }
+
+    #page-content #region-main-wrap {
+        float: left;
+        position: relative;
+        width: 76.56%;
+        }
+
+    #page-content #region-post {
+        float: right;
+        position: relative;
+        width: 21.27%;
+        }
+
+    #page-content #region-main {
+        float: right;
+        position: relative;
+        width: 69.45%;
+        }
+
+    #page-content #region-pre {
+        float: left;
+        position: relative;
+        width: 27.75%;
+        }
+
+    #page-content .managelink {
+        float: right;
+        padding: 0 0 10px 10px;
+        }
+
+    #page-content h2.main {
+        margin-top: 0
+        }
+
+/** Content Columns **/
+
+#page-content {
+    clear: both;
+    padding: 0 1.04167%;
+    }
+
+#page-footer {
+    clear: both;
+    float: left;
+    width: 100%;
+    }
+
+/** Only side pre **/
+
+body.side-pre-only #page-content #region-main-wrap {
+    float: none;
+    width: 100%;
+    }
+
+body.side-pre-only #page-content #region-main {
+    width: 76.56%
+    }
+
+body.side-pre-only #page-content #region-pre {
+    width: 21.27%
+    }
+
+/** Only side post **/
+
+body.side-post-only #page-content #region-main-wrap {
+
+    }
+
+body.side-post-only #page-content #region-post-box {
+
+    }
+
+body.side-post-only #page-content #region-main {
+    width: 100%
+    }
+
+body.side-post-only #page-content #region-post {
+    margin: 0
+    }
+
+/** No blocks whatsoever **/
+
+body.content-only #page-content #region-main-wrap {
+    float: none;
+    width: auto;
+    }
+
+body.content-only #page-content #region-main {
+    float: none;
+    width: auto;
+    }
+
+/** Stabalise some IE6 behaviour **/
+
+body.ie6 #page-content #region-post {
+    margin-left: 0
+    }
+
+/*
+.ie6 #region-pre .region-content,
+.ie6 #region-post .region-content {padding:0 !important;width:100%;float:none;}
+.ie6 #region-pre .region-content .block,
+.ie6 #region-post .region-content .block {width:auto;padding:0;margin:10px;}
+*/
+
+/** Report layout **/
+
+.pagelayout-report #page-header {
+    float: none
+    }
+
+.pagelayout-report #page-content {
+    float: none;
+    overflow: visible;
+    width: auto;
+    }
+
+    .pagelayout-report #page-content #region-main-wrap {
+        width: 100%
+        }
+
+    .pagelayout-report #page-content .region-content {
+        overflow: visible
+        }
+
+.pagelayout-report #report-main-content {
+    float: left;
+    width: 100%;
+    }
+
+    .pagelayout-report #report-main-content .region-content {
+        margin-left: 200px
+        }
+
+        .pagelayout-report #report-main-content .region-content table {
+            background-color: #FFF
+            }
+
+.pagelayout-report #report-region-wrap {
+    float: right;
+    position: relative;
+    width: 0;
+    xleft: -100%;
+    }
+
+.pagelayout-report #report-region-pre {
+    position: relative;
+    xwidth: 200px;
+    }
+
+.pagelayout-report #page-footer {
+    float: none
+    }
+

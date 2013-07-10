@@ -1,0 +1,24 @@
+
+
+/** Content **/
+
+table.graphic-table td {
+    padding: 0
+    }
+
+    table.graphic-table td img {
+        display: block
+        }
+
+#page ol,
+ul,
+dl {
+    margin-left: 3em
+    }
+
+/** Enrol **/
+
+.user-enroller-panel {
+    z-index: 1000
+    }
+

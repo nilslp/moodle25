@@ -1,0 +1,38 @@
+
+
+/** Chat Module
+-----------------------------------------------------------------------------*/
+
+body.path-mod-chat #intro.generalbox {
+    padding: 0
+    }
+
+/** Chat Frames - Input **/
+
+body#page-mod-chat-gui_header_js-chatinput {
+    background: #FFF none;
+    border-top: 3px solid #CCC;
+    padding: 0;
+    }
+
+    body#page-mod-chat-gui_header_js-chatinput #page {
+        box-shadow: none;
+        padding: 5px 15px;
+        }
+
+        body#page-mod-chat-gui_header_js-chatinput #page form input#input_chat_message {
+            padding: 5px 10px
+            }
+
+/** Chat Frames - Users **/
+
+body#page-mod-chat-gui_header_js-users {
+    background: #FFF none
+    }
+
+    body#page-mod-chat-gui_header_js-users #page {
+        border-radius: 0;
+        box-shadow: none;
+        width: auto;
+        }
+

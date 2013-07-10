@@ -1,0 +1,157 @@
+** ---------------------------------------------------------------------------
+*    Base Overrides
+*
+**/
+
+/** ---------------------------------------------------------------------------
+    core.css **/
+
+.headermenu {
+    font-size: 1em;
+    margin: 0;
+    }
+
+.generalbox {
+    border: none
+    }
+
+a.hide {
+    display: none
+    }
+
+.mform fieldset {
+    border: none
+    }
+
+.mform .fitem .fitemtitle {
+    float: left;
+    text-align: right;
+    width: 20%;
+    }
+
+.mform .fitem .felement {
+    border-width: 0;
+    margin-left: 21%;
+    width: 80%;
+    }
+
+img.icon {
+    padding-right: 0
+    }
+
+.mform .fitem_ftextarea,
+.mform .fitem_feditor {
+    overflow: visible
+    }
+
+/** ---------------------------------------------------------------------------
+    admin.css **/
+
+#adminsettings .form-item {
+    border-bottom: 1px solid #CCC;
+    clear: both;
+    margin: 0 0 20px 0;
+    padding-bottom: 20px;
+    }
+
+    #adminsettings .form-item .form-defaultinfo {
+        display: block
+        }
+
+    #adminsettings .form-item .form-description {
+        margin-left: 13.5em
+        }
+
+    #adminsettings .form-item .form-shortname {
+        color: #666;
+        font: normal 1em monospace;
+        }
+
+    #adminsettings .form-item .form-label {
+        font-weight: bold
+        }
+
+/** ---------------------------------------------------------------------------
+    blocks.css **/
+
+.block {
+    margin-bottom: 1em
+    }
+
+    .block .header .commands {
+        margin-left: 0
+        }
+
+        .block .header .commands .icon img {
+            height: auto;
+            margin-right: 0;
+            width: auto;
+            }
+
+        .block .header .commands a:hover {
+            background: transparent none;
+            border: none;
+            }
+
+/** ---------------------------------------------------------------------------
+    course.css **/
+
+.path-course-view .section .summary {
+    line-height: inherit
+    }
+
+.course_category_tree .category .category {
+    margin: 0
+    }
+
+.coursebox .info {
+    float: none;
+    text-align: left;
+    width: auto;
+    }
+
+.coursebox .summary {
+    float: none;
+    text-align: left;
+    width: auto;
+    }
+
+    .coursebox .summary .category {
+        xtext-align: right
+        }
+
+/** ---------------------------------------------------------------------------
+    mod/questionnaire/styles.css **/
+
+body#page-mod-questionnaire-print #page {
+    background-color: #FFFFFF;
+    background-image: none;
+    filter: none;
+    padding: 1em;
+    }
+
+body#page-mod-questionnaire-print .qn-question {
+    border-left: thin dotted #CCCCCC;
+    margin-left: 35px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    }
+
+body#page-mod-questionnaire-print .qn-type {
+    border-bottom: thin dotted #CCCCCC;
+    border-left: thin dotted #CCCCCC;
+    margin-left: 35px;
+    padding: 5px;
+    }
+
+body#page-mod-questionnaire-print .questioncontainer {
+    border: thin solid #CCCCCC;
+    margin-bottom: 10px;
+    }
+
+/** ---------------------------------------------------------------------------
+    mod/questionnaire/styles.css **/
+
+body#page-mod-scorm-player #page #page-header {
+    display: block
+    }
