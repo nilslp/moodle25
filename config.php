@@ -7,7 +7,7 @@ $CFG = new stdClass();
 $CFG->dbtype    = 'mysqli';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = 'localhost';
-$CFG->dbname    = 'moodle25';
+$CFG->dbname    = 'moodle255';
 $CFG->dbuser    = 'root';
 $CFG->dbpass    = '';
 $CFG->prefix    = 'mdl_';
@@ -16,16 +16,16 @@ $CFG->dboptions = array (
   'dbsocket' => 0,
 );
 
-$CFG->wwwroot   = 'http://moodle25.nils.hi';
-$CFG->dataroot  = '/www2/sites/moodle25.nils.hi/moodledata';
+$CFG->wwwroot   = 'http://moodle255.tonyf.hi';
+$CFG->dataroot  = '/www2/sites/moodle255.tonyf.hi/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
 
 // Debug settings
-$CFG->debug = 38911;
-$CFG->debugdisplay = true;
-// Development Mode Settings
+//$CFG->debug = 38911;
+//$CFG->debugdisplay = true;
+//Development Mode Settings
 $CFG->themerev = -1;
 $CFG->perfdebug = true;
 $CFG->debugpageinfo = true;

@@ -28,8 +28,6 @@ body{
 	}
 
 #page{
-	/*[[setting: pagefixedwidth]]width: 960px;*/
-	background: #FFF;
 	height: auto;
 	margin: 0 auto -300px;
 	min-height: 100%;
@@ -48,12 +46,12 @@ body{
 	}
 	
 .push{
-	display: block !important;
+	display: block;
 	height: 300px;
 	}
 	
 #section-footer{
-	background: #e6e6e6;
+	/* background: #e6e6e6;  Remove after development */
 	display: inline-block;
 	height: 300px;
 	margin: 0;
@@ -67,7 +65,7 @@ body{
 #zone-footer{
 	display: inline-block;
 	text-align: left;
-	transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s; 
 	}
 	
 .meta,
@@ -75,44 +73,28 @@ body{
 .custommenu,
 #ticker,
 .navbar{
-	background: #e6e6e6;
 	height: 30px;
 	margin-bottom: 3px;
-	overflow: hidden !important;
+	overflow: hidden !important; /* Remove after development */
 	}
 	
-#page-content > div{
-	padding: 0;
-	overflow: hidden !important;
+#page-content #region-main-box .column{
+	display: inline-block;
+	vertical-align: top;
+	transition: all 0.3s ease-in-out 0s; 
 	}
 
-	#page-content #region-main-wrap{
-		display: inline-block;
-		position: relative;
-		vertical-align: top;
+	#page-content #region-pre{  
+		/* background: #999; Remove after development */
 		}
-
+		
 	#page-content #region-main{
-		background: #E6E6E6;
-		display: inline-block;
 		padding: 0 5%;
-		position: relative;
-		vertical-align: top;
 		width: 90%;
 		}
 
-	#page-content #region-pre{
-		background: #999;
-		display: inline-block;
-		position: relative;
-		vertical-align: top;
-		}
-
-	#page-content #region-post{
-		background: #999;
-		display: inline-block;
-		position: relative;
-		vertical-align: top;
+	#page-content #region-post{  
+		/* background: #999; Remove after development */
 		}
 
 
@@ -127,7 +109,6 @@ body{
 #page-header,
 #region-main-box,
 #zone-footer{
-	background: #000;
 	margin: 0 2%;
 	width: 96%;
 	}
@@ -153,19 +134,19 @@ body{
 
 /* First Sidebar Only **********/
 
-.side-pre-only #page-content #region-main{
+.side-pre-only #page-content #region-main{ /* Remove after development if empty */
 
 	}
 
 /* Second Sidebar Only **********/
 
-.side-post-only #page-content #region-main{
+.side-post-only #page-content #region-main{ /* Remove after development if empty */
 
 	}
 
 /* No Sidebars **********/
 
-.content-only #page-content #region-main-wrap{
+.content-only #page-content #region-main-wrap{ /* Remove after development if empty */
 
 	}
 
@@ -183,7 +164,6 @@ body{
 #page-header,
 #region-main-box,
 #zone-footer{
-	background: #FC0;
 	margin: 0 10px;
 	width: 736px;
 	}
@@ -239,7 +219,6 @@ body{
 #page-header,
 #region-main-box,
 #zone-footer{
-	background: #C00;
 	margin: 0 10px;
 	width: 940px;
 	}
@@ -295,7 +274,6 @@ body{
 #page-header,
 #region-main-box,
 #zone-footer{
-	background: #3C0;
 	margin: 0 10px;
 	width: 1180px;
 	}
@@ -338,7 +316,3 @@ body{
 	}
 
 }
-
-	
-
-

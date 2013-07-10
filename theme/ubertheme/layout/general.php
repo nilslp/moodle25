@@ -197,17 +197,17 @@ echo $OUTPUT->doctype();
 						<div id="region-main-box">
 						
 							<?php if ($hassidepre) { ?>
-								<aside id="region-pre" class="block-region <?= $cn_blocktype ?>">
+								<aside id="region-pre" class="block-region <?= $cn_blocktype ?> column">
 										<div class="region-content">
 												<?php echo $OUTPUT->blocks_for_region('side-pre') ?>
 										</div>
-								</aside><?php } ?><article id="region-main-wrap">
+								</aside><?php } ?><article id="region-main-wrap" class="column">
 								<div id="region-main">
 												<div class="region-content">
 														<?php echo $OUTPUT->main_content() ?>
 												</div>
 										</div>
-								</article><?php if ($hassidepost) { ?><aside id="region-post" class="block-region <?= $cn_blocktype ?>">
+								</article><?php if ($hassidepost) { ?><aside id="region-post" class="block-region <?= $cn_blocktype ?> column">
 										<div class="region-content">
 												<?php echo $OUTPUT->blocks_for_region('side-post') ?>
 										</div>
