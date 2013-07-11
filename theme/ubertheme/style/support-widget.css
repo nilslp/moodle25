@@ -5,3 +5,92 @@
 /* Sub-Section Comment ***********************/
 
 /* Standard Comment */
+
+#support-widget{
+}
+
+	#support-widget *{
+		font-size: 90%;
+	}
+
+	#support-widget p,
+	#support-widget a{
+		color: #CCCCCC;
+	}
+
+	#support-widget a:hover{
+		text-decoration: underline;
+	}
+
+	#support-widget .wrapper{
+		background-color: #333333;
+		color: #CCCCCC;
+	}
+
+		#support-widget ul{
+			float: right;
+			height: 100%;
+			margin: 0;
+			width: 53%;
+		}
+
+			#support-widget ul li{
+				cursor: pointer;
+				/*display: inline-block;*/
+				float: right;
+				height: 30px;
+				line-height: 30px;
+				list-style-type: none;
+				margin: 0 1% 0 4%;
+				padding-right: 4%;
+				width: auto;
+			}
+
+			#support-widget ul li.failed,
+			#support-widget ul li.passed{
+				background-image: url([[pix:theme|footer/support-widget/not-enabled]]);
+				background-position: right center;
+				background-repeat: no-repeat;
+			}
+			
+			#support-widget ul li.passed{
+				background-image: url([[pix:theme|footer/support-widget/enabled]]);
+			}
+
+		#support-widget .lp-logo{
+			display: inline-block;
+			text-align: center;
+			width: 50px;
+		}
+
+			#support-widget .lp-logo a{
+				background-image: url([[pix:theme|footer/support-widget/support-logo]]);
+				background-position: center center;
+				background-repeat: no-repeat;
+				display: inline-block;
+				height: 30px;
+				width: 30px;
+			}
+
+			#support-widget .lp-logo a:hover{
+				color: #333333;
+			}
+
+		#support-widget .opts{
+			margin: 0 10px;
+			padding: 0;
+			position: relative;
+			top: 4px;
+		}
+
+		#support-widget button.retest{
+			background: #333333;
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+			filter: none;
+			height: 24px;
+			line-height: 0;
+			padding: 0;
+			width: 24px;
+		}

@@ -26,6 +26,7 @@ $THEME->sheets = array(
 	'images-icons',
 	'labels',
 	'lists',
+	'miscellaneous',
 	'modals',
 	'notifications-messages',
 	'pagination',

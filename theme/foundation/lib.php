@@ -160,14 +160,16 @@ function renderSupportWidget() {
     $html .= '<div id="support-widget" data-autorun="'.$autorun.'">';
     $html .= '<div class="wrapper">';
     $html .= '<ul class="tests">';
-    $html .= '<li class="unknown"><span class="js">&nbsp;</span></li>';
-    $html .= '<li class="unknown"><span class="browser">&nbsp;</span></li>';
-    $html .= '<li class="unknown"><span class="popup">&nbsp;</span></li>';
-    $html .= '<li class="unknown"><span class="flash">&nbsp;</span></li>';
+    $html .= '<li class="unknown"><span class="js">Javascript Enabled</span></li>';
+    $html .= '<li class="unknown"><span class="browser">Supported Browser</span></li>';
+    $html .= '<li class="unknown"><span class="popup">Pop-ups Enabled</span></li>';
+    $html .= '<li class="unknown"><span class="flash">Flash Enabled</span></li>';
     $html .= '</ul>';
-    $html .= '<button class="retest">&nbsp;</button>';
+    $html .= '<div class="support-details">';
     $html .= '<span class="lp-logo"><a href="http://www.learningpool.com" title="Learning Pool">&nbsp;</a></span>';
     $html .= '<span class="opts">Support: <a href="'.$CFG->supportpage.'">Web</a> | <a href="mailto:'.$CFG->supportemail.'">Email '.$CFG->supportname.'</a> | <b>0845 543 6033</b>.</span>';
+    $html .= '<button class="retest">&nbsp;</button>';
+    $html .= '</div>';
     $html .= '</div>';
     $html .= '</div>';
 

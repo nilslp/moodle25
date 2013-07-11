@@ -221,7 +221,8 @@ function ubertheme_customBanner(){
 		$banner_setting = (!empty($PAGE->theme->settings->custombanner)) ? $PAGE->theme->settings->custombanner : false;
 		$banner_slideshow = (!empty($PAGE->theme->settings->custombannerslideshow)) ? $PAGE->theme->settings->custombannerslideshow : false;
 		
-		if (!$banner_setting) return '<img class="bg" src="'.$OUTPUT->pix_url('banner_default', 'theme').'" alt="banner"/>';
+		// if (!$banner_setting) return '<img class="bg" src="'.$OUTPUT->pix_url('banner_default', 'theme').'" alt="banner"/>';
+		if (!$banner_setting) return '<img class="bg" src="" alt="banner"/>';
 		
 		$ary_banner = explode("\n", str_replace("\n\r", "\n", $banner_setting));
 		shuffle($ary_banner);

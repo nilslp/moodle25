@@ -5,3 +5,8 @@
 /* Sub-Section Comment ***********************/
 
 /* Standard Comment */
+
+#page-content .block{
+	background-color: #F0F0F0;
+	padding: 10px;
+	}

@@ -1,0 +1,64 @@
+/*-----------------------------------------------------------------------------------*/
+/* Section Comment
+/*-----------------------------------------------------------------------------------*/
+
+/* Sub-Section Comment ***********************/
+
+/* Standard Comment */
+
+.skiplinks,
+.skip-block{
+	display: none;
+}
+
+#section-header{ /* For Default Theme */
+	background-image: url([[pix:theme|banner_default]]);
+	height: 400px;
+	}
+
+	#page-header{
+		height: 100%;
+		position: relative;
+	}
+
+		#page-header .meta{
+			overflow: visible !important;
+			position: absolute;
+			width: 100%;
+		}
+
+			#page-header .meta .headermain{
+				display: none;
+				float: left;
+			}
+
+			#page-header .meta .headermenu{
+				float: right;
+			}
+				
+				#page-header .meta .headermenu .logininfo{
+					background-color: #FFFFFF;
+					color: #000000;
+					padding: 5px 10px;
+				}
+
+					#page-header .meta .headermenu .logininfo a{
+						background-color: #FFFFFF;
+						background-image: url([[pix:theme|header/meta/arrow-down]]);
+						background-position: right center;
+						background-repeat: no-repeat;
+						color: #000000;
+						padding-right: 20px;
+					}
+
+					#page-header .meta .headermenu .logininfo a:hover{
+						background-image: url([[pix:theme|header/meta/arrow-up]]);
+					}
+
+		#page-header .bg{
+			visibility: hidden;
+		}
+
+		#page-header .navbar{
+			display: none;
+		}
