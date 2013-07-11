@@ -9,7 +9,5 @@
 body {
 	background: [[setting:pagebbgc]] none;
 	color: #333;
-	font-family: "Segoe UI Light", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 20px;
+	font: 100%/150% "Segoe UI Light", Helvetica, Arial, sans-serif;
 	}

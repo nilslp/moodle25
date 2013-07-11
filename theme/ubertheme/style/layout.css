@@ -14,13 +14,13 @@ body{
 	}
 
 body{
-	[[setting: pagebggrad]]background: -moz-linear-gradient(top, [[setting:pagebgc]] 0%, [[setting:pagebbgc]] 100%);
-	[[setting: pagebggrad]]background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:pagebgc]]), color-stop(100%,[[setting:pagebbgc]]));
-	[[setting: pagebggrad]]background: -webkit-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
-	[[setting: pagebggrad]]background: -o-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
-	[[setting: pagebggrad]]background: -ms-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
-	[[setting: pagebggrad]]background: linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
-	[[setting: pagebggrad]]filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='[[setting:pagebgc]]', endColorstr='[[setting:pagebbgc]]',GradientType=0 );
+	[[setting:pagebggrad]]background: -moz-linear-gradient(top, [[setting:pagebgc]] 0%, [[setting:pagebbgc]] 100%);
+	[[setting:pagebggrad]]background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:pagebgc]]), color-stop(100%,[[setting:pagebbgc]]));
+	[[setting:pagebggrad]]background: -webkit-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
+	[[setting:pagebggrad]]background: -o-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
+	[[setting:pagebggrad]]background: -ms-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
+	[[setting:pagebggrad]]background: linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
+	[[setting:pagebggrad]]filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='[[setting:pagebgc]]', endColorstr='[[setting:pagebbgc]]', GradientType=0);
 	background: [[setting:pagebbgc]];
 	padding: 0;
 	text align: center;
@@ -53,26 +53,29 @@ body{
 #section-footer{
 	/* background: #e6e6e6;  Remove after development */
 	display: inline-block;
+	*display: inline;
 	height: 300px;
 	margin: 0;
 	padding: 0;
 	position: relative;
 	width: 100%;
+	zoom: 1;
 	}
 
 #page-header,
 #region-main-box,
 #zone-footer{
 	display: inline-block;
+	*display: inline;
+	position: relative;
 	text-align: left;
 	transition: all 0.3s ease-in-out 0s; 
+	zoom: 1;
 	}
 	
 .meta,
 .banner,
-.custommenu,
-#ticker,
-.navbar{
+#ticker{
 	height: 30px;
 	margin-bottom: 3px;
 	overflow: hidden !important; /* Remove after development */
@@ -80,8 +83,10 @@ body{
 	
 #page-content #region-main-box .column{
 	display: inline-block;
+	*display: inline;
 	vertical-align: top;
 	transition: all 0.3s ease-in-out 0s; 
+	zoom: 1;
 	}
 
 	#page-content #region-pre{  

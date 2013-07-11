@@ -1,7 +1,43 @@
 /*-----------------------------------------------------------------------------------*/
-/* Section Comment
+/* Breadcrumb
 /*-----------------------------------------------------------------------------------*/
 
-/* Sub-Section Comment ***********************/
+/* Trail Settings ***********************/
 
-/* Standard Comment */
+.breadcrumb ul {
+	background: #E6E6E6;
+	}
+	
+	.breadcrumb ul li {
+		display: inline-block;
+		margin-right: 20px;
+		position: relative;
+		}
+		
+	.breadcrumb ul li:after { /* Move to Skin Style Sheet */
+		content: "/";
+		position: absolute;
+		right: -17px;
+		top: 3px;
+		}
+	
+	.breadcrumb ul li:last-child:after { /* Move to Skin Style Sheet */
+		content: "";
+		}
+
+		.breadcrumb ul li a,
+		.breadcrumb ul li span {
+			display: block;
+			line-height: 30px;
+			}
+	
+			.breadcrumb ul li:last-child a {
+				font-weight: bold;
+				margin: 0;
+				}
+				
+/* Separator Settings ***********************/
+
+.breadcrumb ul .sep { /* This removes the default breadcrumb separators, speak to devs about getting default glyph removed */
+	display: none;
+	}
