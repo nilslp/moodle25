@@ -1,0 +1,15 @@
+/*-----------------------------------------------------------------------------------*/
+/* Section Comment
+/*-----------------------------------------------------------------------------------*/
+
+/* Sub-Section Comment ***********************/
+
+/* Standard Comment */
+
+.skip-block,
+.skip,
+.accesshide{
+	position: absolute;
+	text-indent: -9999px;
+	visibility: hidden;
+	}

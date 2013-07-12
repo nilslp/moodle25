@@ -5,9 +5,9 @@
 if( !isloggedin() ){
 		 
 		echo '<div class="region-content">';
-		include("$CFG->dirroot/theme/$CFG->theme/layout/index_form.html");
-		// echo $SITE->summary;
+		echo'<div class="anonymous-content">';
 		echo $PAGE->theme->settings->customanonhomepagecontent;
+		include("$CFG->dirroot/theme/$CFG->theme/layout/index_form.html");
 		echo '</div>';
 		 
 }else if ($SITE->numsections > 0) {

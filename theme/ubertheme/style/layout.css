@@ -140,7 +140,7 @@ body{
 /* First Sidebar Only **********/
 
 .side-pre-only #page-content #region-main{ /* Remove after development if empty */
-
+	
 	}
 
 /* Second Sidebar Only **********/
@@ -189,19 +189,24 @@ body{
 
 .side-pre-only #page-content #region-main-wrap,
 .side-post-only #page-content #region-main-wrap{
-	width: 552px;
+	width: 567px;
 	}
 
+.side-pre-only #page-content #region-main,
+.side-post-only #page-content #region-main{
+	width: 97%;
+	}
+	
 /* First Sidebar Only **********/
 
 .side-pre-only #page-content #region-main{
-	padding: 0 0 0 5%;
+	padding: 0 0 0 3%;
 	}
 
 /* Second Sidebar Only **********/
 
 .side-post-only #page-content #region-main{
-	padding: 0 5% 0 0;
+	padding: 0 3% 0 0;
 	}
 
 /* No Sidebars **********/
@@ -244,19 +249,24 @@ body{
 
 .side-pre-only #page-content #region-main-wrap,
 .side-post-only #page-content #region-main-wrap{
-	width: 690px;
+	width: 720px;
+	}
+
+.side-pre-only #page-content #region-main,
+.side-post-only #page-content #region-main{
+	width: 97%;
 	}
 
 /* First Sidebar Only **********/
 
 .side-pre-only #page-content #region-main{
-	padding: 0 0 0 5%;
+	padding: 0 0 0 3%;
 	}
 
 /* Second Sidebar Only **********/
 
 .side-post-only #page-content #region-main{
-	padding: 0 5% 0 0;
+	padding: 0 3% 0 0;
 	}
 
 /* No Sidebars **********/
@@ -302,16 +312,21 @@ body{
 	width: 900px;
 	}
 
+.side-pre-only #page-content #region-main,
+.side-post-only #page-content #region-main{
+	width: 97%;
+	}
+
 /* First Sidebar Only **********/
 
 .side-pre-only #page-content #region-main{
-	padding: 0 0 0 5%;
+	padding: 0 0 0 3%;
 	}
 
 /* Second Sidebar Only **********/
 
 .side-post-only #page-content #region-main{
-	padding: 0 5% 0 0;
+	padding: 0 3% 0 0;
 	}
 
 /* No Sidebars **********/
