@@ -26,15 +26,15 @@ $collapsecourselist = (isset($PAGE->theme->settings->collapsecourselist)) ? $PAG
 $showmenu = empty($PAGE->layout_options['nocustommenu']);
 
 if(isset($PAGE->theme->settings->totaramenu)){
-		$show_totaramenu = ($PAGE->theme->settings->totaramenu > 0);
+	$show_totaramenu = ($PAGE->theme->settings->totaramenu > 0);
 }else{
-		$show_totaramenu = true;
+	$show_totaramenu = true;
 }
 
 if(isset($PAGE->theme->settings->appendcustommenuitems)){
-		$appendmenu = $PAGE->theme->settings->appendcustommenuitems;
+	$appendmenu = $PAGE->theme->settings->appendcustommenuitems;
 }else{
-		$appendmenu = false;
+	$appendmenu = false;
 }
 
 // if the site has defined a custom menu we display that,
@@ -46,20 +46,20 @@ $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && $custommenu);
 
 /*global $CFG,$DB,$USER;
 if ($DB->get_field('user','screenreader',array('id'=>$USER->id))) {
-		$screenreader = true;
+	$screenreader = true;
 } else {
-		$screenreader = false;
+	$screenreader = false;
 }*/
 
 if($istotara && $show_totaramenu){
 // totara menu
-		$totaramenuon = true;
-		$menudata = totara_build_menu();
-		$totara_core_renderer = $PAGE->get_renderer('totara_core');
-		$tmenu = '<div id="totara-menu" class="tt-main-menu">'.$totara_core_renderer->print_totara_menu($menudata).'</div>';
+	$totaramenuon = true;
+	$menudata = totara_build_menu();
+	$totara_core_renderer = $PAGE->get_renderer('totara_core');
+	$tmenu = '<div id="totara-menu" class="tt-main-menu">'.$totara_core_renderer->print_totara_menu($menudata).'</div>';
 }
 else {
-		$totaramenuon = false;
+	$totaramenuon = false;
 }
 // containing elements for menu
 $menustart = '<div class="yui3-menu-content"><div>';
@@ -76,25 +76,25 @@ $displaylogo = !isset($PAGE->theme->settings->displaylogo) || $PAGE->theme->sett
 
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
-		$bodyclasses[] = 'side-pre-only';
+	$bodyclasses[] = 'side-pre-only';
 } else if ($showsidepost && !$showsidepre) {
-		$bodyclasses[] = 'side-post-only';
+	$bodyclasses[] = 'side-post-only';
 } else if (!$showsidepost && !$showsidepre) {
-		$bodyclasses[] = 'content-only';
+	$bodyclasses[] = 'content-only';
 }
 if ($hascustommenu) {
-		$bodyclasses[] = 'has_custom_menu';
+	$bodyclasses[] = 'has_custom_menu';
 }
 /*if ($screenreader) {
-		$bodyclasses[] = 'screen-reader-enabled';
+	$bodyclasses[] = 'screen-reader-enabled';
 }*/
 
 /*switch ($PAGE->theme->settings->blockstyle) {
-		case 4:	$cn_blocktype = "sideblock-sticky"; break;
-		case 3:	$cn_blocktype = "sideblock-minimal"; break;
-		case 2:	$cn_blocktype = "sideblock-plain"; break;
-		case 1: 
-		default: $cn_blocktype = "sideblock-basic"; break;
+	case 4:	$cn_blocktype = "sideblock-sticky"; break;
+	case 3:	$cn_blocktype = "sideblock-minimal"; break;
+	case 2:	$cn_blocktype = "sideblock-plain"; break;
+	case 1: 
+	default: $cn_blocktype = "sideblock-basic"; break;
 }*/
 
 // Construct Page Title
@@ -104,7 +104,7 @@ $page_title.= (isset($PAGE->theme->settings->additionalpagetitle)) ? $SITE->full
 // Favicon
 $favicon = (!empty($PAGE->theme->settings->favicon)) ? $PAGE->theme->settings->favicon : $OUTPUT->pix_url('favicon', 'theme');
 if($istotara) {
-		$favicon = (!empty($PAGE->theme->settings->favicon)) ? $PAGE->theme->settings->favicon : 'http://themes.learningpool.com/m2/example_images/favicons/totara_favicon.ico';
+	$favicon = (!empty($PAGE->theme->settings->favicon)) ? $PAGE->theme->settings->favicon : 'http://themes.learningpool.com/m2/example_images/favicons/totara_favicon.ico';
 }
 
 echo $OUTPUT->doctype();
@@ -112,134 +112,134 @@ echo $OUTPUT->doctype();
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
 	<meta charset="utf-8">
-		<meta name='viewport' content='width=device-width'>
-		<title><?php echo $page_title ?></title>
-		<link rel="shortcut icon" href="<?php echo $favicon ?>" />
-		<?php 
-				theme_ubertheme_init_yui();
-				echo $OUTPUT->standard_head_html();
-		?>
+	<meta name='viewport' content='width=device-width'>
+	<title><?php echo $page_title ?></title>
+	<link rel="shortcut icon" href="<?php echo $favicon ?>" />
+	<?php 
+	theme_ubertheme_init_yui();
+	echo $OUTPUT->standard_head_html();
+	?>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
-<?php echo $OUTPUT->standard_top_of_body_html() ?>
-<div id="page">
-<?php if (!empty($PAGE->theme->settings->customhtmltop)) echo $PAGE->theme->settings->customhtmltop; ?>
-<?php if ($hasheading || $hasnavbar) { ?>
+	<?php echo $OUTPUT->standard_top_of_body_html() ?>
+	<div id="page">
+		<?php if (!empty($PAGE->theme->settings->customhtmltop)) echo $PAGE->theme->settings->customhtmltop; ?>
+		<?php if ($hasheading || $hasnavbar) { ?>
 
-<section id="section-header">
-		<div id="page-header">
+		<section id="section-header">
+			<div id="page-header">
 				<?php if ($hasheading) { ?>
-		<div class="meta">
-			<h1 class="headermain"><?php echo $PAGE->heading ?></h1>
-												<div class="headermenu"><?php
-												if ($haslogininfo) { echo $OUTPUT->login_info(); }
-			if (!empty($PAGE->layout_options['langmenu'])) { echo $OUTPUT->lang_menu(); }
-			echo $PAGE->headingmenu
-			?></div>
-		</div>
-				
-		<?php echo ubertheme_customBanner(); ?>
+				<div class="meta">
+					<h1 class="headermain"><?php echo $PAGE->heading ?></h1>
+					<div class="headermenu"><?php
+					if ($haslogininfo) { echo $OUTPUT->login_info(); }
+					if (!empty($PAGE->layout_options['langmenu'])) { echo $OUTPUT->lang_menu(); }
+					echo $PAGE->headingmenu
+					?></div>
+				</div>
 
-		<?php } ?>
-				
+				<?php echo ubertheme_customBanner(); ?>
+
+				<?php } ?>
+
 				<?php
-						if ($showmenu) { 
-						
-								echo '<div id="custommenu" class="custommenu clearfix">';
+				if ($showmenu) { 
 
-								// if totara, append items to totara menu, custom emnu exists
-								if ( $hascustommenu && $appendmenu && $totaramenuon ) {
-										echo $menustart;
-										echo $tmenu;
-										echo $custommenu;
-										echo $menuend;
-								}
-								else if ( $hascustommenu && !$appendmenu && $totaramenuon ) {
-										echo $menustart;
-										echo $tmenu;
-										echo $menuend;
-								}
-								else if( !$hascustommenu && $totaramenuon ) {
-										echo $menustart;
-										echo $tmenu;
-										echo $menuend;
-								}
-								else if( $hascustommenu && !$totaramenuon ) {
-										echo $menustart;
-										echo $custommenu;
-										echo $menuend;
-								}
+					echo '<div id="custommenu" class="custommenu clearfix">';
 
-								echo "</div>";
-						} 
+					// if totara, append items to totara menu, custom menu exists
+					if ( $hascustommenu && $appendmenu && $totaramenuon ) {
+						echo $menustart;
+						echo $tmenu;
+						echo $custommenu;
+						echo $menuend;
+					}
+					else if ( $hascustommenu && !$appendmenu && $totaramenuon ) {
+						echo $menustart;
+						echo $tmenu;
+						echo $menuend;
+					}
+					else if( !$hascustommenu && $totaramenuon ) {
+						echo $menustart;
+						echo $tmenu;
+						echo $menuend;
+					}
+					else if( $hascustommenu && !$totaramenuon ) {
+						echo $menustart;
+						echo $custommenu;
+						echo $menuend;
+					}
+
+					echo "</div>";
+				} 
 				?>
 
-				
+
 				<?php echo makeTicker(); ?>
-				
+
 				<?php if ($hasnavbar) { ?>
-						<div class="navbar clearfix">
-								<?php if ($showbreadcrumb) { ?>
-								<div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
-								<?php } ?>
-								<div class="navbutton"> <?php echo $PAGE->button; ?></div>
-						</div>
+				<div class="navbar clearfix">
+					<?php if ($showbreadcrumb) { ?>
+					<div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
+					<?php } ?>
+					<div class="navbutton"> <?php echo $PAGE->button; ?></div>
+				</div>
 				<?php } ?>
-		</div>
-<?php } ?>
+			</div>
+			<?php } ?>
+
+		</section>
+
+		<!-- END OF HEADER -->
+
+		<section id="page-content">
+
+			<div id="region-main-box">
+
+				<?php if ($hassidepre) { ?>
+				<aside id="region-pre" class="block-region <?= $cn_blocktype ?> column">
+					<div class="region-content">
+						<?php echo $OUTPUT->blocks_for_region('side-pre') ?>
+					</div>
+				</aside><?php } ?><article id="region-main-wrap" class="column">
+				<div id="region-main">
+					<div class="region-content">
+						<?php echo $OUTPUT->main_content() ?>
+					</div>
+				</div>
+			</article><?php if ($hassidepost) { ?><aside id="region-post" class="block-region <?= $cn_blocktype ?> column">
+			<div class="region-content">
+				<?php echo $OUTPUT->blocks_for_region('side-post') ?>
+			</div>
+		</aside>
+		<?php } ?>
+
+	</div>
 
 </section>
 
-<!-- END OF HEADER -->
+<div class="push"></div> 
 
-		<section id="page-content">
-				
-						<div id="region-main-box">
-						
-							<?php if ($hassidepre) { ?>
-								<aside id="region-pre" class="block-region <?= $cn_blocktype ?> column">
-										<div class="region-content">
-												<?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-										</div>
-								</aside><?php } ?><article id="region-main-wrap" class="column">
-								<div id="region-main">
-												<div class="region-content">
-														<?php echo $OUTPUT->main_content() ?>
-												</div>
-										</div>
-								</article><?php if ($hassidepost) { ?><aside id="region-post" class="block-region <?= $cn_blocktype ?> column">
-										<div class="region-content">
-												<?php echo $OUTPUT->blocks_for_region('side-post') ?>
-										</div>
-								</aside>
-								<?php } ?>
-										
-						</div>
-	 
-		</section>
-		
-		<div class="push"></div> 
-		
 </div>
 
 <!-- START OF FOOTER -->
 
 <section id="section-footer">
 
-    <div id="zone-footer">
-    
-        <?php if ($hasfooter) { ?>
-                    <div id="page-footer" class="clearfix">
-                            <?php
-                            echo $OUTPUT->standard_footer_html();
-                            ?>
-                    </div>
-                    <?php } ?>
-            <?php if (!empty($PAGE->theme->settings->customhtmlbottom)) echo $PAGE->theme->settings->customhtmlbottom; ?>
-            
-            <?php if ($hasfooter) { echo renderSupportWidget();} ?>
-            
-    </div>
+	<div id="zone-footer">
+
+		<?php if ($hasfooter) { ?>
+		<div id="page-footer" class="clearfix">
+			<?php
+			echo $OUTPUT->standard_footer_html();
+			?>
+		</div>
+		<?php } ?>
+		<?php if (!empty($PAGE->theme->settings->customhtmlbottom)) echo $PAGE->theme->settings->customhtmlbottom; ?>
+
+		<?php if ($hasfooter) { echo renderSupportWidget();} ?>
+
+	</div>
 
 </section>
 <?= ubertheme_featureSlider(); ?>

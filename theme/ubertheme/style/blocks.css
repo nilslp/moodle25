@@ -6,7 +6,65 @@
 
 /* Standard Comment */
 
-#page-content .block{
-	background-color: #F0F0F0;
-	padding: 10px;
+.block{
+	margin: 0 0 10px;
+	xpadding: 10px;
 	}
+
+	.block .header{
+		/*background-color: [[setting:sbbgc]];
+		color: [[setting:sbtc]];*/
+		background-color: #F0F0F0;
+		margin: 0 0 3px;
+		padding: 10px;
+		position: relative;
+		}
+
+		.block .block_action{
+			xfloat: right;
+			padding-top: 6px;
+			position: absolute;
+			right: 10px;
+			}
+
+			.block .block_action .block-hider-hide,
+			.block.hidden .block_action .block-hider-show{ /* Show '-' when normal, Show '+' when hidden */
+				display: inline-block;
+				}
+
+			.block .block_action .block-hider-show,
+			.block.hidden .block_action .block-hider-hide{ /* Hide '-' when hidden, Show '+' when normal */
+				display: none;
+				}
+
+			.block .header .block_action img,
+			.block .header .block_action input {
+				margin-left: 5px;
+				}
+
+		.block .header h2{
+			font-size: 100%;
+			letter-spacing: -1px;
+			margin: 0;
+			text-transform: uppercase;
+			width: 158px;
+			}
+
+	.block .content{
+		/*background-color: [[setting:sbbgc]];
+		color: [[setting:sbtc]];*/
+		background-color: #F0F0F0;
+		padding: 10px;
+		}
+
+		.block.hidden .content{
+			display: none;
+			}
+
+/*-----------------------------------------------------------------------------------*/
+/* Specfics
+/*-----------------------------------------------------------------------------------*/
+
+				.block_navigation .block_tree .tree_item.branch.navigation_node > a{
+					font-weight: bold;
+					}
