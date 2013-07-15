@@ -2,10 +2,19 @@
 /* Breadcrumb
 /*-----------------------------------------------------------------------------------*/
 
-/* Trail Settings ***********************/
+/* Global Screen Settings **********/
+
+.navbar{
+	background: #FFF;
+	padding-top: 20px;
+	}
+
+.navbar-wrapper{
+	margin: 0 auto;
+	}
 
 .breadcrumb ul {
-	background: #E6E6E6;
+	background: #FFF;
 	}
 	
 	.breadcrumb ul li {
@@ -36,8 +45,73 @@
 				margin: 0;
 				}
 				
-/* Separator Settings ***********************/
+/* Separator Setings ***********************/
 
 .breadcrumb ul .sep { /* This removes the default breadcrumb separators, speak to devs about getting default glyph removed */
 	display: none;
+	}
+
+/* Wide Screen Setting **********/
+
+.wide .navbar-wrapper{
+	width: 1180px;
+	}
+
+/* Normal Screen Setting **********/
+
+.normal .navbar-wrapper{
+	width: 940px;
+	}
+
+/* Narrow Screen Setting **********/
+
+.narrow .navbar-wrapper{
+	width: 736px;
+	}
+
+/* Mobile Screen Setting **********/
+
+.mobile .navbar-wrapper{
+	width: 100%;
+	}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Editing Button
+/*-----------------------------------------------------------------------------------*/
+
+/* Global Screen Settings **********/
+
+.editing-bar{
+	background: #FFF;
+	text-align: right;
+	width: 100%;
+	}
+
+.editing-bar .nav-button{
+	margin: 0 auto;
+	}
+
+/* Wide Screen Setting **********/
+
+.wide .editing-bar .nav-button{
+	width: 1180px;
+	}
+
+/* Normal Screen Setting **********/
+
+.normal .editing-bar .nav-button{
+	width: 940px;
+	}
+
+/* Narrow Screen Setting **********/
+
+.narrow .editing-bar .nav-button{
+	width: 736px;
+	}
+
+/* Mobile Screen Setting **********/
+
+.mobile .editing-bar .nav-button{
+	width: 100%;
 	}

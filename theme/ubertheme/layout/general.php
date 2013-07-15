@@ -179,12 +179,16 @@ echo $OUTPUT->doctype();
 
 				<?php if ($hasnavbar) { ?>
 				<div class="navbar clearfix">
-					<?php if ($showbreadcrumb) { ?>
-					<div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
-					<?php } ?>
-					<div class="navbutton"> <?php echo $PAGE->button; ?></div>
+                	<div class="navbar-wrapper">
+						<?php if ($showbreadcrumb) { ?>
+                        <div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
+                        <?php } ?>
+                      </div>
 				</div>
 				<?php } ?>
+                <div class="editing-bar clearfix">
+                	<div class="nav-button"> <?php echo $PAGE->button; ?></div>
+                </div>
 			</div>
 			<?php } ?>
 

@@ -21,9 +21,9 @@ M.theme_ubertheme.misc = function(Y) {
 		var b = Y.one('body');
 		// console.log('Pure Javascript - Width: ' + x);
 
-		if (x <= 340) {
+		if (x <= 780) {
 			b.removeClass('narrow').removeClass('normal').removeClass('wide').addClass('mobile');
-		} else if (x <= 740) {
+		} else if (x <= 980) {
 			b.removeClass('mobile').removeClass('normal').removeClass('wide').addClass('narrow');
 		} else if (x < 1220) {
 			b.removeClass('mobile').removeClass('narrow').removeClass('wide').addClass('normal');

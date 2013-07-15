@@ -1,1 +1,18 @@
 #page-site-index
+
+/*-----------------------------------------------------------------------------------*/
+/* Anonymous Home Page
+/*-----------------------------------------------------------------------------------*/
+
+/* Sub-Section Comment ***********************/
+
+/* Standard Comment */
+
+.anonymous-content,
+#page-site-index .loginbox{
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	width: 50%;
+	*zoom: 1;
+	}

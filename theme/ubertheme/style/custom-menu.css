@@ -2,17 +2,26 @@
 /* Custom Menu
 /*-----------------------------------------------------------------------------------*/
 
+/* Global Screen Settings **********/
+
 #custommenu *{
 	background: none;
 	border: none;
-	cursor: pointer;
 	float: none;
 	padding: 0;
 	}
+
+#custommenu{
+	background: rgba(255,255,255,0.5);
+	width: 100%;
+	}	
+	
+	.yui3-menu-content{
+		margin: 0 auto;
+		}		
 	
 	#custommenu ul{
-		background: #E6E6E6;
-		cursor: pointer;
+		
 		}
 		
 		#custommenu ul li{
@@ -21,9 +30,35 @@
 		
 			#custommenu ul li a{
 				display: block;
+				cursor: pointer;
 				line-height: 30px;
 				}
 			
 				#custommenu ul li ul li{
 					display: list-item;
 					}
+					
+
+/* Wide Screen Setting **********/
+
+.wide .yui3-menu-content{
+	width: 1180px;
+	}
+
+/* Normal Screen Setting **********/
+
+.normal .yui3-menu-content{
+	width: 940px;
+	}
+
+/* Narrow Screen Setting **********/
+
+.narrow .yui3-menu-content{
+	width: 736px;
+	}
+
+/* Mobile Screen Setting **********/
+
+.mobile .yui3-menu-content{
+	width: 100%;
+	}

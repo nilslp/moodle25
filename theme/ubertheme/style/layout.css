@@ -73,14 +73,6 @@ body{
 	zoom: 1;
 	}
 	
-.meta,
-.banner,
-#ticker{
-	height: 30px;
-	margin-bottom: 3px;
-	overflow: hidden !important; /* Remove after development */
-	}
-	
 #page-content #region-main-box .column{
 	display: inline-block;
 	*display: inline;
@@ -102,7 +94,6 @@ body{
 		/* background: #999; Remove after development */
 		}
 
-
 /*-----------------------------------------------------------------------------------*/
 /* Mobile Screen | < 760px - Media Queries 
 /*-----------------------------------------------------------------------------------*/
@@ -118,7 +109,9 @@ body{
 	width: 96%;
 	}
 
+#page-content #region-main,
 #page-content #region-main-wrap{
+	padding: 0;
 	width: 100%;
 	}
 
@@ -164,9 +157,13 @@ body{
 
 /* Both Sidebars **********/
 
-@media all and (min-width: 756px) and (min-device-width: 756px), (max-device-width: 800px) and (min-width: 756px) and (orientation:landscape){
+@media all and (min-width: 780px) and (min-device-width: 780px), (max-device-width: 800px) and (min-width: 780px) and (orientation:landscape){
 
-#page-header,
+#page-header{
+	margin: 0;
+	width: 100%;
+	}
+	
 #region-main-box,
 #zone-footer{
 	margin: 0 10px;
@@ -175,6 +172,11 @@ body{
 	
 #page-content #region-main-wrap{
 	width: 398px;
+	}
+
+#page-content #region-main{
+	padding: 0 5%;
+	width: 90%;
 	}
 
 #page-content #region-pre{
@@ -226,7 +228,11 @@ body{
 
 @media all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape){
 
-#page-header,
+#page-header{
+	margin: 0;
+	width: 100%;
+	}
+	
 #region-main-box,
 #zone-footer{
 	margin: 0 10px;
@@ -235,6 +241,11 @@ body{
 
 #page-content #region-main-wrap{
 	width: 500px;
+	}
+	
+#page-content #region-main{
+	padding: 0 5%;
+	width: 90%;
 	}
 
 #page-content #region-pre{
@@ -274,6 +285,11 @@ body{
 .content-only #page-content #region-main-wrap{
 	width: 940px;
 	}
+
+.content-only #page-content #region-main{
+	padding: 0;
+	width: 100%;
+	}
 	
 }
 
@@ -282,11 +298,15 @@ body{
 /* Wide Screen | 1200px - Media Queries 
 /*-----------------------------------------------------------------------------------*/
 
-/* Wide **********/
+/* Both Sidebars **********/
 
-@media all and (min-width: 1200px) and (min-height: 760px){
+@media all and (min-width: 1220px) and (min-height: 760px){
 
-#page-header,
+#page-header{
+	margin: 0;
+	width: 100%;
+	}
+	
 #region-main-box,
 #zone-footer{
 	margin: 0 10px;
@@ -295,6 +315,11 @@ body{
 
 #page-content #region-main-wrap{
 	width: 620px;
+	}
+
+#page-content #region-main{
+	padding: 0 5%;
+	width: 90%;
 	}
 
 #page-content #region-pre{
@@ -332,7 +357,12 @@ body{
 /* No Sidebars **********/
 
 .content-only #page-content #region-main-wrap{
-	width: 1180px;
+	width: 100%;
+	}
+
+.content-only #page-content #region-main{
+	padding: 0;
+	width: 100%;
 	}
 
 }

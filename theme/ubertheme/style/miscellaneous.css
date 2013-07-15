@@ -20,7 +20,7 @@ a.label:hover, a.label:focus, a:hover, a:focus{
 
 #section-header{ /* For Default Theme */
 	background-image: url([[pix:theme|banner_default]]);
-	height: 400px;
+	
 	}
 
 	#page-header{
@@ -64,8 +64,4 @@ a.label:hover, a.label:focus, a:hover, a:focus{
 
 		#page-header .bg{
 			visibility: hidden;
-			}
-
-		#page-header .navbar{
-			display: none;
 			}

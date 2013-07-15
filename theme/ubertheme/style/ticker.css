@@ -2,6 +2,109 @@
 /* Section Comment
 /*-----------------------------------------------------------------------------------*/
 
-/* Sub-Section Comment ***********************/
+/* Global Screen Settings **********/
 
-/* Standard Comment */
+#ticker{
+	background: #FFF;
+	padding-top: 20px;
+	width: 100%;
+	}
+	
+#ticker .wrapper{
+	background: #FAFAFA;
+	margin: 0 auto;
+	}
+
+#ticker h2{
+	color: #2087B3;
+	display: inline-block;
+	*display: inline;
+	font-size: 100%;
+	line-height: 30px;
+	margin: 0;
+	text-indent: 10px;
+	vertical-align: top;
+	width: 60px;
+	zoom: 1;
+	}
+
+#ticker ul{
+	display: inline-block;
+	*display: inline;
+	height: 30px;
+	margin: 0;
+	position: relative;
+	vertical-align: top;
+	zoom: 1;
+	}
+
+#ticker li{
+	height: 30px;
+	left: 0 !important;
+	margin: 0;
+	position: absolute;
+	}
+
+#ticker li a{
+	display: block;
+	color: #666;
+	height: 30px;
+	line-height: 30px !important;
+	}
+
+#ticker .controls{
+	display: inline-block;
+	*display: inline;
+	margin: 0;
+	width: 30px;
+	vertical-align: top;
+	zoom: 1;
+	}
+
+	#ticker .controls button{
+		background: #2087B3 url([[pix:theme|bg_ticker-control]]) no-repeat center center;
+		border: none;
+		height: 30px;
+		padding: 0;
+		width: 30px;
+		}
+
+/* Wide Screen Setting **********/
+
+.wide #ticker .wrapper{
+	width: 1180px;
+	}
+
+.wide #ticker ul{
+	width: 1090px;
+	}
+
+/* Normal Screen Setting **********/
+
+.normal #ticker .wrapper{
+	width: 940px;
+	}
+
+.normal #ticker ul{
+	width: 850px;
+	}
+
+/* Narrow Screen Setting **********/
+
+.narrow #ticker .wrapper{
+	width: 736px;
+	}
+
+.narrow #ticker ul{
+	width: 646px;
+	}
+
+/* Mobile Screen Setting **********/
+
+.mobile #ticker .wrapper{
+	width: 100%;
+	}
+
+.mobile #ticker ul{
+	width: 250px;
+	}

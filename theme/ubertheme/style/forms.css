@@ -5,7 +5,7 @@
 /* Form | Fieldset | Legend | General Form Settings  ***********************/
 
 form {
-	background: #FF9933; /* Delete before production */
+	background: #F0F0F0; /* Delete before production */
 	display: block !important;
     margin: 0 0 20px;
 	padding: 20px;
