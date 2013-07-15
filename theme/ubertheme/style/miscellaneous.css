@@ -8,8 +8,8 @@
 
 a.label:hover, a.label:focus, a:hover, a:focus{
 	color: #0088cc;
-	padding-left: 5px;
-	transition: all 0.3s ease-in-out 0s; 
+	xpadding-left: 5px;
+	xtransition: all 0.3s ease-in-out 0s; 
 	text-decoration: underline;
 	}
 
