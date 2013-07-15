@@ -276,18 +276,37 @@ if (!isloggedin() && $THEME->settings->customanonhomepage) {
 $THEME->javascripts = array(
 	'init',
 	'yuimods' => array(
-		'node', 
-		'event', 
-		'selector-css3', 
-		'event-hover', 
-		'transition', 
-		'anim'
+        'anim', 
+        'console', 
+        'cookie', 
+        'dd-constrain'
+        'dd-delegate', 
+        'event', 
+        'event-hover', 
+        'json-parse', 
+        'json-stringify', 
+        'node', 
+        'selector-css3', 
+        'transition', 
 		)
 	);
 
 $THEME->javascripts_footer = array(
+	'course-list',
+	'courses',
 	'cycling-banners',
 	'feature-slider',
+	'html-corrections',
+	'paging',
+	'screen-reader',
+	'sideblock-stuff',
+	'support-widget',
+	'tabs',
+	'theme-settings',
+	'ticker',
+	'toggle-course-list',
+	'util.browser-fitness',
+	'yui-carousel',
 	);
 
 $THEME->csspostprocess = 'ubertheme_process_css';

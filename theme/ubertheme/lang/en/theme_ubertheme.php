@@ -301,3 +301,16 @@ $string['tl_home_logged_in'] = 'Home page, but when logged in.';
 $string['bc_not_shown'] = 'Not Shown';
 $string['bc_all_pages'] = 'All Pages';
 $string['startsignup'] = 'Create new account';
+
+/** Collapsible Course List **/
+
+$string['course-list-show-az'] = "Show A-Z List of Courses";
+$string['course-list-show-cat'] = "Show Category List of Courses";
+$string['course-list-goto-cat'] = "[Go To Category &raquo;]";
+$string['course-list-expand-all'] = "Expand All";
+$string['course-list-collapse-all'] = "Collapse All";
+
+/** Search Widget **/
+
+$string['label:searchwidget_input'] = 'Course Search';
+$string['label:searchwidget_button'] = 'Go';
