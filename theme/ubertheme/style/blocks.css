@@ -8,6 +8,7 @@
 
 .block{
 	margin: 0 0 10px;
+	min-height: 60px;
 	overflow: hidden;
 	position: relative;
 	xpadding: 10px;
@@ -58,12 +59,18 @@
 		background-color: [[setting:sbbgc]];
 		color: [[setting:sbtc]];
 		background-color: #F0F0F0; /* Development Only */
+		margin-top: 0;
 		padding: 10px;
+		transition: all 0.2s ease-in-out 0s; 
 		}
 
 		.block.hidden .content{
-			display: none;
+			height: 0;
+			padding: 0;
+			transform: scaleY(0.5);
+			transform-origin: top center;
 			}
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Specfics
