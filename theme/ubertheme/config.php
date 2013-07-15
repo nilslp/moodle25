@@ -288,6 +288,7 @@ $THEME->javascripts = array(
 $THEME->javascripts_footer = array(
 		'cycling-banners',
 		'feature-slider',
+		'misc',
 		);
 
 $THEME->csspostprocess = 'ubertheme_process_css';

@@ -1,4 +1,4 @@
-M.theme_ubertheme.miscellaneous = function(Y) {
+M.theme_ubertheme.misc = function(Y) {
 	
 	function getWindowSize() {
 
