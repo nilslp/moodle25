@@ -4,13 +4,19 @@
 $page_title = ($PAGE->pagelayout != 'frontpage') ? $PAGE->title . ' | ' : '';
 $page_title.= (isset($PAGE->theme->settings->additionalpagetitle)) ? $SITE->fullname.' '.$PAGE->theme->settings->additionalpagetitle : $SITE->fullname;
 
+// Favicon
+$favicon = (!empty($PAGE->theme->settings->favicon)) ? $PAGE->theme->settings->favicon : $OUTPUT->pix_url('favicon', 'theme');
+if($istotara) {
+	$favicon = (!empty($PAGE->theme->settings->favicon)) ? $PAGE->theme->settings->favicon : 'http://themes.learningpool.com/m2/example_images/favicons/totara_favicon.ico';
+}
+
 echo $OUTPUT->doctype();
 
 ?>
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
 		<title><?php echo $PAGE->title ?></title>
-		<link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
+		<link rel="shortcut icon" href="<?php echo $favicon ?>" />
 		<?php 
 				theme_ubertheme_init_yui();
 				echo $OUTPUT->standard_head_html();

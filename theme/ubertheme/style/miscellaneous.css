@@ -6,6 +6,24 @@
 
 /* Standard Comment */
 
+/*-----------------------------------------------------------------------------------*/
+/* Theme Settings Pages
+/*-----------------------------------------------------------------------------------*/
+
+body.path-admin-setting form#adminsettings .admin-setting-group .felement,
+body#page-theme-ubertheme-basic-settings form.theme-settings .collapsible .fcontainer{
+	display: block;
+	}
+
+	body.path-admin-setting form#adminsettings .admin-setting-group.show .felement,
+	body#page-theme-ubertheme-basic-settings form.theme-settings .collapsible.collapsed .fcontainer{
+		display: none;
+		}
+
+/*-----------------------------------------------------------------------------------*/
+/* Global
+/*-----------------------------------------------------------------------------------*/
+
 a.label:hover, a.label:focus, a:hover, a:focus{
 	color: #0088cc;
 	xpadding-left: 5px;
