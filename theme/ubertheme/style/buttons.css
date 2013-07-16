@@ -8,7 +8,8 @@
 
 button,
 input[type="button"],
-input[type="submit"]{
+input[type="submit"],
+.btn{
 	background: #333 url([[pix:theme|bg_white-chevron]]) no-repeat right center;
 	border: none;
 	border-right: 20px solid transparent;
@@ -28,20 +29,23 @@ input[type="submit"]{
 
 button:first-child,
 input[type="button"]:first-child,
-input[type="submit"]:first-child {
+input[type="submit"]:first-child,
+.btn:first-child {
     *margin-left: 0
     }
 
 button:active,
 input[type="button"]:active,
-input[type="submit"]:active {
+input[type="submit"]:active,
+.btn:active {
 	background-color: #111;
     outline: 0;
     }
 
 button:focus,
-input[type="button"]:focus
-input[type="submit"]:focus {
+input[type="button"]:focus,
+input[type="submit"]:focus,
+.btn:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
@@ -53,7 +57,10 @@ button[disabled],
 input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="submit"]:hover,
-input[type="submit"]:focus{
+input[type="submit"]:focus,
+.btn:hover,
+.btn:focus,
+.btn.disabled{
     background-color: #222;
     }
 

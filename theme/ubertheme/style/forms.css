@@ -15,6 +15,11 @@ fieldset {
     margin: 0 0 15px;
     }
 
+fieldset.surround {
+    border: 1px solid #E0E0E0;
+	padding: 15px;
+    }
+
 legend {
     border: 0;
     display: block;
@@ -22,9 +27,15 @@ legend {
     padding: 0;
     }
 
+fieldset.surround legend{
+	margin: 0;
+	padding: 0 10px;
+    }
+
 label,
 input,
 button,
+.btn,
 select,
 textarea {
     line-height: 40px;
@@ -32,18 +43,18 @@ textarea {
 
 input,
 button,
+.btn,
 select,
 textarea {
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif
+    font-family: inherit;
     }
 
 
 /* Labels & Placeholders ***********************/
 
 label {
-	background: #0088CC; /* Remove before production */
-    display: inline-block;
-	vertical-align: top;
+    xdisplay: inline-block;
+	vertical-align: middle;
     }
 	
 input::-moz-placeholder {
@@ -123,8 +134,9 @@ textarea {
 input[type="radio"],
 input[type="checkbox"] {
     *margin-top: 0;
-    margin: 4px 0 0;
+    margin: 2px 0 0;
     margin-top: 1px \9;
+	vertical-align: middle;
     }
 
 select:focus,
@@ -141,6 +153,7 @@ input[type="image"],
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
+.btn,
 input[type="radio"],
 input[type="checkbox"] {
     width: auto
@@ -157,7 +170,7 @@ input[type="file"] {
 
 select {
 	height: 40px;
-	padding: 3px;
+	padding: 6px;
 	}
 
 select[multiple],
@@ -183,9 +196,21 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-    background-color: #eeeeee;
+	border: none;
+    background: #999;
+	color: #666;
     cursor: not-allowed;
+	padding: 0 10px;
     }
+
+	input[disabled]:hover,
+	select[disabled]:hover,
+	textarea[disabled]:hover,
+	input[readonly]:hover,
+	select[readonly]:hover,
+	textarea[readonly]:hover {
+		background: #999;
+		}
 
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
@@ -193,6 +218,14 @@ input[type="radio"][readonly],
 input[type="checkbox"][readonly] {
     background-color: transparent
     }
+	
+
+/* Other Related Items ***********************/
+
+.helptooltip {
+    padding: 0 10px;
+    vertical-align: middle;
+	}
 
 /*-----------------------------------------------------------------------------------*/
 /* Index and Login Page Forms
