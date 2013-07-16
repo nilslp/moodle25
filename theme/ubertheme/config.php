@@ -32,6 +32,7 @@ $THEME->sheets = array(
 	'pagination',
 	'slideshows',
 	'support-widget',
+	'tables',
 	'tags',
 	'ticker',
 	'page-activity-reports-all-logs',
