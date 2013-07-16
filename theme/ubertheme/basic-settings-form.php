@@ -2,15 +2,15 @@
 
 global $CFG;
 require_once($CFG->dirroot.'/lib/formslib.php');
-MoodleQuickForm::registerElementType('lp_checkbox', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_checkbox');
-MoodleQuickForm::registerElementType('lp_editor', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_editor');
-MoodleQuickForm::registerElementType('lp_textarea', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_textarea');
-MoodleQuickForm::registerElementType('lp_colorpicker', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_colorpicker');
-MoodleQuickForm::registerElementType('lp_select', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_select');
-MoodleQuickForm::registerElementType('lp_static', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_static');
-MoodleQuickForm::registerElementType('lp_text', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_text');
-MoodleQuickForm::registerElementType('lp_filepicker', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_filepicker');
-MoodleQuickForm::registerElementType('lp_filemanager', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_filemanager');
+MoodleQuickForm::registerElementType('lp_checkbox', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_checkbox');
+MoodleQuickForm::registerElementType('lp_editor', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_editor');
+MoodleQuickForm::registerElementType('lp_textarea', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_textarea');
+MoodleQuickForm::registerElementType('lp_colorpicker', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_colorpicker');
+MoodleQuickForm::registerElementType('lp_select', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_select');
+MoodleQuickForm::registerElementType('lp_static', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_static');
+MoodleQuickForm::registerElementType('lp_text', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_text');
+MoodleQuickForm::registerElementType('lp_filepicker', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_filepicker');
+MoodleQuickForm::registerElementType('lp_filemanager', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_filemanager');
 
 class theme_ubertheme_admin_form extends moodleform {
 
@@ -124,6 +124,7 @@ class theme_ubertheme_admin_form extends moodleform {
 				
 						// Favicon URL
 						$mform->addElement('lp_text', 'favicon', get_string('favicon', 'theme_ubertheme'), array('size'=>'60'), get_string('favicon_help', 'theme_ubertheme'));
+						$mform->setType('favicon', PARAM_RAW_TRIMMED);
 						$mform->setDefault('favicon', $defaults->favicon);
 
 						// Autorun the Support Widget
@@ -132,10 +133,12 @@ class theme_ubertheme_admin_form extends moodleform {
 
 						// Link Color
 						$mform->addElement('lp_colorpicker', 'linkc', get_string('linkc', 'theme_ubertheme'),null, get_string('linkc_help','theme_ubertheme'));
+						$mform->setType('linkc', PARAM_RAW_TRIMMED);
 						$mform->setDefault('linkc', $defaults->linkc);
 
 						// Page Background Color
 						$mform->addElement('lp_colorpicker', 'pagebgc', get_string('pagebgc', 'theme_ubertheme'),null, get_string('pagebgc_help','theme_ubertheme'));
+						$mform->setType('pagebgc', PARAM_RAW_TRIMMED);
 						$mform->setDefault('pagebgc', $defaults->pagebgc);
 
 						// Gradients
@@ -144,6 +147,7 @@ class theme_ubertheme_admin_form extends moodleform {
 
 						// Page Background Color
 						$mform->addElement('lp_colorpicker', 'pagebbgc', get_string('pagebbgc', 'theme_ubertheme'), null, get_string('pagebbgc_help','theme_ubertheme'));
+						$mform->setType('pagebbgc', PARAM_RAW_TRIMMED);
 						$mform->setDefault('pagebbgc', $defaults->pagebbgc);
 
 
@@ -190,10 +194,12 @@ class theme_ubertheme_admin_form extends moodleform {
 //
 						// Logo 1 (Primary, left side)
 						$mform->addElement('lp_text', 'logo1', get_string('logo1', 'theme_ubertheme'),array('size'=>'60'), get_string('logo1_help','theme_ubertheme'));
+						$mform->setType('logo1', PARAM_RAW_TRIMMED);
 						$mform->setDefault('logo1', $defaults->logo1);
 
 						// Logo 2 (Secondary, right side)
 						$mform->addElement('lp_text', 'logo2', get_string('logo2', 'theme_ubertheme'),array('size'=>'60'), get_string('logo2_help','theme_ubertheme'));
+						$mform->setType('logo2', PARAM_RAW_TRIMMED);
 						$mform->setDefault('logo2', $defaults->logo2);
 
 
@@ -233,10 +239,12 @@ class theme_ubertheme_admin_form extends moodleform {
 
 						// Main Navigation Text Color
 						$mform->addElement('lp_colorpicker', 'menutc', get_string('menutc', 'theme_ubertheme'), null, get_string('menutc_help','theme_ubertheme'));
+						$mform->setType('menutc', PARAM_RAW_TRIMMED);
 						$mform->setDefault('menutc', $defaults->menutc);
 
 						// Main Navigation Background Color
 						$mform->addElement('lp_colorpicker', 'menubgc', get_string('menubgc', 'theme_ubertheme'), null, get_string('menubgc_help','theme_ubertheme'));
+						$mform->setType('menubgc', PARAM_RAW_TRIMMED);
 						$mform->setDefault('menubgc', $defaults->menubgc);
 
 						// Gradient
@@ -282,10 +290,12 @@ class theme_ubertheme_admin_form extends moodleform {
 
 						// Background Color
 						$mform->addElement('lp_colorpicker', 'sbbgc', get_string('sbbgc', 'theme_ubertheme'), null, get_string('sbbgc_help','theme_ubertheme'));
+						$mform->setType('sbbgc', PARAM_RAW_TRIMMED);
 						$mform->setDefault('sbbgc', $defaults->sbbgc);
 
 						// Text Color
 						$mform->addElement('lp_colorpicker', 'sbtc', get_string('sbtc', 'theme_ubertheme'), null, get_string('sbtc_help','theme_ubertheme'));
+						$mform->setType('sbtc', PARAM_RAW_TRIMMED);
 						$mform->setDefault('sbtc', $defaults->sbtc);
 
 
@@ -315,14 +325,17 @@ class theme_ubertheme_admin_form extends moodleform {
 
 								// Complete Color
 								$mform->addElement('lp_colorpicker', 'mcpcompletecolor', get_string('mcpcompletecolor', 'theme_ubertheme'), null, get_string('mcpcompletecolor_help','theme_ubertheme'));
+								$mform->setType('mcpcompletecolor', PARAM_RAW_TRIMMED);
 								$mform->setDefault('mcpcompletecolor', $defaults->mcpcompletecolor);
 
 								// Incomplete Color
 								$mform->addElement('lp_colorpicker', 'mcpincompletecolor', get_string('mcpincompletecolor', 'theme_ubertheme'), null, get_string('mcpincompletecolor_help','theme_ubertheme'));
+								$mform->setType('mcpincompletecolor', PARAM_RAW_TRIMMED);
 								$mform->setDefault('mcpincompletecolor', $defaults->mcpincompletecolor);
 
 								// Not Attempted Color
 								$mform->addElement('lp_colorpicker', 'mcpnotattemptedcolor', get_string('mcpnotattemptedcolor', 'theme_ubertheme'), null, get_string('mcpnotattemptedcolor_help','theme_ubertheme'));
+								$mform->setType('mcpnotattemptedcolor', PARAM_RAW_TRIMMED);
 								$mform->setDefault('mcpnotattemptedcolor', $defaults->mcpnotattemptedcolor);
 				}
 

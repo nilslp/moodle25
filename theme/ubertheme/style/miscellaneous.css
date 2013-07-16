@@ -65,3 +65,53 @@ a.label:hover, a.label:focus, a:hover, a:focus{
 		#page-header .bg{
 			visibility: hidden;
 			}
+
+/* Theme Settings Pages */
+
+body.path-theme-ubertheme-basic form.theme-settings,
+body#page-theme-ubertheme-admin form#adminsettings{
+
+	}
+
+	body.path-theme-ubertheme-basic form.theme-settings fieldset.collapsible,
+	body#page-theme-ubertheme-admin form#adminsettings fieldset.collapsible{
+		
+		}
+
+/* Custom - Should Remove Colors etc */
+		body.path-theme-ubertheme-basic form.theme-settings fieldset.collapsible legend,
+		body.path-admin-setting form#adminsettings .admin-setting-group h3{
+			background-color: #999999;
+			color: #FFFFFF;
+			margin-bottom: 0;
+			padding: 1%;
+			width: 98%;
+			}
+
+			body.path-theme-ubertheme-basic form.theme-settings fieldset.collapsible legend a{
+				color: #FFFFFF;
+				display: block;
+				height: 100%;
+				padding: 0;
+				width: 100%;
+				}
+			
+			body.path-admin-setting form#adminsettings .admin-setting-group h3{
+				cursor: pointer;
+				}
+
+				body.path-theme-ubertheme-basic form.theme-settings fieldset.collapsible legend.hover,
+				body.path-admin-setting form#adminsettings .admin-setting-group h3.hover{
+					background-color: #7f7f7f;
+					trasition: background-color 0.2s linear 0s;
+					}
+
+		body.path-theme-ubertheme-basic form.theme-settings fieldset.collapsible .fcontainer,
+		body.path-admin-setting form#adminsettings .admin-setting-group.show .form-item{
+			display: block;
+			}
+
+		body.path-theme-ubertheme-basic form.theme-settings fieldset.collapsible.collapsed .fcontainer,
+		body.path-admin-setting form#adminsettings .admin-setting-group .form-item{
+			display: none;
+			}

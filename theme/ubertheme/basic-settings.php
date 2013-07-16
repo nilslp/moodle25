@@ -17,13 +17,13 @@ $PAGE->set_title(get_string('theme_settings','theme_ubertheme'));
 $PAGE->set_heading(get_string('theme_settings','theme_ubertheme'));
 require_capability('theme/ubertheme:config',$context);
 
-// $jsconfig = array(
-//		 'name' => 'theme_foundation_theme_settings',
-//		 'fullpath' => '/theme/foundation/javascript/theme-settings.js',
-//		 'requires' => array('node', 'event', 'selector-css3', 'event-hover', 'transition', 'anim')
-// );
+$jsconfig = array(
+		 'name' => 'theme_ubertheme_theme_settings',
+		 'fullpath' => '/theme/ubertheme/javascript/theme-settings.js',
+		 'requires' => array('node', 'event', 'selector-css3', 'event-hover', 'transition', 'anim')
+);
 
-// $PAGE->requires->js_init_call('M.theme_foundation_theme_settings.init', null, false, $jsconfig);
+$PAGE->requires->js_init_call('M.theme_ubertheme_theme_settings.init', null, false, $jsconfig);
 
 // form definition
 $mform = new theme_ubertheme_admin_form(null, null, 'post', null, array('class'=>'theme-settings'));
