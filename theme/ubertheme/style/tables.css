@@ -1,0 +1,67 @@
+/*-----------------------------------------------------------------------------------*/
+/* Global Table Styles
+/*-----------------------------------------------------------------------------------*/
+
+/* Regular Table ***********************/
+
+table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+	margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+    }
+
+table, th, td{
+	border: none;
+	}
+	
+    table th {
+        font-weight: bold
+        }
+
+    table thead tr th{
+		border-top: none;
+        vertical-align: bottom
+        }
+
+   	table th,
+    table td {
+        border-top: 1px solid #E0E0E0;
+        line-height: 20px;
+        padding: 8px;
+        text-align: left;
+		transition: 0.3s linear 0s;
+        vertical-align: top;
+        }
+
+/* Bordered Table ***********************/
+
+xtable{
+    *border-collapse: collapse;
+    border: 1px solid #E0E0E0;
+    border-collapse: separate;
+    border-left: 0;
+    }
+
+    xtable th,
+    xtable td {
+        border-left: 1px solid #E0E0E0;
+        }
+
+
+/* Striped Table ***********************/
+
+xtable tbody > tr:nth-child(odd) > td,
+xtable tbody > tr:nth-child(odd) > th {
+    background-color: #F9F9F9;
+    }
+
+
+/* Table Hover ***********************/
+
+table tbody tr:hover > td,
+table tbody tr:hover > th {
+    background-color: #F5F5F5
+    }
