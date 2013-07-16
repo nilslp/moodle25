@@ -65,10 +65,10 @@
 		}
 
 		.block.hidden .content{
-			height: 0;
-			padding: 0;
-			transform: scaleY(0.5);
-			transform-origin: top center;
+			xheight: 0;
+			margin-top: -100%;
+			transform: translateY(-100%);
+			transform-origin: 0% 0%;
 			}
 
 

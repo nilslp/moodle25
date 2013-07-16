@@ -26,9 +26,7 @@
 	}
 
 a.label:hover,
-a.label:focus,
-a:hover,
-a:focus {
+a.label:focus {
 	color: #ffffff;
 	text-decoration: none;
 	cursor: pointer;

@@ -6,18 +6,6 @@
 
 /* Standard Comment */
 
-a.label:hover, a.label:focus, a:hover, a:focus{
-	color: #0088cc;
-	xpadding-left: 5px;
-	xtransition: all 0.3s ease-in-out 0s; 
-	text-decoration: underline;
-	}
-
-.skiplinks,
-.skip-block{
-	display: none;
-	}
-
 #section-header{ /* For Default Theme */
 	background-image: url([[pix:theme|banner_default]]);
 	
