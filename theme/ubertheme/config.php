@@ -298,7 +298,6 @@ $THEME->enable_dock = true;
 		
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
-
 // Totara
 if ($istotara) { 
 		$THEME->sheets[] = 'totara';

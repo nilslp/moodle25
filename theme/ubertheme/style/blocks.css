@@ -2,96 +2,157 @@
 /* Global Block Settings
 /*-----------------------------------------------------------------------------------*/
 
-/* Sub-Section Comment ***********************/
-
-/* Standard Comment */
+/* Block Containers ***********************/
 
 .block{
 	margin: 0 0 10px;
-	min-height: 60px;
-	overflow: hidden;
 	position: relative;
-	xpadding: 10px;
 	}
-
-	.block .header{
-		/*background-color: [[setting:sbbgc]];
-		color: [[setting:sbtc]];*/
-		background-color: #F0F0F0;
-		margin: 0 0 3px;
-		padding: 10px;
-		position: relative;
-		z-index: 2;
+	
+	.block:hover{
+		z-index: 10;
 		}
 
-		.block .block_action{
-			xfloat: right;
-			padding-top: 6px;
-			position: absolute;
-			right: 10px;
-			}
+/* Block header ***********************/
 
-			.block .block_action .block-hider-hide,
-			.block.hidden .block_action .block-hider-show{ /* Show '-' when normal, Show '+' when hidden */
-				display: inline-block;
-				}
+.block .header{
+	/*background-color: [[setting:sbbgc]];
+	color: [[setting:sbtc]];*/
+	background-color: #F0F0F0;
+	margin: 0 0 3px;
+	padding: 10px;
+	position: relative;
+	z-index: 2;
+	}
+	
+	.block .header h2{
+		display: inline-block;
+		*display: inline;
+		font-size: 100%;
+		font-weight: normal;
+		line-height: 20px;
+		margin: 5px 6px 5px 0;
+		text-transform: uppercase;
+		vertical-align: top;
+		width: 182px;
+		word-wrap: break-word;
+		}
 
-			.block .block_action .block-hider-show,
-			.block.hidden .block_action .block-hider-hide{ /* Hide '-' when hidden, Show '+' when normal */
-				display: none;
-				}
+/* Block Content ***********************/
 
-			.block .header .block_action img,
-			.block .header .block_action input {
-				cursor: pointer;
-				margin-left: 5px;
-				}
-
-		.block .header h2{
-			font-size: 100%;
-			letter-spacing: -1px;
-			margin: 0;
-			text-transform: uppercase;
-			width: 158px;
-			}
+.block .block-content-wrapper{
+	overflow: hidden;
+	}
 
 	.block .content{
 		background-color: [[setting:sbbgc]];
 		color: [[setting:sbtc]];
 		background-color: #F0F0F0; /* Development Only */
+		height: 100%;
 		margin-top: 0;
 		padding: 10px;
 		transition: all 0.2s ease-in-out 0s; 
 		}
 
 		.block.hidden .content{
-			xheight: 0;
+			height: 1px;
 			margin-top: -100%;
 			transform: translateY(-100%);
 			transform-origin: 0% 0%;
 			}
 
+/* Block Actions & Commands ***********************/
+
+.actions-commands{
+    display: inline-block;
+	*display: inline;
+    position: relative;
+	text-align: right;
+    vertical-align: top;
+    width: 72px;
+	z-index: 200;
+	*zoom: 1;
+	}
+	
+	.commands{
+		background: #333;
+		border-radius: 10px;
+		cursor: pointer;
+		display: inline-block;
+		height: 20px;
+		overflow: hidden;
+		position: relative;
+		text-align: left;
+		vertical-align: middle;
+		width: 20px;
+		}
+		
+		.commands:hover{
+			overflow: visible;
+			z-index: 10;
+			}
+		
+		.commands .icon{
+			background: #333;
+			display: block;
+			line-height: 200%;
+			margin-left: -50px;
+			padding: 0 10px;
+			width: 100px;
+			}
+			
+		.commands .icon:first-child{
+			margin-top: 20px;
+			}
+
+	.block_action{
+		display: inline-block;
+		height: 20px;
+		text-align: right;
+		vertical-align: middle;
+		width: auto;
+		}
+		
+		.block_action img,
+		.block_action input{
+			background: #333;
+			border-radius: 10px;
+			cursor: pointer;
+			display: inline-block;
+			height: 20px;
+			margin-left: 6px;
+			vertical-align: top;
+			width: 20px;
+			}
+			
+			.block .block_action .block-hider-hide,
+			.block.hidden .block_action .block-hider-show{
+				/* Show '-' when normal, Show '+' when hidden */
+				display: inline-block;
+				}
+
+			.block .block_action .block-hider-show,
+			.block.hidden .block_action .block-hider-hide{
+				/* Hide '-' when hidden, Show '+' when normal */ 
+				display: none;
+				}
 
 /*-----------------------------------------------------------------------------------*/
-/* Specfics
+/* Specifics
 /*-----------------------------------------------------------------------------------*/
 
-				.block_navigation .block_tree .tree_item.branch.navigation_node > a{
-					font-weight: bold;
-					}
+.block_navigation .block_tree .tree_item.branch.navigation_node > a{
+	font-weight: bold;
+	}
 
-				.block.block_calendar_month .minicalendar{
-					font-size: 90%;
-					width: 100%;
-					}
+.block.block_calendar_month .minicalendar{
+	font-size: 90%;
+	width: 100%;
+	}
 
-					.block.block_calendar_month .minicalendar th,
-					.block.block_calendar_month .minicalendar td{
-						border: none;
-						padding: 0;
-						text-align: center;
-						}
-						
-/*-----------------------------------------------------------------------------------*/
-/* Admin Block Settings
-/*-----------------------------------------------------------------------------------*/
+	.block.block_calendar_month .minicalendar th,
+	.block.block_calendar_month .minicalendar td{
+		border: none;
+		padding: 0;
+		text-align: center;
+		}
