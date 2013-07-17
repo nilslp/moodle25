@@ -87,3 +87,7 @@ a.label:hover, a.label:focus, a:hover, a:focus{
 		#page-header .navbar{
 			display: none;
 			}
+
+.transparent-block{
+	background-color: #000000;
+	}

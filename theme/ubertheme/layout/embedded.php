@@ -1,5 +1,7 @@
 <?php
 
+$istotara = (isset($CFG->totara_build));
+
 // Construct Page Title
 $page_title = ($PAGE->pagelayout != 'frontpage') ? $PAGE->title . ' | ' : '';
 $page_title.= (isset($PAGE->theme->settings->additionalpagetitle)) ? $SITE->fullname.' '.$PAGE->theme->settings->additionalpagetitle : $SITE->fullname;

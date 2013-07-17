@@ -23,9 +23,9 @@ M.theme_ubertheme.toggle_course_list = function(Y) {
         Y.one('body').addClass(cn_body);
 
         regioncontent = page_course_index.one('.region-content');
-        cat_list = page_course_index.one('.region-content .box.categorybox');
-        toggle = Y.Node.create('<div class="toggle-view">'+M.util.get_string('course-list-show-az','theme_ubertheme')+'</div>');
-        az_list = Y.Node.create('<div id="az-course-list" class="hide"><ul></ul></div>');
+        cat_list = page_course_index.one('.region-content .course_category_tree');
+        toggle = Y.Node.create('<div class="btn toggle-view">'+M.util.get_string('course-list-show-az','theme_ubertheme')+'</div>');
+        az_list = Y.Node.create('<div id="btn az-course-list" class="hide"><ul></ul></div>');
 
         // Add az-list/cat-list toggle
         regioncontent.insert(toggle, cat_list);
@@ -51,10 +51,10 @@ M.theme_ubertheme.toggle_course_list = function(Y) {
 
         if (collapseable) {
             if (collapseable === 1) {
-                 az_list_collapse_button = Y.Node.create('<div class="az-accordian expand"><span>'+M.util.get_string('course-list-expand-all','theme_ubertheme')+'</span></div>');
+                 az_list_collapse_button = Y.Node.create('<div class="btn az-accordian expand"><span>'+M.util.get_string('course-list-expand-all','theme_ubertheme')+'</span></div>');
             }
             else if (collapseable === 2) {
-                 az_list_collapse_button = Y.Node.create('<div class="az-accordian"><span>'+M.util.get_string('course-list-collapse-all','theme_ubertheme')+'</span></div>');
+                 az_list_collapse_button = Y.Node.create('<div class="btn az-accordian"><span>'+M.util.get_string('course-list-collapse-all','theme_ubertheme')+'</span></div>');
             }
             az_list.prepend(az_list_collapse_button);
         }
@@ -76,8 +76,8 @@ M.theme_ubertheme.toggle_course_list = function(Y) {
         });
 
         // Move the collapse/expand controls to the top of the category box
-        controls = page_course_index.one('.region-content .box.categorybox .course_category_tree .controls');
-        controls && page_course_index.one('.region-content .box.categorybox .course_category_tree').removeChild(controls);
+        controls = page_course_index.one('.region-content .course_category_tree .controls');
+        controls && page_course_index.one('.region-content .course_category_tree').removeChild(controls);
         all_cats = page_course_index.all('.course_category_tree .category');
 
         // Set collapse/expand display according to theme setting
@@ -85,11 +85,11 @@ M.theme_ubertheme.toggle_course_list = function(Y) {
             all_cats.removeClass('collapsed');
         }
         else if (collapseable === 1) {
-            page_course_index.one('.region-content .box.categorybox .course_category_tree').prepend('<div class="cat-accordian expand"><span>'+M.util.get_string('course-list-expand-all','theme_ubertheme')+'</span></div>');
+            page_course_index.one('.region-content .course_category_tree').prepend('<div class="btn cat-accordian expand"><span>'+M.util.get_string('course-list-expand-all','theme_ubertheme')+'</span></div>');
             all_cats.addClass('collapsed');
         }
         else if (collapseable === 2) {
-            page_course_index.one('.region-content .box.categorybox .course_category_tree').prepend('<div class="cat-accordian"><span>'+M.util.get_string('course-list-collapse-all','theme_ubertheme')+'</span></div>');
+            page_course_index.one('.region-content .course_category_tree').prepend('<div class="btn cat-accordian"><span>'+M.util.get_string('course-list-collapse-all','theme_ubertheme')+'</span></div>');
             all_cats.removeClass('collapsed');
         }
 

@@ -1,0 +1,54 @@
+
+body#page-course-view-accordion .course-content { position: relative; }
+/*body#page-course-view-accordion #completionprogressid { position: absolute; top: 2em; right: 2em; z-index: 5; }*/
+/*body#page-course-view-accordion #completionprogressid { position: absolute; top: 0.5em; right: 0.5em; z-index: 5; }*/
+body#page-course-view-accordion #completionprogressid { display: block; float: none; height: 2em; position: relative; right: 0; text-align: right; top: 0; z-index: 5; }
+
+/** Clipboard **/
+body#page-course-view-accordion .accordion-topics dl.clipboard { margin-bottom: 2em; padding: 1em; border: 1px solid #C77E00; background: #FCD66D none; box-shadow: 2px 2px 5px rgba(0,0,0,0.35); }
+body#page-course-view-accordion .accordion-topics dl.clipboard dd { margin: 0; font-weight: bold; }
+
+
+/** **/
+body#page-course-view-accordion .accordion-topics dl { margin: 0; }
+
+body#page-course-view-accordion .accordion-topics dt { border: 1px solid #CCC; border-bottom-color: #EEE; background: #CCC;}
+body#page-course-view-accordion .accordion-topics dt .left { float: left; width: 1.0em; padding: 0.5em; text-align: right; }
+body#page-course-view-accordion .accordion-topics dt .right { float: right; padding: 0.5em; }
+body#page-course-view-accordion .accordion-topics dt ul.actions { list-style: none; margin: 0; }
+body#page-course-view-accordion .accordion-topics dt ul.actions li { float: left; display: block; list-style: none; }
+body#page-course-view-accordion .accordion-topics dt h3 { margin: 0 0 0 2em; padding: 0.5em 1em 0.5em 0; font-size: 1em; }
+
+body#page-course-view-accordion .accordion-topics dd { clear: both; margin: 1em 0 3em 2em; }
+body#page-course-view-accordion .accordion-topics dd .summary {  }
+body#page-course-view-accordion .accordion-topics dd ul.section { margin: 0; border-top: 3px solid #CCC; }
+body#page-course-view-accordion .accordion-topics dd ul.section li { padding: 0.5em 11.5em 0.5em 0.5em; border-bottom: 1px dashed #CCC; }
+body#page-course-view-accordion .accordion-topics dd ul.section li.hover { background: #FFC none; }
+body#page-course-view-accordion .accordion-topics dd ul.section li .togglecompletion,
+body#page-course-view-accordion .accordion-topics dd ul.section li .autocompletion { top: 0.5em; right: 0.5em; padding: 0; }
+body#page-course-view-accordion .accordion-topics dd ul.section li .availabilityinfo { padding: 1em 2em; font-size: 0.84615em; }
+body#page-course-view-accordion .accordion-topics dd ul.section li .commands { position: absolute; top: 0.5em; right: 2em; display: block; padding-right: 0.125em; }
+body#page-course-view-accordion .accordion-topics dd ul.section li .commands a { padding: 0 0.125em; }
+body#page-course-view-accordion .accordion-topics dd div.section_add_menus { padding: 0.5em; text-align: center; background: #EEE none; border-bottom: 3px solid #CCC; }
+body#page-course-view-accordion .accordion-topics dd div.section_add_menus .urlselect { padding: 0 0.5em; white-space: nowrap; }
+
+
+/** **/
+body#page-course-view-accordion.jsenabled .accordion-topics dl {}
+body#page-course-view-accordion.jsenabled .accordion-topics dl.current { background: none; }
+body#page-course-view-accordion.jsenabled .accordion-topics dl dt { cursor: pointer; }
+body#page-course-view-accordion.jsenabled .accordion-topics dl.collapsed dd { display: none; }
+
+
+
+/** Section 0 - Topic Outline Summary **/
+body#page-course-view-accordion .accordion-topics dl#section-0 { xmargin-bottom: 2.5em; position: relative; padding: 2em; background: #EEE none; }
+body#page-course-view-accordion .accordion-topics dl#section-0 dt { border: none; cursor: default; background: transparent none; }
+body#page-course-view-accordion .accordion-topics dl#section-0 dt h2 { margin: 0; line-height: 1.05em; }
+body#page-course-view-accordion .accordion-topics dl#section-0 dd { margin: 1em 0; }
+body#page-course-view-accordion .accordion-topics dl#section-0 dd ul.section,
+body#page-course-view-accordion .accordion-topics dl#section-0 dd div.section_add_menus { margin-left: 2em; }
+/*body#page-course-view-accordion .accordion-topics dl#section-0 dd .toggle { position: absolute; bottom: 0.5em; right: 0.5em; padding: 0 0.5em; line-height: 1.5em; font-size: 0.84615em; font-weight: bold; cursor: pointer; }*/
+body#page-course-view-accordion .accordion-topics .toggle { position: absolute; bottom: auto; top: 2.5em; right: 0.5em; padding: 0 0.5em; line-height: 1.5em; font-size: 0.84615em; font-weight: bold; cursor: pointer; }
+body#page-course-view-accordion .accordion-topics dl#section-0 .toggle { bottom: -2.5em; top: auto; }
+body#page-course-view-accordion .accordion-topics dl#section-1 { margin-top: 2.5em; }

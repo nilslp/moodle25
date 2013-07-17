@@ -279,7 +279,7 @@ $THEME->javascripts = array(
         'anim', 
         'console', 
         'cookie', 
-        'dd-constrain'
+        'dd-constrain',
         'dd-delegate', 
         'event', 
         'event-hover', 
@@ -287,26 +287,26 @@ $THEME->javascripts = array(
         'json-stringify', 
         'node', 
         'selector-css3', 
-        'transition', 
+        'transition'
 		)
 	);
 
 $THEME->javascripts_footer = array(
-	'course-list',
+	// 'course-list',
 	'courses',
 	'cycling-banners',
 	'feature-slider',
 	'html-corrections',
 	'paging',
-	'screen-reader',
+	// 'screen-reader',
 	'sideblock-stuff',
 	'support-widget',
 	'tabs',
 	'theme-settings',
 	'ticker',
-	'toggle-course-list',
+	// 'toggle-course-list',
 	'util.browser-fitness',
-	'yui-carousel',
+	'yui-carousel'
 	);
 
 $THEME->csspostprocess = 'ubertheme_process_css';

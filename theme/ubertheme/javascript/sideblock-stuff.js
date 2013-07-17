@@ -1,11 +1,18 @@
 M.theme_ubertheme.sideblock_stuff = function(Y) {
     
-    Y.all('body:not(.editing) .block .header h2:contains(Transparent Block)').each( function(node) {
+    var transparentBlock = Y.all('body:not(.editing) .block .header h2:contains(Transparent Block)');
+    // var transparentBlock = Y.all('body:not(.editing) .block .header h2');
+
+    transparentBlock && transparentBlock.each( function (node) {
 		node.ancestor('.block').addClass('transparent-block');
     });
 
-    Y.all('body#page-calendar-view .block .header h2:contains(Monthly view)').each( function(node) {
+    var calendarBlock = Y.all('body#page-calendar-view .block .header h2:contains(Monthly view)');
+
+    calendarBlock && calendarBlock.each( function (node) {
 		node.ancestor('.block').addClass('block_calendar_month');
     });    
-    
+
+    console.log(transparentBlock);
+
 }

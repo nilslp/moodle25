@@ -2,15 +2,15 @@
 
 global $CFG;
 require_once($CFG->dirroot.'/lib/formslib.php');
-MoodleQuickForm::registerElementType('lp_checkbox', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_checkbox');
-MoodleQuickForm::registerElementType('lp_editor', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_editor');
-MoodleQuickForm::registerElementType('lp_textarea', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_textarea');
-MoodleQuickForm::registerElementType('lp_colorpicker', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_colorpicker');
-MoodleQuickForm::registerElementType('lp_select', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_select');
-MoodleQuickForm::registerElementType('lp_static', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_static');
-MoodleQuickForm::registerElementType('lp_text', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_text');
-MoodleQuickForm::registerElementType('lp_filepicker', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_filepicker');
-MoodleQuickForm::registerElementType('lp_filemanager', "$CFG->dirroot/theme/foundation/lib.php",'LPQuickForm_filemanager');
+MoodleQuickForm::registerElementType('lp_checkbox', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_checkbox');
+MoodleQuickForm::registerElementType('lp_editor', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_editor');
+MoodleQuickForm::registerElementType('lp_textarea', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_textarea');
+MoodleQuickForm::registerElementType('lp_colorpicker', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_colorpicker');
+MoodleQuickForm::registerElementType('lp_select', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_select');
+MoodleQuickForm::registerElementType('lp_static', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_static');
+MoodleQuickForm::registerElementType('lp_text', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_text');
+MoodleQuickForm::registerElementType('lp_filepicker', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_filepicker');
+MoodleQuickForm::registerElementType('lp_filemanager', "$CFG->dirroot/theme/ubertheme/lib.php",'LPQuickForm_filemanager');
 
 class theme_ubertheme_admin_form extends moodleform {
 
