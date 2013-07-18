@@ -74,37 +74,82 @@
 	*zoom: 1;
 	}
 	
+	/* Controls the Move Block, Edit Admin etc button */
 	.commands{
-		background: #333;
-		border-radius: 10px;
-		cursor: pointer;
-		display: inline-block;
-		height: 20px;
-		overflow: hidden;
-		position: relative;
-		text-align: left;
-		vertical-align: middle;
-		width: 20px;
-		}
+		 display: none;
+		 }
+	
+	.block_with_controls .commands{
+			background: #333 url([[pix:theme|block_settings]]) no-repeat center center;
+			border-radius: 10px;
+			cursor: pointer;
+			display: inline-block;
+			height: 20px;
+			overflow: hidden;
+			position: relative;
+			text-align: left;
+			transition: all 0.2s linear 0s;
+			vertical-align: middle;
+			width: 20px;
+			}
 		
 		.commands:hover{
+			background-color: #555;
 			overflow: visible;
-			z-index: 10;
+			}
+		
+		.commands:before {
+			background: transparent;
+			content: " ";
+			display: block;
+			font-size: 0;
+			height: 30px;
+			left: -5px;
+			position: relative;
+			width: 30px;
 			}
 		
 		.commands .icon{
 			background: #333;
 			display: block;
-			line-height: 200%;
-			margin-left: -50px;
+			line-height: 50px;
+			margin-left: -105px;
 			padding: 0 10px;
-			width: 100px;
+			transition: all 0.2s linear 0s;
+			width: 210px;
+			z-index: -10;
 			}
 			
-		.commands .icon:first-child{
-			margin-top: 20px;
+		.commands .icon:first-child:before{
+			border: solid transparent;
+			bottom: -10px;
+			content: " ";
+			height: 0;	
+			pointer-events: none;
+			position: absolute;
+			width: 0;
 			}
-
+			
+		.commands .icon:first-child:before{
+				border-color: rgba(136, 183, 213, 0);
+				border-bottom-color: #333;
+				border-width: 10px;
+				left: 50%;
+				margin-left: -10px;
+				}
+			
+		.commands .icon:after{
+			color: #FFF;
+			content: attr(title);
+			font-size: 70%;
+			margin-left: 10px;
+			}
+			
+		.commands .icon:hover{
+			background: #555;
+			}
+			
+	/* Controls the Hide/Show and Dock block buttons */
 	.block_action{
 		display: inline-block;
 		height: 20px;
@@ -121,9 +166,15 @@
 			display: inline-block;
 			height: 20px;
 			margin-left: 6px;
+			transition: all 0.2s linear 0s;
 			vertical-align: top;
 			width: 20px;
 			}
+			
+			.block_action img:hover,
+			.block_action input:hover{
+				background: #555;
+				}
 			
 			.block .block_action .block-hider-hide,
 			.block.hidden .block_action .block-hider-show{
@@ -136,6 +187,7 @@
 				/* Hide '-' when hidden, Show '+' when normal */ 
 				display: none;
 				}
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Specifics

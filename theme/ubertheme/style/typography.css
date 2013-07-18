@@ -17,7 +17,12 @@ a:focus {
 	text-decoration: none;
 	}
 
-p {
+#region-main-wrap a:visited {
+	color: #996666;
+	text-decoration: none;
+	}
+
+p{
 	margin: 0 0 10px;
 	}
 
@@ -25,73 +30,27 @@ small {
 	font-size: 85%;
 	}
 
-strong {
+strong{
 	font-weight: bold;
 	}
 
-em {
+em{
 	font-style: italic;
 	}
 
-cite {
+cite{
 	font-style: normal;
 	}
 
-.muted {
-	color: #999999;
-	}
-
-a.muted:hover,
-a.muted:focus {
-	color: #808080;
-	}
-
-.text-warning {
-	color: #c09853;
-	}
-
-a.text-warning:hover,
-a.text-warning:focus {
-	color: #a47e3c;
-	}
-
-.text-error {
-	color: #b94a48;
-	}
-
-a.text-error:hover,
-a.text-error:focus {
-	color: #953b39;
-	}
-
-.text-info {
-	color: #3a87ad;
-	}
-
-a.text-info:hover,
-a.text-info:focus {
-	color: #2d6987;
-	}
-
-.text-success {
-	color: #468847;
-	}
-
-a.text-success:hover,
-a.text-success:focus {
-	color: #356635;
-	}
-
-.text-left {
-	text-align: left;
-	}
-
-.text-right {
-	text-align: right;
-	}
-
-.text-center {
-	text-align: center;
+pre,
+pre,
+code,
+kbd,
+samp,
+tt{
+	font-family: monospace;
+	font-size: 100%;
+	line-height: 140%;
 	}
 
 h1,
@@ -100,138 +59,83 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 10px 0;
-	font-family: inherit;
-	font-weight: bold;
-	line-height: 20px;
 	color: inherit;
-	text-rendering: optimizelegibility;
-	}
-
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
+	font-family: "Segoe UI Semilight";
 	font-weight: normal;
-	line-height: 1;
-	color: #999999;
+	line-height: 100%;
+	margin: 10px 0;
+	text-rendering: optimizelegibility;
 	}
 
 h1,
 h2,
 h3 {
-	line-height: 40px;
+	line-height: 100%;
 	}
 
 h1 {
-	font-size: 38.5px;
+	font-size: 246%;
 	}
 
 h2 {
-	font-size: 31.5px;
+	font-size: 200%;
 	}
 
 h3 {
-	font-size: 24.5px;
+	font-size: 160%;
 	}
 
 h4 {
-	font-size: 17.5px;
+	font-size: 115%;
 	}
 
 h5 {
-	font-size: 14px;
+	font-size: 90%;
 	}
 
 h6 {
-	font-size: 11.9px;
+	font-size: 70%;
 	}
-
-h1 small {
-	font-size: 24.5px;
-	}
-
-h2 small {
-	font-size: 17.5px;
-	}
-
-h3 small {
-	font-size: 14px;
-	}
-
-h4 small {
-	font-size: 14px;
-	}
-
-.page-header {
-	padding-bottom: 9px;
-	margin: 20px 0 30px;
-	border-bottom: 1px solid #eeeeee;
-	}
-
 
 hr {
-	margin: 20px 0;
 	border: 0;
-	border-top: 1px solid #eeeeee;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 1px solid #FFF;
+	border-top: 1px solid #EEE;
+	margin: 20px 0;
 	}
 
 abbr[title],
-abbr[data-original-title] {
+abbr[data-original-title],
+acronym{
+	border-bottom: 1px dotted #999;
 	cursor: help;
-	border-bottom: 1px dotted #999999;
+	}
+	
+sub, sup{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+	}
+	
+sub{
+	bottom: -5px;
 	}
 
-abbr.initialism {
-	font-size: 90%;
-	text-transform: uppercase;
+sup{
+	top: -5px;
 	}
 
-blockquote {
-	padding: 0 0 0 15px;
+blockquote{
+	border-left: 5px solid #F0F0F0;
 	margin: 0 0 20px;
-	border-left: 5px solid #eeeeee;
+	padding: 0 0 0 15px;
 	}
 
-blockquote p {
+blockquote p{
+	font-size: 110%;
+	line-height: 160%;
 	margin-bottom: 0;
-	font-size: 17.5px;
-	font-weight: 300;
-	line-height: 1.25;
-	}
-
-blockquote small {
-	display: block;
-	line-height: 20px;
-	color: #999999;
-	}
-
-blockquote small:before {
-	content: '\2014 \00A0';
-	}
-
-blockquote.pull-right {
-	float: right;
-	padding-right: 15px;
-	padding-left: 0;
-	border-right: 5px solid #eeeeee;
-	border-left: 0;
-	}
-
-blockquote.pull-right p,
-blockquote.pull-right small {
-	text-align: right;
-	}
-
-blockquote.pull-right small:before {
-	content: '';
-	}
-
-blockquote.pull-right small:after {
-	content: '\00A0 \2014';
 	}
 
 q:before,
@@ -243,8 +147,8 @@ blockquote:after {
 
 address {
 	display: block;
-	margin-bottom: 20px;
 	font-style: normal;
-	line-height: 20px;
+	line-height: 130%;
+	margin-bottom: 20px;
 	}
 
