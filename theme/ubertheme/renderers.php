@@ -1,7 +1,7 @@
 <?php
 
 require_once($CFG->dirroot . "/blocks/settings/renderer.php");
-require_once($CFG->dirroot.'/lib/outputrenderers.php');
+require_once($CFG->dirroot. "/lib/outputrenderers.php");
 
 class theme_ubertheme_block_settings_renderer extends block_settings_renderer {
 	    
@@ -84,6 +84,46 @@ class theme_ubertheme_core_renderer extends core_renderer{
 			$title = '<span class="accesshide">'.get_string('pagepath').'</span>';
 			return $title . "<ul class=\"breadcrumb\">$list_items</ul>";
     	}
+
+		// This function renders the paging bar as a list item
+		protected function render_paging_bar(paging_bar $pagingbar) {
+			$output = '';
+			$pagingbar = clone($pagingbar);
+			$pagingbar->prepare($this, $this->page, $this->target);
+			
+						
+			if ($pagingbar->totalcount > $pagingbar->perpage) {
+				$output .= html_writer::tag('li', get_string('page'), array('class'=>'paging-title'));
+
+				if (!empty($pagingbar->previouslink)) {
+					$output .= html_writer::tag('li', ($pagingbar->previouslink), array('class'=>'previous-page'));
+				}
+			
+				if (!empty($pagingbar->firstlink)) {
+					$output .= html_writer::tag('li', ($pagingbar->firstlink . '&#160;&#8230;'), array('class'=>'first-page'));
+				}
+				
+				foreach ($pagingbar->pagelinks as $link) {
+					$output .= html_writer::tag('li', $link); 
+				}
+				
+				if (!empty($link->pagelinks)) {
+					// do not use div here due to nesting restriction in xhtml strict
+					return html_writer::tag('span', $text, array('class'=>'currentlink'));
+				}
+
+				if (!empty($pagingbar->lastlink)) {
+					$output .= html_writer::tag('li', ( '&#8230;&#160;' . $pagingbar->lastlink), array('class'=>'last-page'));
+				}
+			
+				if (!empty($pagingbar->nextlink)) {
+					$output .= html_writer::tag('li', ($pagingbar->nextlink), array('class'=>'next-page'));
+				}
+			}
+			
+			
+			return html_writer::tag( 'ul', $output, array('class' => 'paging')); 
+		}
 
 }
 	
