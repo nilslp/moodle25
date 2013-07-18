@@ -37,56 +37,40 @@ class theme_ubertheme_core_renderer extends core_renderer{
 	
 			$output = '';
 			if ($title || $controlshtml) {
-
 			$output .= html_writer::tag('div', html_writer::tag('div', $title . html_writer::tag('div',  $controlshtml . html_writer::tag('div', '', array('class'=>'block_action')) , array('class' => 'actions-commands')), array('class' => 'title')), array('class' => 'header'));
 			}
 			return $output;
 			
 		}
-		// This function renders the block content markup
-		public function block(block_contents $bc, $region) {
-			$bc = clone($bc); // Avoid messing up the object passed in.
-			if (empty($bc->blockinstanceid) || !strip_tags($bc->title)) {
-				$bc->collapsible = block_contents::NOT_HIDEABLE;
-			}
-			$skiptitle = strip_tags($bc->title);
-			if ($bc->blockinstanceid && !empty($skiptitle)) {
-				$bc->attributes['aria-labelledby'] = 'instance-'.$bc->blockinstanceid.'-header';
-			} else if (!empty($bc->arialabel)) {
-				$bc->attributes['aria-label'] = $bc->arialabel;
-			}
-			if ($bc->collapsible == block_contents::HIDDEN) {
-				$bc->add_class('hidden');
-			}
-			if (!empty($bc->controls)) {
-				$bc->add_class('block_with_controls');
-			}
-	
-	
-			if (empty($skiptitle)) {
-				$output = '';
-				$skipdest = '';
-			} else {
-				$output = html_writer::tag('a', get_string('skipa', 'access', $skiptitle), array('href' => '#sb-' . $bc->skipid, 'class' => 'skip-block'));
-				$skipdest = html_writer::tag('span', '', array('id' => 'sb-' . $bc->skipid, 'class' => 'skip-block-to'));
-        }
-
-        $output .= html_writer::start_tag('div', $bc->attributes);
-
-        $output .= $this->block_header($bc);
-        $output .= html_writer::start_tag('div', array( 'class' => 'block-content-wrapper'));
-		$output .= $this->block_content($bc);
-		$output .= html_writer::end_tag('div');
-        $output .= html_writer::end_tag('div');
-
-        $output .= $this->block_annotation($bc);
-
-        $output .= $skipdest;
-
-        $this->init_block_hider_js($bc);
-        return $output;
-   		}
 		
+		// This function renders the block controls markup
+		public function block_controls($controls) {
+			if (empty($controls)) {
+				return '';
+			}
+			$controlshtml = array();
+			foreach ($controls as $control) {
+				$controlshtml[] = html_writer::tag('a',
+						html_writer::empty_tag('img',  array('src' => $this->pix_url($control['icon'])->out(false), 'alt' => $control['caption'])),
+						array('class' => 'icon ' . $control['class'],'title' => $control['caption'], 'href' => $control['url']));
+			}
+			return html_writer::tag('div', implode('', $controlshtml), array('class' => 'commands'));
+		}
+		
+		// This function renders the block content markup
+		protected function block_content(block_contents $bc) {
+			$output .= html_writer::start_tag('div', array( 'class' => 'block-content-wrapper')) . html_writer::start_tag('div', array('class' => 'content')); 
+			if (!$bc->title && !$this->block_controls($bc->controls)) {
+				$output .= html_writer::tag('div', '', array('class'=>'block_action notitle'));
+			}	
+			$output .= $bc->content;
+			$output .= $this->block_footer($bc);
+			$output .= html_writer::end_tag('div');
+			$output .= html_writer::end_tag('div');
+	
+			return $output;
+    	}
+
 		// This function renders empty separators spans on the breadcrumb
 		public function navbar() {
 			$items = $this->page->navbar->get_items();
@@ -100,6 +84,6 @@ class theme_ubertheme_core_renderer extends core_renderer{
 			$title = '<span class="accesshide">'.get_string('pagepath').'</span>';
 			return $title . "<ul class=\"breadcrumb\">$list_items</ul>";
     	}
-	
+
 }
 	
