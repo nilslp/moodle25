@@ -6,86 +6,49 @@
 
 /* Standard Comment */
 
-.paging {
-	margin: 20px 0;
-	}
-
- ul.paging {
+ul.paging {
 	display: inline-block;
 	*display: inline;
-	/* IE7 inline-block hack */
+	margin: 20px 0;
+	width: 100%;
 	*zoom: 1;
-	margin-left: 0;
-	margin-bottom: 0;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-	width: 100%;
 	}
 
-ul.paging li {
-	display: inline-block;
-	margin: 0;
-	}
+	ul.paging li{
+		display: inline-block;
+		margin: 0 1px;
+		}
 	
-ul.paging li a{
-	background-color: #ffffff;
-	border: 1px solid #dddddd;
-	border-left-width: 0;
-	display: block;
-	padding: 4px 12px;
-	line-height: 20px;
-	text-decoration: none;
-	}
-	
-ul.paging li span{
-	display: block;
-	height: 100%;
-	width: 100%;
-	}
-
-ul.paging > li > a:hover,
-ul.paging > li > a:focus,
-ul.paging > .active > a,
-ul.paging > .active > span {
-	background-color: #f5f5f5;
-	}
-
-ul.paging > .active > a,
-ul.paging > .active > span {
-	color: #999999;
-	cursor: default;
-	}
-
-ul.paging > .disabled > span,
-ul.paging > .disabled > a,
-ul.paging > .disabled > a:hover,
-ul.paging > .disabled > a:focus {
-	color: #999999;
-	background-color: transparent;
-	cursor: default;
-	}
-
-ul.paging > li:first-child > a,
-ul.paging > li:first-child > span {
-	border-left-width: 1px;
-	-webkit-border-top-left-radius: 4px;
-	-moz-border-radius-topleft: 4px;
-	border-top-left-radius: 4px;
-	-webkit-border-bottom-left-radius: 4px;
-	-moz-border-radius-bottomleft: 4px;
-	border-bottom-left-radius: 4px;
-	}
-
-ul.paging > li:last-child > a,
-ul.paging > li:last-child > span {
-	-webkit-border-top-right-radius: 4px;
-	-moz-border-radius-topright: 4px;
-	border-top-right-radius: 4px;
-	-webkit-border-bottom-right-radius: 4px;
-	-moz-border-radius-bottomright: 4px;
-	border-bottom-right-radius: 4px;
-	}
+		/* Pager Links */
+		
+		ul.paging li a{
+			background: #999;
+			color: #FFF;
+			display: block;
+			line-height: 30px;
+			padding: 0 12px;
+			text-decoration: none;
+			}
+			
+		ul.paging li a:hover,
+		ul.paging li a:focus{
+			background: #777;
+			}
+		
+		/* Current Page Link */
+		
+		ul.paging .current-page{
+			background-color: #333;
+			color: #FFF;
+			display: inline-block;
+			*display: inline;
+			line-height: 30px;
+			padding: 0 12px;
+			*zoom: 1;
+			}
+		
+		ul.paging .current-page:hover,
+		ul.paging .current-page:focus{
+			background: #333;
+			cursor: default;
+			}
