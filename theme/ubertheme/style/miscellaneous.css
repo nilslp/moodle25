@@ -51,7 +51,7 @@
 						}
 
 		#page-header .bg{
-			visibility: hidden;
+			xvisibility: hidden;
 			}
 
 /* Theme Settings Pages */
@@ -103,3 +103,24 @@ body#page-theme-ubertheme-admin form#adminsettings{
 		body.path-admin-setting form#adminsettings .admin-setting-group .form-item{
 			display: none;
 			}
+
+/* Banner */
+
+#section-header{
+	height: auto;
+	}
+
+	#page-header .banner{
+		height: auto;
+		}
+
+		#page-header .banner .bg{
+			display: block;
+			height: 100%;
+			text-align: center;
+			}
+
+			#page-header .banner .bg li{
+				display: none;
+				margin: 0;
+				}

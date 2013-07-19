@@ -198,7 +198,7 @@ function ubertheme_customBanner(){
     $html = '';
     $logo1 = false;
     $logo2 = false;
-    $height = 120;
+    $height = 'auto';
     $showbanners = true;
 
     $homeonly = (!empty($PAGE->theme->settings->custombannerhomeonly)) ? $PAGE->theme->settings->custombannerhomeonly : false;
@@ -236,7 +236,7 @@ function ubertheme_customBanner(){
 
 // Construct HTML
 
-    $html.= '<div class="banner" style="height:'.$height.'px;">';
+    $html.= '<div class="banner" style="height:'.$height.';">';
 
     if ($logo1) {
         $html.= '<div class="logo1"><a href="/"><img src="'.$logo1.'" alt="Logo"/></a></div>';
@@ -253,7 +253,8 @@ function ubertheme_customBanner(){
                 if ($replacement) $b = str_ireplace($pattern, $replacement, $b);
                 $html.= "<li data-id=\"".$banner_num++."\"";
                 if ($banner_num <= count($ary_banner)) { $html .= ' style="opacity:0;"'; }
-                $html.= "><div style=\"background-image:url($b);\"><img src=\"$b\" alt=\"banner\"/></div></li>";
+                // $html.= "><div style=\"background-image:url($b);\"><img src=\"$b\" alt=\"banner\"/></div></li>";
+                $html.= "><img src=\"$b\" alt=\"banner\"/></li>";
             }
             $html.= '</ul>';
         }
