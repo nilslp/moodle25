@@ -125,5 +125,50 @@ class theme_ubertheme_core_renderer extends core_renderer{
 			return html_writer::tag( 'ul', $output, array('class' => 'paging')); 
 		}
 
+		/**
+	     * Renders tabtree
+	     *
+	     * @param tabtree $tabtree
+	     * @return string
+	     */
+	    protected function render_tabtree(tabtree $tabtree) {
+	        if (empty($tabtree->subtree)) {
+	            return '';
+	        }
+	        $firstrow = $secondrow = '';
+	        foreach ($tabtree->subtree as $tab) {
+	            $firstrow .= $this->render($tab);
+	            if (($tab->selected || $tab->activated) && !empty($tab->subtree) && $tab->subtree !== array()) {
+	                $secondrow = $this->tabtree($tab->subtree);
+	            }
+	        }
+	        return html_writer::tag('ul', $firstrow, array('class' => 'nav nav-tabs')) . $secondrow;
+	    }
+
+	    /**
+	     * Renders tabobject (part of tabtree)
+	     *
+	     * This function is called from {@link core_renderer::render_tabtree()}
+	     * and also it calls itself when printing the $tabobject subtree recursively.
+	     *
+	     * @param tabobject $tabobject
+	     * @return string HTML fragment
+	     */
+	    protected function render_tabobject(tabobject $tab) {
+	        if ($tab->selected or $tab->activated) {
+	            return html_writer::tag('li', html_writer::tag('a', $tab->text), array('class' => 'active'));
+	        } else if ($tab->inactive) {
+	            return html_writer::tag('li', html_writer::tag('a', $tab->text), array('class' => 'disabled'));
+	        } else {
+	            if (!($tab->link instanceof moodle_url)) {
+	                // backward compartibility when link was passed as quoted string
+	                $link = "<a href=\"$tab->link\" title=\"$tab->title\">$tab->text</a>";
+	            } else {
+	                $link = html_writer::link($tab->link, $tab->text, array('title' => $tab->title));
+	            }
+	            return html_writer::tag('li', $link);
+	        }
+	    }
+
 }
 	

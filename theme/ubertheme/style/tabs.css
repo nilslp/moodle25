@@ -1,0 +1,64 @@
+/*-----------------------------------------------------------------------------------*/
+/* Section Comment
+/*-----------------------------------------------------------------------------------*/
+
+/* Sub-Section Comment ***********************/
+
+/* Standard Comment */
+
+.nav-tabs {
+	display: inline-block;
+	*display: inline;
+	margin: 20px 0;
+	width: 100%;
+	*zoom: 1;
+	}
+
+	.nav-tabs li{
+		display: inline-block;
+		margin: 0 2px 0 0;
+		}
+	
+	/* Tabs Links */
+	
+	.nav-tabs a{
+		background: #999;
+		color: #FFF;
+		display: block;
+		line-height: 30px;
+		padding: 0 12px;
+		text-decoration: none;
+		}
+			
+		.nav-tabs a:hover,
+		.nav-tabs a:focus{
+			background: #777;
+			}
+		
+		.nav-tabs .active > a,
+		.nav-tabs .selected > a{
+			background-color: #333;
+			color: #FFF;
+			display: inline-block;
+			*display: inline;
+			line-height: 30px;
+			*zoom: 1;
+			}
+
+			.nav-tabs a:visited{
+				color: #FFF;
+				}
+
+			.nav-tabs .disabled{
+				padding: 0;
+				}
+
+				.nav-tabs .disabled a,
+				.nav-tabs .disabled a:hover{
+					background-color: #999;
+					color: #666;
+					}
+
+	.nav-tabs .last{
+		margin-right: 0;
+		}

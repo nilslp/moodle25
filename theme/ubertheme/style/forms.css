@@ -190,6 +190,7 @@ textarea{
     margin-left: 0
     }
 
+.disabled,
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -203,6 +204,7 @@ textarea[readonly] {
 	padding: 0 10px;
     }
 
+    .disabled,
 	input[disabled]:hover,
 	select[disabled]:hover,
 	textarea[disabled]:hover,
