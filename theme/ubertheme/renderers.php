@@ -84,45 +84,51 @@ class theme_ubertheme_core_renderer extends core_renderer{
 			$title = '<span class="accesshide">'.get_string('pagepath').'</span>';
 			return $title . "<ul class=\"breadcrumb\">$list_items</ul>";
     	}
-
+		
 		// This function renders the paging bar as a list item
 		protected function render_paging_bar(paging_bar $pagingbar) {
 			$output = '';
 			$pagingbar = clone($pagingbar);
 			$pagingbar->prepare($this, $this->page, $this->target);
-			
+			$current_page = 1 + $pagingbar->page;
 						
 			if ($pagingbar->totalcount > $pagingbar->perpage) {
-				$output .= html_writer::tag('li', get_string('page'), array('class'=>'paging-title'));
+				#$output .= html_writer::tag('li', get_string('page'), array('class'=>'paging-title'));
 
-				if (!empty($pagingbar->previouslink)) {
-					$output .= html_writer::tag('li', ($pagingbar->previouslink), array('class'=>'previous-page'));
-				}
 			
 				if (!empty($pagingbar->firstlink)) {
-					$output .= html_writer::tag('li', ($pagingbar->firstlink . '&#160;&#8230;'), array('class'=>'first-page'));
-				}
+					$output .= html_writer::tag('li', ($pagingbar->firstlink . "<span class=\"ellipsis\">&#160;&#8230;</span>"), array('class'=>'first-page'));
+					}
 				
 				foreach ($pagingbar->pagelinks as $link) {
-					$output .= html_writer::tag('li', $link); 
-				}
-				
-				if (!empty($link->pagelinks)) {
-					// do not use div here due to nesting restriction in xhtml strict
-					return html_writer::tag('span', $text, array('class'=>'currentlink'));
+					
+					if ($current_page == $link) {
+						$output .= html_writer::tag('li', $link,array('class'=>'current-page')); 
+						}
+						
+					else {
+						$output .= html_writer::tag('li', $link,array('class'=>'page-link')); 
+						}				
 				}
 
 				if (!empty($pagingbar->lastlink)) {
-					$output .= html_writer::tag('li', ( '&#8230;&#160;' . $pagingbar->lastlink), array('class'=>'last-page'));
-				}
-			
-				if (!empty($pagingbar->nextlink)) {
-					$output .= html_writer::tag('li', ($pagingbar->nextlink), array('class'=>'next-page'));
-				}
+					$output .= html_writer::tag('li', ("<span class=\"ellipsis\">&#8230;&#160;</span>" . $pagingbar->lastlink), array('class'=>'last-page'));
+					}
+				
+				$output .= html_writer::start_tag('ul', array('class'=>'prev-next')); 
+					
+					if (!empty($pagingbar->previouslink)) {
+						$output .= html_writer::tag('li', ($pagingbar->previouslink), array('class'=>'previous-page'));
+						}
+				
+					if (!empty($pagingbar->nextlink)) {
+						$output .= html_writer::tag('li', ($pagingbar->nextlink), array('class'=>'next-page'));
+						}
+						
+				$output .= html_writer::end_tag('ul'); 	
 			}
 			
-			
-			return html_writer::tag( 'ul', $output, array('class' => 'paging')); 
+			return html_writer::tag( 'div', html_writer::tag( 'ul', $output, array('class' => 'paging')), array('class'=>'pager-wrapper') );
 		}
 
 		/**
