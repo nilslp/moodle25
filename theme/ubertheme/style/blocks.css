@@ -208,3 +208,8 @@
 		padding: 0;
 		text-align: center;
 		}
+
+/* Block - Main Menu */
+.chooserdialoguebody, .choosertitle{
+	display: none;
+	}

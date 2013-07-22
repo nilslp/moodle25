@@ -33,6 +33,7 @@ $THEME->sheets = array(
 	'slideshows',
 	'support-widget',
 	'tables',
+	'tabs',
 	'tags',
 	'ticker',
 	'page-activity-reports-all-logs',
