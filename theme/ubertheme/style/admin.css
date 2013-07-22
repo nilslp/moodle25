@@ -1,0 +1,92 @@
+/*-----------------------------------------------------------------------------------*/
+/* Add Blog page
+/*-----------------------------------------------------------------------------------*/
+
+/* Accordion Settings  ***********************/
+
+#page-blog-edit fieldset{
+	background: #FAFAFA !important;
+	border: 1px solid #E0E0E0;
+	min-height: 35px;
+	padding: 60px 15px 15px;
+	position: relative;
+	transition: height 0.2s ease-in-out 0s;
+	}
+
+#page-blog-edit fieldset.collapsed{
+	padding: 15px;
+	}
+	
+	#page-blog-edit fieldset.collapsed .fcontainer{
+		display: none;
+		}
+				
+		#page-blog-edit legend{
+			margin: 0;
+			position: absolute;
+			top: 13px;
+			width: 95%;
+			}
+
+		#page-blog-edit legend a.fheader {
+			background: #E0E0E0;
+			color: #333333;
+			display: block;
+			font-size: 120%;
+			line-height: 40px;
+			padding: 0 40px 0 10px;
+			}
+			
+/* Expand/Collapse All Button  ***********************/		
+			
+.collapsible-actions{
+	margin-bottom: 20px;
+    text-align: right;
+    width: 100%;
+	}
+			
+	.collapseexpand{
+		background: #333;
+		color: #FFF;
+		display: inline-block;
+		*display: inline;
+		line-height: 40px;
+		padding: 0 50px 0 10px;
+		text-align: center;
+		width: auto;
+		*zoom: 1;
+		}
+		
+/* Tags ***********************/
+
+#page-blog-edit fieldset.ftags{
+	padding-top: 0;
+	}
+	
+.ftags .accesshide{
+	display: block;
+	position: relative;
+	text-indent: 0;
+	visibility: visible;
+	}
+	
+.ftags select{
+	min-width: 300px;
+	}
+
+
+/* Errors  ***********************/
+	
+.error input{
+	border-color: #c00 !important;
+	}
+
+span.error{
+    background: none repeat scroll 0 0 #CC0000;
+    color: #FFFFFF;
+    font-family: Segoe UI Semilight;
+    font-size: 80%;
+    margin: 0;
+    padding: 5px 10px;
+    position: relative;
+	}
