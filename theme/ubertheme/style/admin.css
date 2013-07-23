@@ -2,6 +2,26 @@
 /* Add Blog page
 /*-----------------------------------------------------------------------------------*/
 
+/* Add Blog Entry  ***********************/
+
+.addbloglink{
+	margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+	}
+
+.addbloglink a{
+	background: #333;
+	color: #FFF;
+	display: inline-block;
+	*display: inline;
+	line-height: 40px;
+	padding: 0 50px 0 10px;
+	text-align: center;
+	width: auto;
+	*zoom: 1;
+	}
+
 /* Accordion Settings  ***********************/
 
 #page-blog-edit fieldset{
@@ -90,3 +110,66 @@ span.error{
     padding: 5px 10px;
     position: relative;
 	}
+	
+	
+/*-----------------------------------------------------------------------------------*/
+/* Tags Page
+/*-----------------------------------------------------------------------------------*/
+
+/* Manage Tags Button  ***********************/
+
+.managelink{
+	margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+	}
+
+.managelink a{
+	background: #333;
+	color: #FFF;
+	display: inline-block;
+	*display: inline;
+	line-height: 40px;
+	padding: 0 50px 0 10px;
+	text-align: center;
+	width: auto;
+	*zoom: 1;
+	}
+
+/* Tags Search results  ***********************/
+
+#tag-search-results li{
+	color: transparent;
+	margin: 10px 0 0;
+	}
+
+#tag-search-results li a{
+	background: #333 url([[pix:theme|bg_tag]]) no-repeat right center;
+	color: #FFF;
+	display: inline-block;
+	line-height: 150%;
+	margin-left: -10px;
+    margin-right: 10px;
+	padding: 0 40px 0 5px;
+	}
+	
+	#tag-search-results li a:hover{
+		background-color: #555;
+		}
+	
+		
+/* Tags Box  ***********************/
+
+#big-tag-cloud-box{
+    border: 3px solid #F0F0F0;
+    padding: 15px;
+	}
+
+#big-tag-cloud-box ul{
+	margin: 0;
+	}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Add Tags Page
+/*-----------------------------------------------------------------------------------*/

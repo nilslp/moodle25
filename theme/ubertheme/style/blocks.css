@@ -77,6 +77,7 @@
 	/* Controls the Move Block, Edit Admin etc button */
 	.commands{
 		 display: none;
+		 
 		 }
 	
 	.block_with_controls .commands{
@@ -187,7 +188,84 @@
 				/* Hide '-' when hidden, Show '+' when normal */ 
 				display: none;
 				}
+	
+/* Block Menu Settings ***********************/	
 
+.block-region .block_tree{
+    margin:0;
+	padding: 0;
+	}
+	
+.block-region .block_tree li{
+    margin: 0;
+	padding: 0;
+	}
+
+.block-region .block_tree li ul{
+    margin: 0;
+	padding: 0;
+	}
+	
+				
+/* Navigation Block Settings ***********************/
+	
+.block_navigation .block_tree .type_activity > p.tree_item.branch.hasicon.active_tree_node,
+.block_navigation .block_tree .tree_item{
+    margin: 0;
+    padding-left: 0;
+	}
+	
+.block_navigation .block_tree li span,
+.block_navigation .block_tree li a{
+	display: block;
+    line-height: 190%;
+	}
+
+.jsenabled .block_navigation .block_tree .collapsed .tree_item.branch {
+    background: url("[[pix:theme|menu_tree_state]]") no-repeat left top;
+	}
+	
+	.jsenabled .block_navigation .block_tree .tree_item.branch {
+		background: url("[[pix:theme|menu_tree_state]]") no-repeat left bottom;
+		}
+	
+	
+/* Settings Block Settings ***********************/
+
+.block_settings .block_tree .type_activity > p.tree_item.branch.hasicon.active_tree_node,
+.block_settings  .block_tree .tree_item{
+    margin: 0;
+    padding-left: 0;
+	}
+	
+.block_settings .block_tree li span,
+.block_settings .block_tree li a{
+	display: block;
+    line-height: 190%;
+	}
+
+.jsenabled .block_settings .block_tree .collapsed .tree_item.branch {
+    background: url("[[pix:theme|menu_tree_state]]") no-repeat left top;
+	}
+	
+	.jsenabled .block_settings .block_tree .tree_item.branch {
+		background: url("[[pix:theme|menu_tree_state]]") no-repeat left bottom;
+		}
+
+/* Block Search Settings ***********************/
+
+.adminsearchform input[type=text]{
+	border-right: none;
+	width: 172px;
+	}
+
+.adminsearchform button{
+	background: #DDD url("[[pix:theme|block_search]]") no-repeat center center;
+	border: none;
+	display: inline-block;
+	padding: 20px;
+	text-indent: -9999px;
+	}
 
 /*-----------------------------------------------------------------------------------*/
 /* Specifics

@@ -12,17 +12,23 @@
 .notifysuccess,
 .notifymessage,
 .redirectmessage,
-.error{
+.green{
 	padding: 8px 35px 8px 14px;
 	margin-bottom: 20px;
 	}
+	
+.error{
+	padding: 8px 35px 8px 0;
+	}
 
-	.notifysuccess{
+	.notifysuccess,
+	.green{
 		background-color: #dff0d8;
 		color: #468847;
 		}
 	
-		.notifysuccess a{
+		.notifysuccess a,
+		.green a{
 			border-bottom: 1px dotted #468847;
 			color: inherit;
 			font-weight: bold;

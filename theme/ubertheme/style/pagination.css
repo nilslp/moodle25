@@ -6,49 +6,83 @@
 
 /* Standard Comment */
 
-ul.paging {
-	display: inline-block;
-	*display: inline;
-	margin: 20px 0;
+.pager-wrapper{
 	width: 100%;
-	*zoom: 1;
 	}
 
-	ul.paging li{
+	ul.paging {
 		display: inline-block;
-		margin: 0 1px;
+		*display: inline;
+		margin: 20px 0;
+		position: relative;
+		width: 100%;
+		*zoom: 1;
 		}
 	
-		/* Pager Links */
-		
-		ul.paging li a{
-			background: #999;
-			color: #FFF;
-			display: block;
-			line-height: 30px;
-			padding: 0 12px;
-			text-decoration: none;
-			}
-			
-		ul.paging li a:hover,
-		ul.paging li a:focus{
-			background: #777;
-			}
-		
-		/* Current Page Link */
-		
-		ul.paging .current-page{
-			background-color: #333;
-			color: #FFF;
+		ul.paging li{
 			display: inline-block;
-			*display: inline;
-			line-height: 30px;
-			padding: 0 12px;
-			*zoom: 1;
+			margin: 0 1px;
 			}
 		
-		ul.paging .current-page:hover,
-		ul.paging .current-page:focus{
-			background: #333;
-			cursor: default;
-			}
+			/* Pager Links */
+			
+			ul.paging li a{
+				background: #999;
+				color: #FFF;
+				display: inline-block;
+				line-height: 30px;
+				padding: 0 12px;
+				text-decoration: none;
+				transition: all 0.2s linear 0s;
+				}
+				
+			ul.paging li a:hover,
+			ul.paging li a:focus{
+				background: #777;
+				}
+			
+			ul.paging li a:visited{
+				color: #FFF;
+				}
+			
+			/* Current Pager Link */
+			
+			ul.paging .current-page{
+				background-color: #333;
+				color: #FFF;
+				display: inline-block;
+				*display: inline;
+				line-height: 30px;
+				padding: 0 12px;
+				*zoom: 1;
+				}
+			
+			ul.paging .current-page:hover,
+			ul.paging .current-page:focus{
+				background: #333;
+				cursor: default;
+				}
+				
+			/* Pager Ellipsis */
+			
+			.ellipsis {
+				display: inline-block;
+				padding: 0 12px;
+				}
+			
+			/* Previous / Next Links */
+			
+			ul.prev-next {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: auto;
+				}
+			
+			ul li.previous-page a {
+				padding-left: 40px;
+				}
+				
+			ul li.next-page a {
+				padding-right: 40px;
+				}
