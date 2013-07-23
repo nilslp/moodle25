@@ -119,8 +119,8 @@ $string['logo2_help'] = 'Provide the URL to the image of the logo to be used on 
 $string['banners'] = 'Banners';
 
 $string['custombanner'] = 'Custom Banners';
-$string['custombannerdesc'] = 'A set of banner images that will cycled in placed behind each of the logos specified above.';
-$string['custombanner_help'] = 'A set of banner images that will cycled in placed behind each of the logos specified above.';
+$string['custombannerdesc'] = 'A set of banner images that will cycled in placed behind each of the logos specified above. Height will be automatically set based on the height of the image.';
+$string['custombanner_help'] = 'A set of banner images that will cycled in placed behind each of the logos specified above. Height will be automatically set based on the height of the image.';
 
 $string['custombannerheight'] = 'Height';
 $string['custombannerheightdesc'] = 'Specify a height, in pixels for the banner images.';

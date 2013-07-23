@@ -45,7 +45,7 @@ class theme_ubertheme_admin_form extends moodleform {
 				$defaults->pagebbgc = (isset($cs_ubertheme->pagebbgc)) ? $cs_ubertheme->pagebbgc : '#FFFFFF';
 				$defaults->searchwidget = (isset($cs_ubertheme->searchwidget)) ? $cs_ubertheme->searchwidget : 0;
 				$defaults->custombanner = (isset($cs_ubertheme->custombanner)) ? $cs_ubertheme->custombanner : '';
-				$defaults->custombannerheight = (isset($cs_ubertheme->custombannerheight)) ? $cs_ubertheme->custombannerheight : 120;
+				// $defaults->custombannerheight = (isset($cs_ubertheme->custombannerheight)) ? $cs_ubertheme->custombannerheight : 120;
 				$defaults->custombannerslideshow = (isset($cs_ubertheme->custombannerslideshow)) ? $cs_ubertheme->custombannerslideshow : 0;
 				$defaults->custombannerhomeonly = (isset($cs_ubertheme->custombannerhomeonly)) ? $cs_ubertheme->custombannerhomeonly : 0;
 				$defaults->favicon = (isset($cs_ubertheme->favicon)) ? $cs_ubertheme->favicon : '';
@@ -160,9 +160,9 @@ class theme_ubertheme_admin_form extends moodleform {
 						$mform->setDefault('custombanner', $defaults->custombanner);
 
 						// Custom Banner Height - in pixels
-						$mform->addElement('lp_text', 'custombannerheight', get_string('custombannerheight', 'theme_ubertheme'), array('size'=>'5'), get_string('custombannerheight_help', 'theme_ubertheme'));
-						$mform->setType('custombannerheight', PARAM_INT);
-						$mform->setDefault('custombannerheight', $defaults->custombannerheight);
+						// $mform->addElement('lp_text', 'custombannerheight', get_string('custombannerheight', 'theme_ubertheme'), array('size'=>'5'), get_string('custombannerheight_help', 'theme_ubertheme'));
+						// $mform->setType('custombannerheight', PARAM_INT);
+						// $mform->setDefault('custombannerheight', $defaults->custombannerheight);
 
 						// Custom Banner Slideshow
 						$mform->addElement('lp_select', 'custombannerslideshow', get_string('custombannerslideshow', 'theme_ubertheme'), $choices_on_off, null, get_string('custombannerslideshow_help', 'theme_ubertheme'));

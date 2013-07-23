@@ -20,6 +20,7 @@
 			overflow: visible !important;
 			position: absolute;
 			width: 100%;
+			z-index: 2;
 			}
 
 			#page-header .meta .headermain{

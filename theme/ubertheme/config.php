@@ -280,12 +280,18 @@ if (!isloggedin() && $THEME->settings->customanonhomepage) {
 $THEME->javascripts = array(
 		'init',
 		'yuimods' => array(
-				'node', 
-				'event', 
-				'selector-css3', 
-				'event-hover', 
-				'transition', 
-				'anim'
+		        'anim',
+		        'console',
+		        'cookie',
+		        'dd-constrain',
+		        'dd-delegate',
+		        'event',
+		        'event-hover',
+		        'json-parse',
+		        'json-stringify',
+		        'node',
+		        'selector-css3',
+		        'transition'
 				)
 		);
 
@@ -293,6 +299,11 @@ $THEME->javascripts_footer = array(
 		'cycling-banners',
 		'feature-slider',
 		'misc',
+		'sideblock-stuff',
+		'support-widget',
+		'ticker',
+		'util.browser-fitness',
+		'yui-carousel',
 		);
 
 $THEME->csspostprocess = 'ubertheme_process_css';

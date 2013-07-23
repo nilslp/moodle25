@@ -59,6 +59,7 @@ class theme_ubertheme_core_renderer extends core_renderer{
 		
 		// This function renders the block content markup
 		protected function block_content(block_contents $bc) {
+			$output = '';
 			$output .= html_writer::start_tag('div', array( 'class' => 'block-content-wrapper')) . html_writer::start_tag('div', array('class' => 'content')); 
 			if (!$bc->title && !$this->block_controls($bc->controls)) {
 				$output .= html_writer::tag('div', '', array('class'=>'block_action notitle'));
