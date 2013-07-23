@@ -236,7 +236,8 @@ function ubertheme_customBanner(){
 
 // Construct HTML
 
-    $html.= '<div class="banner" style="height:'.$height.';">';
+    // $html.= '<div class="banner" style="height:'.$height.';">';
+    $html.= '<div class="banner">';
 
     if ($logo1) {
         $html.= '<div class="logo1"><a href="/"><img src="'.$logo1.'" alt="Logo"/></a></div>';
@@ -251,10 +252,14 @@ function ubertheme_customBanner(){
             $html.= '<ul class="bg">';
             foreach ($ary_banner as $b) {
                 if ($replacement) $b = str_ireplace($pattern, $replacement, $b);
-                $html.= "<li data-id=\"".$banner_num++."\"";
+                if ($banner_num == count($ary_banner)) {
+                    $html.= "<li data-id=\"".$banner_num++."\" style=\" opacity: 1; position: relative;\"";
+                } else {
+                    $html.= "<li data-id=\"".$banner_num++."\" style=\" opacity: 0; position: absolute;\"";
+                }
                 if ($banner_num <= count($ary_banner)) { $html .= ' style="opacity:0;"'; }
                 // $html.= "><div style=\"background-image:url($b);\"><img src=\"$b\" alt=\"banner\"/></div></li>";
-                $html.= "><img src=\"$b\" alt=\"banner\"/></li>";
+                $html.= "><img src=\"$b\" alt=\"banner\" style=\"position: relative;\" /></li>";
             }
             $html.= '</ul>';
         }

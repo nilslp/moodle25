@@ -112,15 +112,25 @@ body#page-theme-ubertheme-admin form#adminsettings{
 
 	#page-header .banner{
 		height: auto;
+		position: relative;
 		}
 
 		#page-header .banner .bg{
 			display: block;
 			height: 100%;
-			text-align: center;
+			margin: 0;
 			}
 
 			#page-header .banner .bg li{
-				display: none;
 				margin: 0;
+				position: absolute;
+				top: 0;
+				}
+				
+			#page-header .banner .bg li.show{
+				display: block;
+				}
+
+			#page-header .banner .bg li.hide{
+				display: none;
 				}
