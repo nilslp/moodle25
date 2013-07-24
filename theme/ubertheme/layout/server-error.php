@@ -100,7 +100,7 @@ echo $OUTPUT->doctype();
 
 		<?php } ?>
 
-				<?php echo theme_foundation_search_widget(); ?>
+				<?php echo theme_ubertheme_search_widget(); ?>
 				
 		<div id="custommenu" class="custommenu">
 				<?php if ($hascustommenu) { echo $custommenu; } ?>

@@ -10,12 +10,6 @@ global $CFG;
 
 $istotara = (isset($CFG->totara_build));
 
-if (!file_exists($CFG->dirroot.'/theme/foundation/lib.php')) {
-		return;
-}
-require_once($CFG->dirroot.'/theme/foundation/lib.php');
-
-
 if ($ADMIN->fulltree) {
 
 

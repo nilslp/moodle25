@@ -18,8 +18,8 @@ class theme_ubertheme_admin_form extends moodleform {
 
 				global $CFG;
 				$istotara = (isset($CFG->totara_build));
-//				$context = get_system_context();
-				$has_accordion_course_format = (file_exists($CFG->dirroot.'/course/format/accordion/format.php'));
+				// $context = get_system_context();
+				// $has_accordion_course_format = (file_exists($CFG->dirroot.'/course/format/accordion/format.php'));
 
 				$mform = & $this->_form;
 
@@ -73,8 +73,8 @@ class theme_ubertheme_admin_form extends moodleform {
 				$defaults->mcpcompletecolor = (isset($cs_ubertheme->mcpcompletecolor)) ? $cs_ubertheme->mcpcompletecolor : '#55B295';
 				$defaults->mcpincompletecolor = (isset($cs_ubertheme->mcpincompletecolor)) ? $cs_ubertheme->mcpincompletecolor : '#5875B5';
 				$defaults->mcpnotattemptedcolor = (isset($cs_ubertheme->mcpnotattemptedcolor)) ? $cs_ubertheme->mcpnotattemptedcolor : '#FFFFFF';
-				$defaults->accordioncolor = (isset($cs_ubertheme->accordioncolor)) ? $cs_ubertheme->accordioncolor : '#CCCCCC';
-				$defaults->accordiongradient = (isset($cs_ubertheme->accordiongradient)) ? $cs_ubertheme->accordiongradient : 0;
+				// $defaults->accordioncolor = (isset($cs_ubertheme->accordioncolor)) ? $cs_ubertheme->accordioncolor : '#CCCCCC';
+				// $defaults->accordiongradient = (isset($cs_ubertheme->accordiongradient)) ? $cs_ubertheme->accordiongradient : 0;
 
 
 				// General Settings
@@ -342,18 +342,18 @@ class theme_ubertheme_admin_form extends moodleform {
 
 				// Accordion Course Format
 
-				if ($has_accordion_course_format) {
-						// Only show the setting if the accordion course format exists
-						$mform->addElement('header', 'accordion-course-format-settings', get_string('accordion_course_format', 'theme_ubertheme'));
+				// if ($has_accordion_course_format) {
+				// 		// Only show the setting if the accordion course format exists
+				// 		$mform->addElement('header', 'accordion-course-format-settings', get_string('accordion_course_format', 'theme_ubertheme'));
 
-								// Base Color
-								$mform->addElement('lp_colorpicker', 'accordioncolor', get_string('accordioncolor', 'theme_ubertheme'), null, get_string('accordioncolor_help','theme_ubertheme'));
-								$mform->setDefault('accordioncolor', $defaults->accordioncolor);
+				// 				// Base Color
+				// 				$mform->addElement('lp_colorpicker', 'accordioncolor', get_string('accordioncolor', 'theme_ubertheme'), null, get_string('accordioncolor_help','theme_ubertheme'));
+				// 				$mform->setDefault('accordioncolor', $defaults->accordioncolor);
 
-								// Gradients
-								$mform->addElement('lp_select', 'accordiongradient', get_string('accordiongradient', 'theme_ubertheme'),$choices_on_off, null, get_string('accordiongradient_help','theme_ubertheme'));
-								$mform->setDefault('accordiongradient', $defaults->accordiongradient);
-				}
+				// 				// Gradients
+				// 				$mform->addElement('lp_select', 'accordiongradient', get_string('accordiongradient', 'theme_ubertheme'),$choices_on_off, null, get_string('accordiongradient_help','theme_ubertheme'));
+				// 				$mform->setDefault('accordiongradient', $defaults->accordiongradient);
+				// }
 
 
 				// Form Submit Buttons

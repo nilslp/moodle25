@@ -2,7 +2,7 @@
 
 require_once($CFG->dirroot . "/blocks/settings/renderer.php");
 require_once($CFG->dirroot . "/blocks/navigation/renderer.php");
-require_once($CFG->dirroot. "/lib/outputrenderers.php");
+require_once($CFG->dirroot . "/lib/outputrenderers.php");
 
 class theme_ubertheme_block_settings_renderer extends block_settings_renderer {
 		
@@ -119,7 +119,13 @@ class theme_ubertheme_block_navigation_renderer extends block_navigation_rendere
                 continue;
             }
 
-			
+			// if ($hasicon) {
+				// $icon = $this->output->render($item->icon);
+				// $icon = '';
+			// } else {
+				$icon = '';
+			// }
+
             $content = $icon.$content; // use CSS for spacing of icons
             if ($item->helpbutton !== null) {
                 $content = trim($item->helpbutton).html_writer::tag('span', $content, array('class'=>'clearhelpbutton'));

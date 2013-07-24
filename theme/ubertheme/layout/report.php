@@ -60,7 +60,7 @@ echo $OUTPUT->doctype();
 				
 				<?php echo ubertheme_customBanner(); ?>
 
-				<?php echo theme_foundation_search_widget(); ?>
+				<?php echo theme_ubertheme_search_widget(); ?>
 
 		<?php } ?>
 		<div id="custommenu" class="custommenu">

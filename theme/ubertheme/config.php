@@ -5,7 +5,7 @@ $istotara = (isset($CFG->totara_build));
 
 $THEME->name = 'ubertheme';
 
-$THEME->parents = array('foundation', 'bootstrapbase');
+$THEME->parents = array();
 
 $THEME->sheets = array(
 	'reset',
@@ -74,59 +74,6 @@ $THEME->sheets = array(
 	);
 		
 if (!empty($THEME->settings->blockwidth)) { $THEME->sheets[] = 'columns-'.$THEME->settings->blockwidth; }
-
-$THEME->parents_exclude_sheets = array(
-	'bootstrapbase' => array(
-		'editor',
-		'moodle'
-			),
-	'foundation' => array(
-		'typography',
-		'cssbase-min',
-		'base-overrides',
-		'columns',
-		'blocks',
-		'tables',
-		'login',
-		'forms',
-		'tabs',
-		'paging',
-		'notifications',
-		'calendar',
-		'course-list',
-		'topics',
-		'accordian-topic-outline',
-		'content',
-		'forums_blogs',
-		'mods',
-		'popup',
-		'browser-specific',
-		'yui-overrides',
-		'yui3-menu',
-		'yui3-overlay',
-		'yui3-panel',
-		'server-errors',
-		'carousel',
-		'ticker',
-		'support-widget',
-		'dialog',
-		'treeview',
-		'mediaqueries',
-		'printstyles',
-		'layout',
-		'typography',
-		'dock',
-		'overrides',
-		'anon-home',
-		'block-containers',
-		'lp-custom',
-		'cycling-banners',
-		'feature-slider',
-		'reports',
-		'css3',
-		'theme-settings'
-	),
-);
 
 $THEME->layouts = array(
 		// Most backwards compatible layout without the blocks - this is the layout used by default
@@ -285,6 +232,7 @@ $THEME->javascripts = array(
 		        'cookie',
 		        'dd-constrain',
 		        'dd-delegate',
+		        'dd-drag',
 		        'event',
 		        'event-hover',
 		        'json-parse',
