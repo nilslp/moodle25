@@ -64,7 +64,7 @@ class theme_ubertheme_block_settings_renderer extends block_settings_renderer {
 				}
 				$content = html_writer::tag('p', $content, $divattr) . $this->navigation_node($item);
 				if (!empty($item->preceedwithhr) && $item->preceedwithhr===true) {
-					$content = html_writer::empty_tag('hr') . $content;
+				
 				}
 				$content = html_writer::tag('li', $content, $liattr);
 				$lis[] = $content;
