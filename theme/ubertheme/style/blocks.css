@@ -50,7 +50,7 @@
 		background-color: #F0F0F0; /* Development Only */
 		height: 100%;
 		margin-top: 0;
-		padding: 10px;
+		padding: 7%;
 		transition: all 0.2s ease-in-out 0s; 
 		}
 
@@ -195,85 +195,113 @@
     margin:0;
 	padding: 0;
 	}
-	
+
 .block-region .block_tree li{
     margin: 0;
 	padding: 0;
 	}
+	
+.block_settings .block_tree li.item_with_icon > p{
+	padding-left: 20px;
+	}
 
-.block-region .block_tree li ul{
+.block-region .block_tree li ul,
+.block-region .block_tree li.depth_2 ul{
+	background: #FEFEFE;
+	border: 1px solid #CCC;
+    margin: 10px 0 10px 20px;
+	padding: 10px;
+	position: relative;
+	}
+		
+	.block-region .block_tree li ul:before{
+		background: transparent;
+		border: solid transparent;
+		border-color: rgba(0, 0, 0, 0);
+		border-bottom-color: #FEFEFE;
+		border-width: 5px;
+		content: " ";
+		display: block;
+		font-size: 0;
+		height: 0;	
+		margin-left: 1px;
+		pointer-events: none;
+		position: absolute;
+		top: -10px;
+		width: 0;
+		}
+
+.block-region .block_tree .tree_item{
+	background: url("[[pix:theme|bg_block-menu-link]]") no-repeat -10px center;
     margin: 0;
 	padding: 0;
 	}
-	
-				
-/* Navigation Block Settings ***********************/
-	
-.block_navigation .block_tree .type_activity > p.tree_item.branch.hasicon.active_tree_node,
-.block_navigation .block_tree .tree_item{
-    margin: 0;
-    padding-left: 0;
-	}
-	
-.block_navigation .block_tree li span,
-.block_navigation .block_tree li a{
+
+.block-region .block_tree li span,
+.block-region .block_tree li a{
 	display: block;
+	font-size: 94%;
     line-height: 190%;
 	}
 
-.jsenabled .block_navigation .block_tree .collapsed .tree_item.branch {
-    background: url("[[pix:theme|menu_tree_state]]") no-repeat left top;
+.jsenabled .block-region .block_tree .tree_item.branch{
+	background: url("[[pix:theme|menu_tree_state]]") no-repeat -10px bottom;
+	padding-left: 20px;
 	}
 	
-	.jsenabled .block_navigation .block_tree .tree_item.branch {
-		background: url("[[pix:theme|menu_tree_state]]") no-repeat left bottom;
+	.jsenabled .block-region .block_tree .collapsed .tree_item.branch{
+		background: url("[[pix:theme|menu_tree_state]]") no-repeat -10px top;
 		}
-	
-	
-/* Settings Block Settings ***********************/
 
-.block_settings .block_tree .type_activity > p.tree_item.branch.hasicon.active_tree_node,
-.block_settings  .block_tree .tree_item{
-    margin: 0;
-    padding-left: 0;
+.jsenabled .block-region .block_tree li:first-child p.tree_item.branch.navigation_node{
+	/* Controls the Navigation Block Home Link */
+	background: none;
+	padding-left: 0;
 	}
 	
-.block_settings .block_tree li span,
-.block_settings .block_tree li a{
-	display: block;
-    line-height: 190%;
+ul li[aria-expanded="true"] ul > li{
+	/* Controls the appearance of child elments */
+	/*background: #FAFAFA;*/
+	padding-left: 10px;
+	}
+	
+ul li li[aria-expanded="true"] ul{
+	/* Controls the appearance of child elments */
+	border-bottom: 2px solid #f0f0f0;
+	background: #FAFAFA;
+    margin: 10px 0 10px 0 !important;
 	}
 
-.jsenabled .block_settings .block_tree .collapsed .tree_item.branch {
-    background: url("[[pix:theme|menu_tree_state]]") no-repeat left top;
-	}
-	
-	.jsenabled .block_settings .block_tree .tree_item.branch {
-		background: url("[[pix:theme|menu_tree_state]]") no-repeat left bottom;
-		}
+
 
 /* Block Search Settings ***********************/
 
-.adminsearchform input[type=text]{
-	border-right: none;
-	width: 172px;
+.adminsearchform{
+	margin: 20px 0 0;
+	padding: 0;
 	}
 
+.adminsearchform input[type=text]{
+    -moz-box-sizing: border-box;
+    border-right: none;
+    height: 40px;
+	padding: 0;
+    text-indent: 5px;
+    width: 80%;
+	}
+	
 .adminsearchform button{
 	background: #DDD url("[[pix:theme|block_search]]") no-repeat center center;
 	border: none;
 	display: inline-block;
-	padding: 20px;
+	padding: 0;
 	text-indent: -9999px;
+	width: 20%;
 	}
 
 /*-----------------------------------------------------------------------------------*/
 /* Specifics
 /*-----------------------------------------------------------------------------------*/
-
-.block_navigation .block_tree .tree_item.branch.navigation_node > a{
-	font-weight: bold;
-	}
 
 .block.block_calendar_month .minicalendar{
 	font-size: 90%;
