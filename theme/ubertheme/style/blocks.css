@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------------*/
-/* Global Block Settings
+/* Block Stucture Settings
 /*-----------------------------------------------------------------------------------*/
 
 /* Block Containers ***********************/
@@ -19,7 +19,7 @@
 	/*background-color: [[setting:sbbgc]];
 	color: [[setting:sbtc]];*/
 	background-color: #F0F0F0;
-	margin: 0 0 3px;
+	margin: 0;
 	padding: 10px;
 	position: relative;
 	z-index: 2;
@@ -50,7 +50,7 @@
 		background-color: #F0F0F0; /* Development Only */
 		height: 100%;
 		margin-top: 0;
-		padding: 4%;
+		padding: 0 4% 4%;
 		transition: all 0.2s ease-in-out 0s; 
 		}
 
@@ -60,8 +60,11 @@
 			transform: translateY(-100%);
 			transform-origin: 0% 0%;
 			}
-
-/* Block Actions & Commands ***********************/
+			
+			
+/*-----------------------------------------------------------------------------------*/
+/* Block Header - Actions & Commands
+/*-----------------------------------------------------------------------------------*/
 
 .actions-commands{
     display: inline-block;
@@ -189,160 +192,271 @@
 				display: none;
 				}
 	
-/* Block Menu Settings ***********************/	
 
-.block-region .block_tree{
-    margin:0;
-	padding: 0;
-	}
-	
-.block-region .block_tree li{
+/*-----------------------------------------------------------------------------------*/
+/* Block Content - Block Menu Settings
+/*-----------------------------------------------------------------------------------*/
+
+/* Global Block Menu Settings ***********************/
+
+.block-region ul.block_tree{
+	/* Tree style */
     margin: 0;
 	padding: 0;
 	}
 
-.block-region .block_tree li ul{
+.block-region .block ul.block_tree *,
+.block-region .block ul.block_tree .tree_item.branch,
+.block-region .block ul.block_tree .collapsed .tree_item.branch{
+	/* Tree style reset */
+	background: none;
     margin: 0;
 	padding: 0;
 	}
 	
+.block-region .block ul.block_tree>li{
+	/* Main branch style */
+    margin: 0 0 10px 0;
+    padding: 0;
+	}
+	
+	
+	/* Top Level Menu items ***********************/
+	
+	
+	.block-region ul.block_tree li ul a,
+	.block-region ul.block_tree li ul p span{
+		/* Top Level - Font size */
+		font-size: 92%;
+		}
+
+	
+	.block-region .block ul.block_tree li p.navigation_node{
+		/* Navigation Block - Top Level Home Button */
+		color: #333;
+		}
+		
+	.block-region .block ul.block_tree li p.navigation_node a{
+		/* Navigation Block - Top Level Branch Toggle */
+		color: inherit;
+		display: block;
+		line-height: 280%;
+		padding: 0;
+		}
+	
+	.block-region .block ul.block_tree li p.root_node,
+	.block-region .block ul.block_tree li p.branch a{
+		/* Top Level - Branch Toggle */
+		display: block;
+		line-height: 280%;
+		padding: 0;
+		text-indent: 15px;
+		}
+			
+		.block-region .block ul.block_tree li.collapsed p.tree_item.root_node{
+			background: #FEFEFE url("[[pix:theme|menu_tree_state]]") no-repeat 95% -58%;
+			border: 1px dotted #CCC;
+			}
+	
+		.block-region .block ul.block_tree li p.tree_item.root_node {
+			background: #FEFEFE url("[[pix:theme|menu_tree_state]]") no-repeat 95% 138%;
+			border: 1px solid #F0F0F0;
+			}
+		
+			.block-region .block ul.block_tree li.collapsed p.tree_item.root_node,
+			.block-region .block ul.block_tree li p.tree_item.root_node{
+				transition: background-color 0.2s linear 0s;
+				}
 				
+			.block-region .block ul.block_tree li.collapsed p.tree_item.root_node:hover,
+			.block-region .block ul.block_tree li p.tree_item.root_node:hover{
+				background-color: #F6F6F6;
+				}
+		
+	.block-region .block ul.block_tree li p.leaf a{
+		/* Top Level - Leafs */
+		/*color: #639;*/
+		display: block;
+		line-height: 230%;
+		text-indent: 15px;
+		}
+				
+	.block-region .block ul.block_tree li p.leaf a:hover{
+		/* Top Level - Leafs Hover */
+		background: #F6F6F6;
+		}
+		
+	.block-region .block ul.block_tree li p.root_node + ul{
+		/* Top level - Dropdown Panel */
+		background: #FEFEFE;
+		border: none;
+		margin: 3px 0;
+		padding: 5px 0;
+		position: relative;
+		}
+		
+		.block-region .block ul.block_tree li p.root_node + ul:after,	
+		.block-region .block ul.block_tree li p.root_node + ul:before{
+			/* Global arrow style */
+			border: solid transparent;
+			border-width: 8px;
+			bottom: 100%;
+			content: " ";
+			height: 0;
+			right: 7%;
+			pointer-events: none;
+			position: absolute;
+			width: 0;	
+			}
+				
+		.block-region .block ul.block_tree li p.root_node + ul:after{
+			/* Foreground arrow style */
+			border-color: rgba(239, 239, 14, 0);
+			border-bottom-color: #FEFEFE;
+			margin-bottom: -3px;
+			}
+		
+		.block-region .block ul.block_tree li p.root_node + ul:before{
+			/* Background arrow style */
+			border-color: rgba(240, 240, 240, 0);
+			border-bottom-color:  #F0F0F0;
+			margin-bottom: 1px;
+			}
+		
+		
+	/* Second Level Menu items ***********************/
+
+	.block-region .block ul.block_tree li ul li p.branch,
+	.block-region .block ul.block_tree li ul li p.branch a{
+		/* Second Level - Branch Toggle */
+		color: #999;
+		display: block;
+		line-height: 230%;
+		text-indent: 0;
+		}
+		
+		.block-region .block ul.block_tree li ul li.collapsed p.branch span,
+		.block-region .block ul.block_tree li ul li p.branch span,
+		.block-region .block ul.block_tree li ul li p.branch ul{
+			/* Second Level - Branch Toggle Span */
+			display: block;
+			margin: 0 15px;
+			}
+		
+		.block-region .block ul.block_tree li ul li.collapsed p.branch a{
+			text-indent: 15px;
+			}
+			
+		.block-region .block ul.block_tree li ul li.collapsed p.tree_item.branch,
+		.block-region .block ul.block_tree li ul li p.tree_item.branch{
+			transition: background-color 0.2s linear 0s;
+			}
+				
+		.block-region .block ul.block_tree li ul li.collapsed p.tree_item.branch:hover,
+		.block-region .block ul.block_tree li ul li p.tree_item.branch:hover{
+			background-color: #F6F6F6;
+			}
+
+			.block-region .block ul.block_tree li ul li.collapsed p.tree_item.branch{
+				background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% -20%;
+				}
+		
+			.block-region .block ul.block_tree li ul li p.tree_item.branch{
+				background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% 108%;
+				}
+			
+		.block-region .block ul.block_tree li ul li ul{
+			/* Second Level - Drop Down Panel */
+			border-bottom: 1px dashed #E6E6E6;
+			border-top: 1px dashed #E6E6E6;
+			display: block;
+			margin: 0 15px;
+			}	
+			
+			
+		/* Third Level Menu items ***********************/
+	
+		.block-region .block ul.block_tree li ul li ul li.collapsed p.branch span,
+		.block-region .block ul.block_tree li ul li ul li.collapsed p.branch a,
+		.block-region .block ul.block_tree li ul li ul li p.branch span,
+		.block-region .block ul.block_tree li ul li ul li p.branch a{
+			/* Third Level - Branch Toggle Span */
+			border-bottom: none;
+			font-weight: normal;
+			text-indent: 15px;
+			}
+		
+		.block-region .block ul.block_tree li ul li ul li.collapsed p.tree_item.branch,
+		.block-region .block ul.block_tree li ul li ul li p.tree_item.branch{
+			transition: background-color 0.2s linear 0s;
+			}
+				
+		.block-region .block ul.block_tree li ul li ul li.collapsed p.tree_item.branch:hover,
+		.block-region .block ul.block_tree li ul li ul li p.tree_item.branch:hover{
+			background-color: #F6F6F6;
+			}
+		
+			.block-region .block ul.block_tree li ul li ul li.collapsed p.tree_item.branch{
+				background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% -20%;
+				}
+		
+			.block-region .block ul.block_tree li ul li ul li p.tree_item.branch{
+				background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% 108%;
+				}
+
+		.block-region .block ul.block_tree li ul li ul li ul{
+			/* Third Level - Drop Down Panel */
+			border: 0;
+			/*border-left: 1px dashed #E6E6E6;*/
+			display: block;
+			margin: 0 15px 10px;
+			}
+			
+		.block-region .block ul.block_tree li ul li ul li ul p.leaf a{
+			/* Third Level - Leafs */
+			/*border-left: 2px solid #e6e6e6;*/
+			display: block;
+			line-height: 230%;
+			text-indent: 15px;
+			}	
+		
+		.block-region .block ul.block_tree li ul li ul li ul p.leaf a:before{
+			content: "-";
+			left: -15px;
+			position: absolute;
+			}
+
+		
 /* Navigation Block Settings ***********************/
 	
-.block_navigation .block_tree .type_activity > p.tree_item.branch.hasicon.active_tree_node,
-.block_navigation .block_tree .tree_item{
-    margin: 0;
-    padding-left: 0;
-	}
 	
-.block_navigation .block_tree li span,
-.block_navigation .block_tree li a{
-	display: block;
-    line-height: 190%;
-	}
-
-			
 /* Settings Block Settings ***********************/
 
-.block_settings .block_tree .type_activity > p.tree_item.branch.hasicon.active_tree_node,
-.block_settings  .block_tree .tree_item{
-    margin: 0;
-    padding-left: 0;
-	}
-	
-.block_settings .block_tree li span,
-.block_settings .block_tree li a{
-	display: block;
-    line-height: 190%;
-	}
-
+		
 /* Block Search Settings ***********************/
 
-.adminsearchform input[type=text]{
-	border-right: none;
-	width: 172px;
+.adminsearchform{
+	margin: 20px 0 0;
+	padding: 0;
 	}
 
+.adminsearchform input[type=text]{
+    -moz-box-sizing: border-box;
+    border-right: none;
+    height: 40px;
+	padding: 0;
+    text-indent: 5px;
+    width: 80%;
+	}
+	
 .adminsearchform button{
 	background: #DDD url("[[pix:theme|block_search]]") no-repeat center center;
 	border: none;
 	display: inline-block;
-	padding: 20px;
+	padding: 0;
 	text-indent: -9999px;
+	width: 20%;
 	}
-	
-/* Block Menu Settings ***********************/
-
-.block-region .block_tree{
-    margin:0;
-	padding: 0;
-	}
-	
-.block-region .block_tree li{
-    margin: 0;
-	padding: 0;
-	}
-
-.block-region .block_tree li ul{
-    margin: 0;
-	padding: 0;
-	}
-	
-
-.block_settings .block_tree li ul {
-    border-right: medium none;
-    border-top: 3px solid #F0F0F0 !important;
-    margin: 0;
-    padding-left: 18px;
-}
-	
-.block-region .block_tree li {
-    margin: 10px 0;
-    padding: 0;
-}	
-	
-.block-region .block_tree li ul,
-.block-region .block_tree li.depth_2 ul {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: none repeat scroll 0 0 #FEFEFE;
-    border-color: -moz-use-text-color #CCCCCC -moz-use-text-color -moz-use-text-color;
-    border-image: none;
-    border-style: none solid none none;
-    border-width: 0;
-    position: relative;
-	}
-	
-.block-region .block_tree li ul:after,	
-.block-region .block_tree li ul:before{
-    border: solid transparent;
-	border-width: 8px;
-	bottom: 100%;
-    content: " ";
-    height: 0;
-	right: 7%;
-    pointer-events: none;
-    position: absolute;
-    width: 0;	
-	}
-		
-.block-region .block_tree li ul:after {
-	border-color: rgba(239, 239, 14, 0);
-    border-bottom-color: #FEFEFE;
-	margin-bottom: -3px;
-	}
-
-.block-region .block_tree li ul:before {
-	border-color: rgba(240, 240, 240, 0);
-    border-bottom-color:  #F0F0F0;
-	margin-bottom: 1px;
-	}
-	
-.block_settings .block_tree li.item_with_icon > p {
-    padding-left: 0;
-	}
-	
-.block-region .block_tree li span,
-.block-region .block_tree li a {
-    display: block;
-    font-size: 94%;
-    line-height: 190%;
-    text-indent: 10px;
-	}
-	
-.block-region .block_tree li span{
-	line-height: 280%;
-	}
-	
-body.jsenabled .block .block_tree .collapsed .tree_item.branch {
-    background: #FEFEFE url("[[pix:theme|block_menu_toggle]]") no-repeat 95% -50%;
-	}
-	
-	body.jsenabled .block .block_tree .tree_item.branch {
-		background: #FEFEFE url("[[pix:theme|block_menu_toggle]]") no-repeat 95% 130%;
-		}
 
 
 /*-----------------------------------------------------------------------------------*/
