@@ -62,7 +62,7 @@ class theme_ubertheme_block_settings_renderer extends block_settings_renderer {
 				if (!empty($item->id)) {
 					$divattr['id'] = $item->id;
 				}
-				$content = html_writer::tag('p', $content, $divattr, html_writer::tag('span')) . $this->navigation_node($item);
+				$content = html_writer::tag('p', $content, $divattr) . $this->navigation_node($item);
 				if (!empty($item->preceedwithhr) && $item->preceedwithhr===true) {
 				
 				}
@@ -119,7 +119,6 @@ class theme_ubertheme_block_navigation_renderer extends block_navigation_rendere
                 continue;
             }
 
-<<<<<<< Updated upstream
 			// if ($hasicon) {
 				// $icon = $this->output->render($item->icon);
 				// $icon = '';
@@ -127,15 +126,6 @@ class theme_ubertheme_block_navigation_renderer extends block_navigation_rendere
 				$icon = '';
 			// }
 
-=======
-            if ($hasicon) {
-                #$icon = $this->output->render($item->icon);
-				$icon = '';
-            } else {
-                $icon = '';
-            }
-			
->>>>>>> Stashed changes
             $content = $icon.$content; // use CSS for spacing of icons
             if ($item->helpbutton !== null) {
                 $content = trim($item->helpbutton).html_writer::tag('span', $content, array('class'=>'clearhelpbutton'));

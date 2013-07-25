@@ -228,22 +228,24 @@ echo $OUTPUT->doctype() ?>
 
 								</div>
 							</div>
-						</div>
-
-						<?php if ($hassidepre OR (right_to_left() AND $hassidepost)) { ?>
-
-						<div id="region-pre" class="block-region <?= $cn_blocktype ?> column">
-							<div class="region-content">
-
-								<?php
-								if (!right_to_left()) {
-									echo $OUTPUT->blocks_for_region('side-pre');
-								} elseif ($hassidepost) {
-									echo $OUTPUT->blocks_for_region('side-post');
-								} ?>
-
-							</div>
-						</div>
+						
+    
+                            <?php if ($hassidepre OR (right_to_left() AND $hassidepost)) { ?>
+    
+                            <div id="region-pre" class="block-region <?= $cn_blocktype ?> column">
+                                <div class="region-content">
+    
+                                    <?php
+                                    if (!right_to_left()) {
+                                        echo $OUTPUT->blocks_for_region('side-pre');
+                                    } elseif ($hassidepost) {
+                                        echo $OUTPUT->blocks_for_region('side-post');
+                                    } ?>
+    
+                                </div>
+                            </div>
+                        
+                        </div>
 
 						<?php } ?>
 

@@ -1,6 +1,21 @@
 /*-----------------------------------------------------------------------------------*/
 /* Section Comment
 /*-----------------------------------------------------------------------------------*/
+#custommenu {
+    margin-top: -28px;
+	position: relative;
+	z-index: 200;
+	}
+	
+.banner li,
+.banner li img{
+	width: 100%;
+	}
+	
+.block-region .yui3-dd-drop{
+	border: 3px dashed #CCC;
+	min-height: 200px;
+	}
 
 /* Sub-Section Comment ***********************/
 
