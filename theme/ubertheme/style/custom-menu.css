@@ -62,3 +62,88 @@
 .mobile .yui3-menu-content{
 	width: 100%;
 	}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Custom Menu Mobile
+/*-----------------------------------------------------------------------------------*/
+
+.wide #custommenu{
+	background: #333;
+	height: 100%;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 700px;
+	z-index: -1;
+	}
+	
+.wide #custommenu *{
+	position: relative;
+	}
+
+.wide #custommenu>div.yui3-menu-content{
+	background: linear-gradient(to right, #444 0%,#333 100%);
+	height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	}
+	
+.wide #custommenu>div.yui3-menu-content:before{
+	color: #FFF;
+	content:"Menu";
+	font-size: 200%;
+	margin-left: 15px;
+	}
+	
+.wide #custommenu ul li a{
+	background: #333;
+	color: #CCC;
+	font-weight: bold;
+	line-height: 60px;
+	margin: 1px 0;
+	text-indent: 15px;
+	transition: background-color 0.3s linear 0s;
+	}
+	
+	.wide #custommenu ul li a:hover{
+		background: #444;
+		}
+	
+.wide #custommenu ul ul.first-of-type li a{
+	padding-left: 15px;
+	}
+	
+.wide #custommenu ul ul ul.first-of-type li a{
+	padding-left: 30px;
+	}
+	
+.wide #custommenu ul ul ul ul.first-of-type li a{
+	padding-left: 45px;
+	}
+	
+.wide #custommenu ul.first-of-type li{
+	display: block;
+	height: auto;
+	position: relative;
+	}
+	
+	.wide #custommenu .custom_menu_submenu .mobile,
+	.wide #custommenu .custom_menu_submenu .yui3-menu-label-active.yui3-menu-label-menuvisible,
+	.wide #custommenu .custom_menu_submenu .yui3-menu-hidden,
+	.wide #custommenu .custom_menu_submenu,
+	.wide #custommenu #cm_submenu_3.custom_menu_submenu{
+		left: 0;
+		position: relative;
+		top: 0 !important;
+		visibility: visible !important;
+		}
+		
+		.wide #custommenu .custom_menu_submenu li a{
+			
+			}
+		
+		

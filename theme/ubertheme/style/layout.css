@@ -11,9 +11,38 @@ body{
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	position: relative;
 	}
 
 body{
+	background: none;
+	height: 100%;
+	left: 0;
+	min-height: 100%;
+	padding: 0;
+	text align: center;
+	transition: 0.3s ease-in-out 0s;
+	width: auto;
+	}
+
+/*	body:hover{
+		left: -700px;
+		}*/
+	
+	body:hover #page:after{
+		content: ".";
+		background: rgba(0,0,0,0.5);
+		box-shadow: 3px 0 3px rgba(0,0,0,0.8);
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 5px;
+		z-index: 100;
+		}
+	
+#page{
+	background: #FFF;
 	[[setting:pagebggrad]]background: -moz-linear-gradient(top, [[setting:pagebgc]] 0%, [[setting:pagebbgc]] 100%);
 	[[setting:pagebggrad]]background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:pagebgc]]), color-stop(100%,[[setting:pagebbgc]]));
 	[[setting:pagebggrad]]background: -webkit-linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
@@ -22,21 +51,18 @@ body{
 	[[setting:pagebggrad]]background: linear-gradient(top, [[setting:pagebgc]] 0%,[[setting:pagebbgc]] 100%);
 	[[setting:pagebggrad]]filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='[[setting:pagebgc]]', endColorstr='[[setting:pagebbgc]]', GradientType=0);
 	background: [[setting:pagebbgc]];
-	padding: 0;
-	text align: center;
-	width: auto;
-	}
-
-#page{
 	height: auto;
+	left: 0;
 	margin: 0 auto -300px;
 	min-height: 100%;
 	min-width: 300px;
 	padding: 0;
 	position: relative;
 	text-align: left;
+	transition: left 0.3s ease-in-out 0s;
 	width: 100%;
 	}
+
 
 #section-header,
 #page-content,
@@ -172,6 +198,13 @@ body{
 	margin: 0;
 	width: 100%;
 	}
+
+#custommenu .yui3-menu-content,	
+#ticker .wrapper,
+.navbar .navbar-wrapper,
+.editing-bar .nav-button{
+	width: 736px;
+	}
 	
 #region-main-box,
 #zone-footer{
@@ -245,6 +278,13 @@ body{
 #page-header{
 	margin: 0;
 	width: 100%;
+	}
+	
+#custommenu .yui3-menu-content,	
+#ticker .wrapper,
+.navbar .navbar-wrapper,
+.editing-bar .nav-button{
+	width: 940px;
 	}
 	
 #region-main-box,
@@ -324,6 +364,13 @@ body{
 #page-header{
 	margin: 0;
 	width: 100%;
+	}
+	
+#custommenu .yui3-menu-content,	
+#ticker .wrapper,
+.navbar .navbar-wrapper,
+.editing-bar .nav-button{
+	width: 1180px;
 	}
 	
 #region-main-box,
