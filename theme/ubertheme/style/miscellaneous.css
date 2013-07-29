@@ -2,6 +2,44 @@
 /* Section Comment
 /*-----------------------------------------------------------------------------------*/
 
+#page-site-index .region-content {
+	display: inline-block;
+    position: relative;
+    width: 100%;
+	}
+	
+#page-site-index #region-main {
+    float: none;
+    padding: 0;
+    width: 100%;
+	}
+	
+#page-site-index #login {
+	padding: 3%;
+    width: 94%;
+	}
+	
+#page-site-index #login fieldset{
+    padding: 15px;
+	}
+
+#page-site-index #login label{
+    display: none;
+	}
+
+#page-site-index .anonymous-content *{
+	margin-right: 20px;
+	}
+	
+#page-site-index.mobile .anonymous-content,
+#page-site-index.mobile .loginbox{
+	width: 100%;
+	}
+
+#page-site-index.mobile .anonymous-content{
+	margin-bottom: 20px;
+	}
+
 .logo1 {
     left: 50%;
     margin-left: -137px;
