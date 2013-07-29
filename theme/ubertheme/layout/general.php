@@ -148,6 +148,7 @@ echo $OUTPUT->doctype() ?>
 						echo $PAGE->headingmenu
 						?>
 					</div>
+					<div id="menu-tray">=</div>
 				</div>
 
 				<?php echo ubertheme_customBanner(); ?>
