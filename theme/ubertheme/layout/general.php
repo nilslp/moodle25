@@ -113,6 +113,8 @@ echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
 	<title><?php echo $page_title ?></title>
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="shortcut icon" href="<?php echo $favicon ?>" />
 	<?php 
 	theme_ubertheme_init_yui();
@@ -148,7 +150,7 @@ echo $OUTPUT->doctype() ?>
 						echo $PAGE->headingmenu
 						?>
 					</div>
-					<div id="menu-tray">=</div>
+					<div id="menu-tray"></div>
 				</div>
 
 				<?php echo ubertheme_customBanner(); ?>

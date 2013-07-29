@@ -24,7 +24,7 @@
 
 /* Accordion Settings  ***********************/
 
-#page-blog-edit fieldset{
+fieldset{
 	background: #FAFAFA !important;
 	border: 1px solid #E0E0E0;
 	min-height: 35px;
@@ -33,22 +33,22 @@
 	transition: height 0.2s ease-in-out 0s;
 	}
 
-#page-blog-edit fieldset.collapsed{
+fieldset.collapsed{
 	padding: 15px;
 	}
 	
-	#page-blog-edit fieldset.collapsed .fcontainer{
+	fieldset.collapsed .fcontainer{
 		display: none;
 		}
 				
-		#page-blog-edit legend{
+		legend{
 			margin: 0;
 			position: absolute;
 			top: 13px;
 			width: 95%;
 			}
 
-		#page-blog-edit legend a.fheader {
+		legend a.fheader {
 			background: #E0E0E0;
 			color: #333333;
 			display: block;

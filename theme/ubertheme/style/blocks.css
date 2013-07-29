@@ -20,7 +20,7 @@
 	color: [[setting:sbtc]];*/
 	background-color: #F0F0F0;
 	margin: 0;
-	padding: 10px;
+	padding: 15px;
 	position: relative;
 	z-index: 2;
 	}
@@ -34,9 +34,33 @@
 		margin: 5px 6px 5px 0;
 		text-transform: uppercase;
 		vertical-align: top;
-		width: 182px;
+		width: 198px;
 		word-wrap: break-word;
 		}
+		
+		.editing .block .header h2{
+			width: 172px;
+			}
+			
+		body:not(.wide) .block .header h2{
+			margin-right: 0;
+			width: 100%;
+			}
+			
+		body.mobile .block .header h2{
+			margin-right: 0;
+			width: 90%;
+			}
+			
+		body.mobile .actions-commands{
+			position: absolute;
+			right: 15px;
+			width: auto;
+			}
+			
+			body.mobile	.actions-commands input.moveto{
+				display: none;
+				}
 
 /* Block Content ***********************/
 
@@ -72,10 +96,14 @@
     position: relative;
 	text-align: right;
     vertical-align: top;
-    width: 72px;
+    width: 46px;
 	z-index: 200;
 	*zoom: 1;
 	}
+	
+	.editing .actions-commands{
+		width: 72px;
+		}
 	
 	/* Controls the Move Block, Edit Admin etc button */
 	.commands{
@@ -169,11 +197,20 @@
 			cursor: pointer;
 			display: inline-block;
 			height: 20px;
-			margin-left: 6px;
+			margin-left: 0;
 			transition: all 0.2s linear 0s;
 			vertical-align: top;
 			width: 20px;
 			}
+			
+			.block_action input{
+				margin-left: 6px;
+				}
+			
+			.editing .block_action .block-hider-show,
+			.editing .block_action .block-hider-hide{
+				margin-left: 6px;
+				}
 			
 			.block_action img:hover,
 			.block_action input:hover{
@@ -192,7 +229,7 @@
 				display: none;
 				}
 	
-
+	
 /*-----------------------------------------------------------------------------------*/
 /* Block Content - Block Menu Settings
 /*-----------------------------------------------------------------------------------*/
@@ -223,7 +260,6 @@
 	
 	/* Top Level Menu items ***********************/
 	
-	
 	.block-region ul.block_tree li ul a,
 	.block-region ul.block_tree li ul p span{
 		/* Top Level - Font size */
@@ -248,7 +284,7 @@
 	.block-region .block ul.block_tree li p.branch a{
 		/* Top Level - Branch Toggle */
 		display: block;
-		line-height: 280%;
+		line-height: 44px;
 		padding: 0;
 		text-indent: 15px;
 		}
@@ -275,7 +311,6 @@
 		
 	.block-region .block ul.block_tree li p.leaf a{
 		/* Top Level - Leafs */
-		/*color: #639;*/
 		display: block;
 		line-height: 230%;
 		text-indent: 15px;
@@ -286,6 +321,7 @@
 		background: #F6F6F6;
 		}
 		
+	.block-region .block_navigation.block ul.block_tree li ul p + ul,
 	.block-region .block ul.block_tree li p.root_node + ul{
 		/* Top level - Dropdown Panel */
 		background: #FEFEFE;
@@ -295,6 +331,8 @@
 		position: relative;
 		}
 		
+		.block-region .block_navigation.block ul.block_tree li ul li.depth_2 > p + ul:after,
+		.block-region .block_navigation.block ul.block_tree li ul li.depth_2 > p + ul:before,
 		.block-region .block ul.block_tree li p.root_node + ul:after,	
 		.block-region .block ul.block_tree li p.root_node + ul:before{
 			/* Global arrow style */
@@ -308,7 +346,8 @@
 			position: absolute;
 			width: 0;	
 			}
-				
+			
+		.block-region .block_navigation.block ul.block_tree li ul li.depth_2 > p + ul:after,	
 		.block-region .block ul.block_tree li p.root_node + ul:after{
 			/* Foreground arrow style */
 			border-color: rgba(239, 239, 14, 0);
@@ -316,6 +355,7 @@
 			margin-bottom: -3px;
 			}
 		
+		.block-region .block_navigation.block ul.block_tree li ul li.depth_2 > p + ul:before,
 		.block-region .block ul.block_tree li p.root_node + ul:before{
 			/* Background arrow style */
 			border-color: rgba(240, 240, 240, 0);
@@ -331,7 +371,7 @@
 		/* Second Level - Branch Toggle */
 		color: #999;
 		display: block;
-		line-height: 230%;
+		line-height: 34px;
 		text-indent: 0;
 		}
 		
@@ -343,8 +383,12 @@
 			margin: 0 15px;
 			}
 		
+		.block-region .block ul.block_tree li ul li p.branch a,
 		.block-region .block ul.block_tree li ul li.collapsed p.branch a{
+			color: #0088CC;
+			font-weight: normal;
 			text-indent: 15px;
+			width: 80%;
 			}
 			
 		.block-region .block ul.block_tree li ul li.collapsed p.tree_item.branch,
@@ -358,11 +402,11 @@
 			}
 
 			.block-region .block ul.block_tree li ul li.collapsed p.tree_item.branch{
-				background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% -20%;
+				background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% 3px;
 				}
 		
 			.block-region .block ul.block_tree li ul li p.tree_item.branch{
-				background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% 108%;
+				background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% -27px;
 				}
 			
 		.block-region .block ul.block_tree li ul li ul{
@@ -390,7 +434,7 @@
 		.block-region .block ul.block_tree li ul li ul li p.tree_item.branch{
 			transition: background-color 0.2s linear 0s;
 			}
-				
+
 		.block-region .block ul.block_tree li ul li ul li.collapsed p.tree_item.branch:hover,
 		.block-region .block ul.block_tree li ul li ul li p.tree_item.branch:hover{
 			background-color: #F6F6F6;
@@ -407,14 +451,12 @@
 		.block-region .block ul.block_tree li ul li ul li ul{
 			/* Third Level - Drop Down Panel */
 			border: 0;
-			/*border-left: 1px dashed #E6E6E6;*/
 			display: block;
 			margin: 0 15px 10px;
 			}
 			
 		.block-region .block ul.block_tree li ul li ul li ul p.leaf a{
 			/* Third Level - Leafs */
-			/*border-left: 2px solid #e6e6e6;*/
 			display: block;
 			line-height: 230%;
 			text-indent: 15px;
@@ -427,12 +469,121 @@
 			}
 
 		
-/* Navigation Block Settings ***********************/
-	
-	
-/* Settings Block Settings ***********************/
+/*-----------------------------------------------------------------------------------*/
+/* Block Content - Navigation Block Specific Settings
+/*-----------------------------------------------------------------------------------*/
 
+.block-region .block_navigation.block ul.block_tree li.depth_1>p.branch,
+.block-region .block_navigation.block ul.block_tree li.type_setting.depth_2 p.leaf a{
+	background: url("[[pix:theme|menu_tree_home]]") no-repeat 95% center #FEFEFE;
+	border: 1px dotted #CCC;
+    display: block;
+	line-height: 44px;
+    text-indent: 15px;
+	transition: background-color 0.3s linear 0s;
+	}
+	
+.block-region .block_navigation.block ul.block_tree li.type_setting.depth_2 p.leaf a{
+	background: url("[[pix:theme|menu_tree_my_home]]") no-repeat 95% center #FEFEFE;
+	}
+
+	.block-region .block_navigation.block ul.block_tree li.depth_1>p,
+	.block-region .block_navigation.block ul.block_tree li.type_setting.depth_2 p.leaf a:hover{
+		background-color: #F6F6F6;
+		}
+	
+/* Top Level Menu items ***********************/
+
+.block-region .block_navigation.block ul.block_tree li.depth_1>p,
+.block-region .block_navigation.block ul.block_tree li.depth_2{
+    margin: 0 0 10px;
+    padding: 0;
+	}
+	
+.block-region .block_navigation.block ul.block_tree li ul li.depth_2>p.branch,
+.block-region .block_navigation.block ul.block_tree li ul li.depth_2>p.emptybranch a,
+.block-region .block_navigation.block ul.block_tree li ul li.depth_2>p.branch a{
+    display: block;
+	line-height: 44px;
+    text-indent: 15px;
+	}
 		
+.block-region .block_navigation.block ul.block_tree li ul li.collapsed p.branch span,	
+.block-region .block_navigation.block ul.block_tree li p.branch span{
+	margin: 0;
+	}
+
+.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_2 p.tree_item.branch,
+.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_2 p.tree_item.emptybranch
+{
+    background: url("[[pix:theme|menu_tree_state]]") no-repeat 95% 138% #FEFEFE;
+    border: 1px solid #F0F0F0;
+	}
+	
+.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_2 p.tree_item.branch,
+.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_2 p.tree_item.emptybranch{
+    background: url("[[pix:theme|menu_tree_state]]") no-repeat 95% -58% #FEFEFE;
+    border: 1px dotted #CCC;
+	}
+	
+	.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_2 p.tree_item.branch:hover,
+	.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_2 p.tree_item.branch:hover{
+		background-color: #F6F6F6;
+		}
+	
+/* Second Level Menu items ***********************/
+
+.block-region .block_navigation.block ul.block_tree li ul li ul li p.branch{
+	/* Second Level - Branch Toggle */
+	border: none;
+	color: #999;
+	display: block;
+	text-indent: 0;
+	}
+	
+	.block-region .block_navigation.block ul.block_tree li ul li ul li p.branch span,
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.collapsed p.branch span{
+		/* Second Level - Branch Toggle Span */
+		display: block;
+		margin: 0;
+		}
+	
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.collapsed p.branch a{
+		text-indent: 15px;
+		}
+		
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.collapsed p.tree_item.branch,
+	.block-region .block_navigation.block ul.block_tree li ul li ul li p.tree_item.branch{
+		transition: background-color 0.2s linear 0s;
+		}
+
+		.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_3 p.tree_item.branch{
+			background: url("[[pix:theme|menu_branch_state]]") no-repeat 95% 109% #FEFEFE;
+			border: none;
+			}
+		
+		.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_3 p.tree_item.branch{
+			background: url("[[pix:theme|menu_branch_state]]") no-repeat 95% -20% #FEFEFE;
+			border: none;
+			}
+			.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_3 p.tree_item.branch:hover,
+			.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_3 p.tree_item.branch:hover{
+			background-color: #F6F6F6;
+			}
+		
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.depth_3 ul{
+		/* Second Level - Drop Down Panel */
+		border-bottom: 1px dashed #E6E6E6;
+		border-top: 1px dashed #E6E6E6;
+		display: block;
+		margin: 0 15px;
+		}	
+					
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.depth_3.collapsed ul{
+		display: none;
+		}
+
+	
 /* Block Search Settings ***********************/
 
 .adminsearchform{
@@ -462,6 +613,11 @@
 /*-----------------------------------------------------------------------------------*/
 /* Specifics
 /*-----------------------------------------------------------------------------------*/
+
+
+.block_site_main_menu .footer{
+    margin-top: 0
+	}
 
 .block_navigation .block_tree .tree_item.branch.navigation_node > a{
 	font-weight: bold;

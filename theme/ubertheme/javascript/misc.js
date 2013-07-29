@@ -34,7 +34,7 @@ M.theme_ubertheme.misc = function(Y) {
 			mobile_menu && mobile_menu.addClass('yui3-menu-label').removeClass('mobile');
 		} else if (x >= 1220) {
 			b.removeClass('mobile').removeClass('narrow').removeClass('normal').addClass('wide');
-			mobile_menu && mobile_menu.removeClass('yui3-menu-label').addClass('mobile');
+			mobile_menu && mobile_menu.addClass('yui3-menu-label').removeClass('mobile');
 		}
 
 		var mobile = b.hasClass('mobile');
@@ -69,9 +69,8 @@ M.theme_ubertheme.misc = function(Y) {
 	// Mobile Menu Functionality
 	var bodyElement = Y.one('body'),
 	    hamburgerMenu = Y.one('#menu-tray'),
+		menuWidth,
 	    mobileMenu = Y.one('#custommenu');
-
-	var menuWidth = mobileMenu && mobileMenu.get('offsetWidth');
 
 	hamburgerMenu && hamburgerMenu.on('click', function (node) {
 		bodyElement.toggleClass('mobile-menu-open');
@@ -79,6 +78,8 @@ M.theme_ubertheme.misc = function(Y) {
 	});
 
 	function moveBody() {
+		
+		menuWidth = mobileMenu && mobileMenu.get('offsetWidth');
 
 		if (bodyElement.hasClass('mobile-menu-open')) {
 			bodyElement.setStyle('left', '-' + menuWidth);

@@ -23,13 +23,10 @@ body{
 	text align: center;
 	transition: 0.3s ease-in-out 0s;
 	width: auto;
+	z-index: 0;
 	}
 
-/*	body:hover{
-		left: -700px;
-		}*/
-	
-	body:hover #page:after{
+	body.mobile-menu-open #page:after{
 		content: ".";
 		background: rgba(0,0,0,0.5);
 		box-shadow: 3px 0 3px rgba(0,0,0,0.8);
@@ -62,7 +59,10 @@ body{
 	transition: left 0.3s ease-in-out 0s;
 	width: 100%;
 	}
-
+	
+	.mobile #page{
+		top: 34px;
+		}
 
 #section-header,
 #page-content,
@@ -113,7 +113,7 @@ body{
 	}
 
 	#page-content #region-pre{  
-		/* background: #999; Remove after development */
+		min-height: 30px;
 		}
 		
 	#page-content #region-main{
@@ -121,8 +121,8 @@ body{
 		width: 90%;
 		}
 
-	#page-content #region-post{  
-		/* background: #999; Remove after development */
+	#page-content #region-post{ 
+		min-height: 30px;
 		}
 
 /*-----------------------------------------------------------------------------------*/

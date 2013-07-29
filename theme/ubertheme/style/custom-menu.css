@@ -68,22 +68,23 @@
 /* Custom Menu Mobile
 /*-----------------------------------------------------------------------------------*/
 
-.wide #custommenu{
+.mobile #custommenu{
 	background: #333;
+	border-top: 5px solid #999;
 	height: 100%;
 	margin: 0;
 	position: fixed;
-	top: 0;
+	top: 34px;
 	right: 0;
-	width: 700px;
+	width: 90%;
 	z-index: -1;
 	}
 	
-.wide #custommenu *{
+.mobile #custommenu *{
 	position: relative;
 	}
 
-.wide #custommenu>div.yui3-menu-content{
+.mobile #custommenu>div.yui3-menu-content{
 	background: linear-gradient(to right, #444 0%,#333 100%);
 	height: auto;
     left: 0;
@@ -92,14 +93,18 @@
     width: 100%;
 	}
 	
-.wide #custommenu>div.yui3-menu-content:before{
+.mobile #custommenu>div.yui3-menu-content:before{
 	color: #FFF;
 	content:"Menu";
 	font-size: 200%;
 	margin-left: 15px;
 	}
+
+.mobile #custommenu>div .yui3-menu-content{
+    width: 100%;
+	}
 	
-.wide #custommenu ul li a{
+.mobile #custommenu ul li a{
 	background: #333;
 	color: #CCC;
 	font-weight: bold;
@@ -109,41 +114,35 @@
 	transition: background-color 0.3s linear 0s;
 	}
 	
-	.wide #custommenu ul li a:hover{
+	.mobile #custommenu ul li a:hover{
 		background: #444;
 		}
 	
-.wide #custommenu ul ul.first-of-type li a{
+.mobile #custommenu ul ul.first-of-type li a{
 	padding-left: 15px;
 	}
 	
-.wide #custommenu ul ul ul.first-of-type li a{
+.mobile #custommenu ul ul ul.first-of-type li a{
 	padding-left: 30px;
 	}
 	
-.wide #custommenu ul ul ul ul.first-of-type li a{
+.mobile #custommenu ul ul ul ul.first-of-type li a{
 	padding-left: 45px;
 	}
 	
-.wide #custommenu ul.first-of-type li{
+.mobile #custommenu ul.first-of-type li{
 	display: block;
 	height: auto;
 	position: relative;
 	}
 	
-	.wide #custommenu .custom_menu_submenu .mobile,
-	.wide #custommenu .custom_menu_submenu .yui3-menu-label-active.yui3-menu-label-menuvisible,
-	.wide #custommenu .custom_menu_submenu .yui3-menu-hidden,
-	.wide #custommenu .custom_menu_submenu,
-	.wide #custommenu #cm_submenu_3.custom_menu_submenu{
+	.mobile #custommenu .custom_menu_submenu .mobile,
+	.mobile #custommenu .custom_menu_submenu .yui3-menu-label-active.yui3-menu-label-menuvisible,
+	.mobile #custommenu .custom_menu_submenu .yui3-menu-hidden,
+	.mobile #custommenu .custom_menu_submenu,
+	.mobile #custommenu #cm_submenu_3.custom_menu_submenu{
 		left: 0;
 		position: relative;
 		top: 0 !important;
 		visibility: visible !important;
-		}
-		
-		.wide #custommenu .custom_menu_submenu li a{
-			
-			}
-		
-		
+		}		
