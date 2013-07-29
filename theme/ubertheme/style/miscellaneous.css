@@ -2,16 +2,185 @@
 /* Section Comment
 /*-----------------------------------------------------------------------------------*/
 
-#custommenu {
+.logo1 {
+    left: 50%;
+    margin-left: -137px;
+    margin-top: -35px;
+    position: absolute;
+    top: 50%;
+    z-index: 2000;
+}
+
+.mobile .logo1{
+	margin-left: -110px;
+	margin-top: -28px;
+	}
+	
+.mobile .logo1 img{
+	width: 80%
+	}
+	
+
+.mobile #region-pre,
+.mobile #region-post{
+	display: block;
+	position: relative;
+	width: 100%;
+	}
+
+#frontpage-course-list {
+    margin-top: 28px;
+}
+
+#dock{
+	display: none;
+	}
+
+body.mobile-menu-open.wide,
+body.mobile-menu-open.normal,
+body.mobile-menu-open.narrow{
+	left: 0 !important;
+	}
+	
+		body.mobile-menu-open.wide #page:after,
+		body.mobile-menu-open.normal #page:after,
+		body.mobile-menu-open.narrow #page:after{
+			display: none;
+			}
+		
+#custommenu{
+	display: none;
+	}
+
+.wide #custommenu,
+.normal #custommenu,
+.narrow #custommenu{
+	display: block;
     margin-top: -28px;
 	position: relative;
 	z-index: 200;
+	}
+	
+.mobile #custommenu{
+	display: block;
 	}
 	
 .banner li,
 .banner li img{
 	width: 100%;
 	}
+	
+.mobile #page-content{
+	padding-bottom: 40px;
+	}
+
+#page-footer .pageinfo,
+#page-footer .logininfo{
+    background: #C5C5C5;
+    display: inline-block;
+	*display: inline;
+    font-size: 80%;
+    padding: 5px 0;
+    text-align: left;
+    text-indent: 15px;
+    width: 50%;
+	*zoom: 1;
+	}
+	
+#page-footer .logininfo{
+	direction: rtl;
+    text-align: right;
+    text-indent: 15px;
+	}
+	
+p.helplink{
+	display: none;
+	}
+	
+.normal #page-footer .pageinfo{
+	width: 60%;
+	}
+
+
+.normal #page-footer .logininfo{
+	width: 40%;
+	}
+
+.narrow #page-footer .pageinfo,
+.narrow #page-footer .logininfo,
+.mobile #page-footer .pageinfo,
+.mobile #page-footer .logininfo{
+    display: block;
+    padding: 5px 0;
+    text-align: center;
+    text-indent: 0;
+    width:100%;
+	}
+	
+.mobile #page{
+	margin-bottom: 0;
+	}
+	
+.mobile .push{
+	display: none;
+	}
+	
+.mobile #section-footer{
+	height: 90px;
+	margin-top: 60px;
+	}
+	
+#page-footer{
+	display: none;
+	}
+	
+
+/* Support Widget ***********************/
+
+#support-widget {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+	}
+	
+#support-widget .wrapper {
+    background-color: #333;
+    color: #CCC;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+	}
+	
+#support-widget ul{
+    display: inline-block;
+    float: right;
+    height: 100%;
+    margin: 0;
+	text-align: right;
+    vertical-align: top;
+    width: 50%;
+	}
+	
+#support-widget .support-details {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+	}
+	
+	.narrow #support-widget ul,
+	.mobile #support-widget ul,
+	.narrow #support-widget .support-details,
+	.mobile #support-widget .support-details{
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		}
+
+#support-widget span{
+    display: inline-block;
+    vertical-align: top;
+	}
+
 /*	
 .block-region .yui3-dd-drop{
 	border: 3px dashed #CCC;
@@ -46,24 +215,27 @@
 				position: absolute;
 				right: 20px;
 				}
-				
+								
 				#page-header .meta .headermenu .logininfo{
 					background-color: #FFFFFF;
 					color: #000;
+					font-size: 84%;
 					padding: 5px 10px;
 					}
 
 					#page-header .meta .headermenu .logininfo a{
 						background-repeat: no-repeat;
 						color: #000;
-						padding-right: 20px;
+						padding-right: 0;
 						}
+
 						
 /* Page Header Meta Mobile***********************/
 
 
 .mobile #page-header .meta{
 	background: #FFF;
+	height: 60px;
 	overflow: visible !important;
 	position: fixed;
 	right: 0;
@@ -72,25 +244,33 @@
 	z-index: 200;
 	}
 	
+	.mobile #page-header .meta .headermenu{
+		height: 60px;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		width: 100%;
+		}
+		
 	.mobile #page-header .meta .headermenu .logininfo{
 		background-color: #FFFFFF;
 		color: #000000;
-		padding: 5px 44px 5px 10px;
+		padding: 16px 65px 5px 0;
 		}
 
 .mobile #page-header .meta #menu-tray{
-	background: #333;
+	background: #333  url("[[pix:theme|sidebar_toggle_hamburger]]");
 	cursor: pointer;
 	display: block;
-	height: 34px;
+	height: 60px;
 	position: absolute;
 	right: 0;
-	width: 34px;
+	width: 60px;
 	z-index: 200;
 	}
 	
 	.mobile #page-header .meta #menu-tray:hover{
-		background: #444;
+		background-color: #444;
 		}
 	
 	

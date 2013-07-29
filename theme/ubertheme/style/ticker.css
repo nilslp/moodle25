@@ -22,6 +22,8 @@
 	font-size: 100%;
 	line-height: 30px;
 	margin: 0;
+	overflow: hidden;
+	position: relative;
 	text-indent: 10px;
 	vertical-align: top;
 	width: 60px;
@@ -34,15 +36,22 @@
 	height: 30px;
 	margin: 0;
 	position: relative;
+	overflow: hidden;
 	vertical-align: top;
 	zoom: 1;
 	}
 
 #ticker li{
+	cursor: move;
 	height: 30px;
-	left: 0 !important;
+	line-height: 30px;
+	left: 0;
 	margin: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	position: absolute;
+	white-space: nowrap;
 	}
 
 #ticker li a{
@@ -56,10 +65,19 @@
 	display: inline-block;
 	*display: inline;
 	margin: 0;
+	overflow: hidden;
+	padding-left: 10px;
+	position: relative;
 	width: 30px;
 	vertical-align: top;
 	zoom: 1;
 	}
+	
+	.mobile #ticker .controls{
+		position: absolute;
+		right: 0;
+		}
+
 
 	#ticker .controls button{
 		background: #2087B3 url([[pix:theme|bg_ticker-control]]) no-repeat center center;
@@ -73,10 +91,10 @@
 
 .wide #ticker .wrapper{
 	width: 1180px;
-	}
+  }
 
 .wide #ticker ul{
-	width: 1090px;
+	width: 1080px;
 	}
 
 /* Normal Screen Setting **********/
@@ -86,7 +104,7 @@
 	}
 
 .normal #ticker ul{
-	width: 850px;
+	width: 840px;
 	}
 
 /* Narrow Screen Setting **********/
@@ -96,7 +114,7 @@
 	}
 
 .narrow #ticker ul{
-	width: 646px;
+	width: 636px;
 	}
 
 /* Mobile Screen Setting **********/
@@ -106,5 +124,5 @@
 	}
 
 .mobile #ticker ul{
-	width: 250px;
+	width: 240px;
 	}

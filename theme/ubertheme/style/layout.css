@@ -22,6 +22,7 @@ body{
 	padding: 0;
 	text align: center;
 	transition: 0.3s ease-in-out 0s;
+	-webkit-transition: 0.3s ease-in-out 0s;
 	width: auto;
 	z-index: 0;
 	}
@@ -61,7 +62,7 @@ body{
 	}
 	
 	.mobile #page{
-		top: 34px;
+		top: 60px;
 		}
 
 #section-header,
@@ -77,7 +78,7 @@ body{
 	}
 	
 #section-footer{
-	/* background: #e6e6e6;  Remove after development */
+	background: #F0F0F0;
 	display: inline-block;
 	*display: inline;
 	height: 300px;

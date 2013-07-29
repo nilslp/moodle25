@@ -69,20 +69,23 @@ M.theme_ubertheme.misc = function(Y) {
 	// Mobile Menu Functionality
 	var bodyElement = Y.one('body'),
 	    hamburgerMenu = Y.one('#menu-tray'),
-		menuWidth,
 	    mobileMenu = Y.one('#custommenu');
 
 	hamburgerMenu && hamburgerMenu.on('click', function (node) {
-		bodyElement.toggleClass('mobile-menu-open');
-		moveBody();
+		
+		if (bodyElement.hasClass('mobile')) {
+			bodyElement.toggleClass('mobile-menu-open');
+			moveBody();
+		} else {
+			bodyElement.removeClass('mobile-menu-open').setStyle('left', 0);
+		}
+		
 	});
 
 	function moveBody() {
 		
-		menuWidth = mobileMenu && mobileMenu.get('offsetWidth');
-
 		if (bodyElement.hasClass('mobile-menu-open')) {
-			bodyElement.setStyle('left', '-' + menuWidth);
+			bodyElement.setStyle('left', '-90%');
 		} else {
 			bodyElement.setStyle('left', 0);
 		}

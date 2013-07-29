@@ -288,6 +288,17 @@
 		padding: 0;
 		text-indent: 15px;
 		}
+		
+		.narrow .block-region .block ul.block_tree li p.root_node  span{
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			width: 85px;
+			}
+		
+		.narrow .block-region .block ul.block_tree li p#frontpagesettings  span{
+			width: 88px;
+			}
 			
 		.block-region .block ul.block_tree li.collapsed p.tree_item.root_node{
 			background: #FEFEFE url("[[pix:theme|menu_tree_state]]") no-repeat 95% -58%;

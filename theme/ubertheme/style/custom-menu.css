@@ -32,6 +32,11 @@
 				display: block;
 				cursor: pointer;
 				line-height: 30px;
+				padding: 0 10px;
+				}
+				
+			#custommenu ul li a:hover{
+				background: #FFF;
 				}
 			
 				#custommenu ul li ul li{
@@ -74,7 +79,7 @@
 	height: 100%;
 	margin: 0;
 	position: fixed;
-	top: 34px;
+	top: 60px;
 	right: 0;
 	width: 90%;
 	z-index: -1;

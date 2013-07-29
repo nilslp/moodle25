@@ -285,22 +285,20 @@ echo $OUTPUT->doctype() ?>
 			<div id="course-footer"><?php echo $coursefooter; ?></div>
 			<?php } ?>
 
+			<?php if (!empty($PAGE->theme->settings->customhtmlbottom)) echo $PAGE->theme->settings->customhtmlbottom; ?>
+			<?php if ($hasfooter) { echo renderSupportWidget();} ?>
+			
 			<?php if ($hasfooter) { ?>
 			<div id="page-footer" class="clearfix">
 				<p class="helplink"><?php echo page_doc_link(get_string('moodledocslink')) ?></p>
 				<?php
-				echo $OUTPUT->login_info();
-				echo $OUTPUT->home_link();
 				echo $OUTPUT->standard_footer_html();
+				echo $OUTPUT->login_info();
 				?>
 			</div>
 			<?php } ?>
 
-			<?php if (!empty($PAGE->theme->settings->customhtmlbottom)) echo $PAGE->theme->settings->customhtmlbottom; ?>
-			<?php if ($hasfooter) { echo renderSupportWidget();} ?>
-
-			<div class="clearfix"></div>
-
+		
 		</div>
 	</section>
 
