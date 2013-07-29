@@ -66,5 +66,26 @@ M.theme_ubertheme.misc = function(Y) {
 
 	});
 
+	// Mobile Menu Functionality
+	var bodyElement = Y.one('body'),
+	    hamburgerMenu = Y.one('#menu-tray'),
+	    mobileMenu = Y.one('#custommenu');
+
+	var menuWidth = mobileMenu && mobileMenu.get('offsetWidth');
+
+	hamburgerMenu && hamburgerMenu.on('click', function (node) {
+		bodyElement.toggleClass('mobile-menu-open');
+		moveBody();
+	});
+
+	function moveBody() {
+
+		if (bodyElement.hasClass('mobile-menu-open')) {
+			bodyElement.setStyle('left', '-' + menuWidth);
+		} else {
+			bodyElement.setStyle('left', 0);
+		}
+
+	}
 
 }
