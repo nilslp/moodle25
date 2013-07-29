@@ -1,1 +1,0 @@
-M.theme_foundation = {};
