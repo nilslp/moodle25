@@ -1,97 +1,107 @@
 /*-----------------------------------------------------------------------------------*/
-/* Section Comment
+/* Support Widget
 /*-----------------------------------------------------------------------------------*/
 
-/* Sub-Section Comment ***********************/
-
-/* Standard Comment */
+/* Gobal ***********************/
 
 #support-widget{
-}
-
-	#support-widget *{
-		font-size: 95%;
+	background: #333;
+	font-size: 80%;
+    position: relative;
+    width: 100%;
 	}
-
-	#support-widget p,
-	#support-widget a{
-		color: #CCCCCC;
-	}
-
-	#support-widget a:hover{
-		text-decoration: underline;
-	}
-
-	#support-widget .wrapper{
-		background-color: #333333;
-		color: #CCCCCC;
-	}
-
-		#support-widget ul{
-			float: right;
-			height: 100%;
-			margin: 0;
-			width: 50%;
+		
+	#support-widget ul{
+		display: inline-block;
+		margin: 0;
+		vertical-align: top;
+		width: 50%;
 		}
-
-			#support-widget ul li{
-				cursor: pointer;
-				display: inline-block;
-				/*float: right;*/
-				height: 30px;
-				line-height: 30px;
-				list-style-type: none;
-				margin: 0 1%;
-				padding-right: 10px;
-				text-align: right;
-				width: auto;
-			}
-
-			#support-widget ul li.failed,
-			#support-widget ul li.passed{
-				background-image: url([[pix:theme|footer/support-widget/not-enabled]]);
-				background-position: right center;
-				background-repeat: no-repeat;
-			}
 			
-			#support-widget ul li.passed{
-				background-image: url([[pix:theme|footer/support-widget/enabled]]);
-			}
-
-		#support-widget .lp-logo{
+	/* Responsive Setting - Narrow/Mobile */
+			
+	.narrow #support-widget ul,
+	.mobile #support-widget ul{
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		}
+	
+	/* Responsive Setting - Narrow/Mobile - End */
+		
+		#support-widget li{
+			color: #CCC;
 			display: inline-block;
-			text-align: center;
-			width: 50px;
-		}
+			line-height: 320%;
+			margin: 0;
+			width: auto;
+			}
 
-			#support-widget .lp-logo a{
-				background-image: url([[pix:theme|footer/support-widget/support-logo]]);
-				background-position: center center;
-				background-repeat: no-repeat;
+			#support-widget li span{
 				display: inline-block;
-				height: 30px;
-				width: 30px;
-			}
+				}
+			
+			#support-widget li a{
+				background-color: transparent;
+				display: inline-block;
+				color: #999;
+				padding: 0 10px;
+				transition: background-color 0.3s linear 0s;
+				}
+			
+			#support-widget li a:hover{
+				background-color: #222;
+				}
+	
+/* Support Details ***********************/	
 
-			#support-widget .lp-logo a:hover{
-				color: #333333;
-			}
+#support-widget a.lp-logo{
+	background: transparent url("[[pix:theme|footer/support-widget/support-logo]]") no-repeat center center;
+	margin-right: 10px;
+	opacity: 1;
+	text-indent: -9999px;
+	transition: background-color 0.3s linear 0s;
+	width: 40px;
+	}
 
-		#support-widget .opts{
-			margin: 0 10px;
-			padding: 0;
-			position: relative;
-			top: 4px;
+	#support-widget a.lp-logo:hover{
+		background-color: #222;
 		}
 
-		#support-widget button.retest{
-			background: #333333;
-			border: none;
-			border-radius: 0;
-			box-shadow: none;
-			filter: none;
-			height: 24px;
-			line-height: 0;
-			padding: 0;
-			width: 24px;
+#support-widget li.site span{
+	margin-right: 5px;
+	}
+
+/* Support Test ***********************/
+
+#support-widget ul.tests{
+	text-align: right;
+	}			
+		
+	#support-widget ul.tests li{
+		margin-right: 10px;
+		padding-right: 25px;
 		}
+		
+	#support-widget ul.tests li:last-child{
+		margin-right: 0;
+		padding-right: 0;
+		}
+	
+	#support-widget ul.tests li.failed,
+	#support-widget ul.tests li.passed{
+		background: url("[[pix:theme|footer/support-widget/not-enabled]]") no-repeat right center;
+		}
+	
+	#support-widget ul.tests li.passed{
+		background-image: url("[[pix:theme|footer/support-widget/enabled]]");
+		}
+	
+		#support-widget ul.tests li button{
+			background-color: #444;
+			background-position: 18px center;
+			padding: 0;
+			text-indent: -9999px;
+			vertical-align: top;
+			width: 40px;
+			}

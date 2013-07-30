@@ -959,19 +959,19 @@ function renderSupportWidget() {
     $html = '';
 
     $html .= '<div id="support-widget" data-autorun="'.$autorun.'">';
-    $html .= '<div class="wrapper">';
-    $html .= '<ul class="tests">';
-    $html .= '<li class="unknown"><span class="js">Javascript Enabled</span></li>';
-    $html .= '<li class="unknown"><span class="browser">Supported Browser</span></li>';
-    $html .= '<li class="unknown"><span class="popup">Pop-ups Enabled</span></li>';
-    $html .= '<li class="unknown"><span class="flash">Flash Enabled</span></li>';
+	$html .= '<ul class="support-details">';
+	$html .= '<li class="support lp-site"><a href="http://www.learningpool.com" title="Learning Pool" class="lp-logo" target="_blank">Learning Pool</a></li>';
+	$html .= '<li class="support site"><span>Support</span><a href="'.$CFG->supportpage.'" target="_blank">Web</a></li>';
+	$html .= '<li class="support email"><a href="mailto:'.$CFG->supportemail.'">Email '.$CFG->supportname.'</a></li>';
+	$html .= '<li class="support phone"><a href="tel:08455436033">0845 543 6033</a></li>';
     $html .= '</ul>';
-    $html .= '<div class="support-details">';
-    $html .= '<span class="lp-logo"><a href="http://www.learningpool.com" title="Learning Pool">&nbsp;</a></span>';
-    $html .= '<span class="opts">Support: <a href="'.$CFG->supportpage.'">Web</a> | <a href="mailto:'.$CFG->supportemail.'">Email '.$CFG->supportname.'</a> | <b>0845 543 6033</b>.</span>';
-    $html .= '<button class="retest">&nbsp;</button>';
-    $html .= '</div>';
-    $html .= '</div>';
+    $html .= '<ul class="tests">';
+    $html .= '<li class="js"><span class="js">Javascript Enabled</span></li>';
+    $html .= '<li class="browser"><span class="browser">Supported Browser</span></li>';
+    $html .= '<li class="popup"><span class="popup">Pop-ups Enabled</span></li>';
+    $html .= '<li class="flash"><span class="flash">Flash Enabled</span></li>';
+	$html .= '<li class="retest"><button class="btn retest">Retest</button></li>';
+    $html .= '</ul>';
     $html .= '</div>';
 
     return $html;
