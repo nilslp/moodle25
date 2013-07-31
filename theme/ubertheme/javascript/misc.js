@@ -26,9 +26,9 @@ M.theme_ubertheme.misc = function(Y) {
 		if (x <= 780) {
 			b.removeClass('narrow').removeClass('normal').removeClass('wide').addClass('mobile');
 			mobile_menu && mobile_menu.removeClass('yui3-menu-label').addClass('mobile');
-		} else if (x <= 980) {
+		/*} else if (x <= 980) {
 			b.removeClass('mobile').removeClass('normal').removeClass('wide').addClass('narrow');
-			mobile_menu && mobile_menu.addClass('yui3-menu-label').removeClass('mobile');
+			mobile_menu && mobile_menu.addClass('yui3-menu-label').removeClass('mobile');*/
 		} else if (x < 1220) {
 			b.removeClass('mobile').removeClass('narrow').removeClass('wide').addClass('normal');
 			mobile_menu && mobile_menu.addClass('yui3-menu-label').removeClass('mobile');
@@ -38,7 +38,7 @@ M.theme_ubertheme.misc = function(Y) {
 		}
 
 		var mobile = b.hasClass('mobile');
-		var narrow = b.hasClass('narrow');
+		/*var narrow = b.hasClass('narrow');*/
 		var normal = b.hasClass('normal');
 		var wide = b.hasClass('wide');
 
@@ -46,8 +46,8 @@ M.theme_ubertheme.misc = function(Y) {
 
 		if (mobile) {
 			debugValue = 'Mobile: ';
-		} else if (narrow) {
-			debugValue = 'Narrow: ';
+		/*} else if (narrow) {
+			debugValue = 'Narrow: ';*/
 		} else if (normal) {
 			debugValue = 'Normal: ';
 		} else {

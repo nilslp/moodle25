@@ -127,7 +127,7 @@ body{
 		}
 
 /*-----------------------------------------------------------------------------------*/
-/* Mobile Screen | < 760px - Media Queries 
+/* Mobile Screen | < 960px - Media Queries 
 /*-----------------------------------------------------------------------------------*/
 
 /* Both Sidebars **********/
@@ -193,7 +193,7 @@ body{
 
 /* Both Sidebars **********/
 
-@media all and (min-width: 780px) and (min-device-width: 780px), (max-device-width: 800px) and (min-width: 780px) and (orientation:landscape){
+/*@media all and (min-width: 780px) and (min-device-width: 780px), (max-device-width: 800px) and (min-width: 780px) and (orientation:landscape){
 
 #page-header{
 	margin: 0;
@@ -234,7 +234,7 @@ body{
 	width: 169px;
 	}
 	
-/* One Sidebar Only **********/
+/* One Sidebar Only **********
 
 .side-pre-only #page-content #region-main-wrap,
 .side-post-only #page-content #region-main-wrap{
@@ -246,27 +246,26 @@ body{
 	width: 557px;
 	}
 	
-/* First Sidebar Only **********/
+/* First Sidebar Only **********
 
 .side-pre-only #page-content #region-main{
 	padding: 0 0 0 10px;
 	}
 
-/* Second Sidebar Only **********/
+/* Second Sidebar Only **********
 
 .side-post-only #page-content #region-main{
 	float: left;
 	padding: 0 10px 0 0;
 	}
 
-/* No Sidebars **********/
+/* No Sidebars **********
 
 .content-only #page-content #region-main-wrap{
 	width: 736px;
 	}
 
-}
-
+}*/
 
 /*-----------------------------------------------------------------------------------*/
 /* Normal Screen | 960px - Media Queries 
