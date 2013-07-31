@@ -13,6 +13,11 @@ input[type="submit"],
 	background: #333 url([[pix:theme|bg_white-chevron]]) no-repeat right center;
 	border: none;
 	border-right: 20px solid transparent;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	-webkit-border-radius: 0;
     color: #FFF;
     cursor: pointer;
     display: inline-block;
@@ -69,3 +74,7 @@ button[disabled] {
     filter: alpha(opacity=65);
     opacity: 0.65;
     }
+	
+.search{
+	background-image: url("[[pix:theme|block_search]]");
+	}

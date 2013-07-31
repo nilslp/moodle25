@@ -1,7 +1,371 @@
 /*-----------------------------------------------------------------------------------*/
-/* Section Comment
+/* Global Settings
 /*-----------------------------------------------------------------------------------*/
 
-/* Sub-Section Comment ***********************/
+.chooserdialoguebody,
+.choosertitle{
+	display: none;
+	}
 
-/* Standard Comment */
+.block-region ul.block_tree{
+	/* Tree style */
+    margin: 0;
+	padding: 0;
+	}
+
+.block-region .block ul.block_tree *,
+.block-region .block ul.block_tree .tree_item.branch,
+.block-region .block ul.block_tree .collapsed .tree_item.branch{
+	/* Tree style reset */
+	background: none;
+    margin: 0;
+	padding: 0;
+	}
+	
+.block-region .block ul.block_tree>li{
+	/* Main branch style */
+    margin: 0 0 10px 0;
+    padding: 0;
+	}
+
+	.block-region ul.block_tree li ul a,
+	.block-region ul.block_tree li ul p span{
+		/* Top Level - Font size */
+		font-size: 92%;
+		}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Admin Menu Settings
+/*-----------------------------------------------------------------------------------*/
+	
+/* Top Level Menu items ***********************/
+
+.block-region .block ul.block_tree li p.root_node,
+.block-region .block ul.block_tree li p.branch a{
+	/* Top Level - Branch Toggle */
+	display: block;
+	line-height: 44px;
+	padding: 0;
+	text-indent: 15px;
+	}
+	
+	.narrow .block-region .block ul.block_tree li p.root_node  span{
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 85px;
+		}
+	
+	.narrow .block-region .block ul.block_tree li p#frontpagesettings  span{
+		width: 88px;
+		}
+		
+	.block-region .block ul.block_tree li.collapsed p.tree_item.root_node{
+		background: #FEFEFE url("[[pix:theme|menu_tree_state]]") no-repeat 95% -58%;
+		border: 1px dotted #CCC;
+		}
+
+	.block-region .block ul.block_tree li p.tree_item.root_node {
+		background: #FEFEFE url("[[pix:theme|menu_tree_state]]") no-repeat 95% 138%;
+		border: 1px solid #F0F0F0;
+		}
+	
+		.block-region .block ul.block_tree li.collapsed p.tree_item.root_node,
+		.block-region .block ul.block_tree li p.tree_item.root_node{
+			transition: background-color 0.2s linear 0s;
+			}
+			
+		.block-region .block ul.block_tree li.collapsed p.tree_item.root_node:hover,
+		.block-region .block ul.block_tree li p.tree_item.root_node:hover{
+			background-color: #F6F6F6;
+			}
+	
+.block-region .block ul.block_tree li p.leaf a{
+	/* Top Level - Leafs */
+	display: block;
+	line-height: 230%;
+	text-indent: 15px;
+	}
+			
+.block-region .block ul.block_tree li p.leaf a:hover{
+	/* Top Level - Leafs Hover */
+	background: #F6F6F6;
+	}
+	
+.block-region .block_navigation.block ul.block_tree li ul p + ul,
+.block-region .block ul.block_tree li p.root_node + ul{
+	/* Top level - Dropdown Panel */
+	background: #FEFEFE;
+	border: none;
+	margin: 3px 0;
+	padding: 5px 0;
+	position: relative;
+	}
+	
+	.block-region .block_navigation.block ul.block_tree li ul li.depth_2 > p + ul:after,
+	.block-region .block_navigation.block ul.block_tree li ul li.depth_2 > p + ul:before,
+	.block-region .block ul.block_tree li p.root_node + ul:after,	
+	.block-region .block ul.block_tree li p.root_node + ul:before{
+		/* Global arrow style */
+		border: solid transparent;
+		border-width: 8px;
+		bottom: 100%;
+		content: " ";
+		height: 0;
+		right: 7%;
+		pointer-events: none;
+		position: absolute;
+		width: 0;	
+		}
+		
+	.block-region .block_navigation.block ul.block_tree li ul li.depth_2 > p + ul:after,	
+	.block-region .block ul.block_tree li p.root_node + ul:after{
+		/* Foreground arrow style */
+		border-color: rgba(239, 239, 14, 0);
+		border-bottom-color: #FEFEFE;
+		margin-bottom: -3px;
+		}
+	
+	.block-region .block_navigation.block ul.block_tree li ul li.depth_2 > p + ul:before,
+	.block-region .block ul.block_tree li p.root_node + ul:before{
+		/* Background arrow style */
+		border-color: rgba(240, 240, 240, 0);
+		border-bottom-color:  #F0F0F0;
+		margin-bottom: 1px;
+		}
+	
+	
+/* Second Level Menu items ***********************/
+
+.block-region .block ul.block_tree li ul li p.branch,
+.block-region .block ul.block_tree li ul li p.branch a{
+	/* Second Level - Branch Toggle */
+	color: #999;
+	display: block;
+	line-height: 34px;
+	text-indent: 0;
+	}
+	
+	.block-region .block ul.block_tree li ul li.collapsed p.branch span,
+	.block-region .block ul.block_tree li ul li p.branch span,
+	.block-region .block ul.block_tree li ul li p.branch ul{
+		/* Second Level - Branch Toggle Span */
+		display: block;
+		margin: 0 15px;
+		}
+	
+	.block-region .block ul.block_tree li ul li p.branch a,
+	.block-region .block ul.block_tree li ul li.collapsed p.branch a{
+		color: #0088CC;
+		font-weight: normal;
+		text-indent: 15px;
+		width: 80%;
+		}
+		
+	.block-region .block ul.block_tree li ul li.collapsed p.tree_item.branch,
+	.block-region .block ul.block_tree li ul li p.tree_item.branch{
+		transition: background-color 0.2s linear 0s;
+		}
+			
+	.block-region .block ul.block_tree li ul li.collapsed p.tree_item.branch:hover,
+	.block-region .block ul.block_tree li ul li p.tree_item.branch:hover{
+		background-color: #F6F6F6;
+		}
+
+		.block-region .block ul.block_tree li ul li.collapsed p.tree_item.branch{
+			background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% 3px;
+			}
+	
+		.block-region .block ul.block_tree li ul li p.tree_item.branch{
+			background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% -27px;
+			}
+		
+	.block-region .block ul.block_tree li ul li ul{
+		/* Second Level - Drop Down Panel */
+		border-bottom: 1px dashed #E6E6E6;
+		border-top: 1px dashed #E6E6E6;
+		display: block;
+		margin: 0 15px;
+		}	
+		
+		
+	/* Third Level Menu items ***********************/
+
+	.block-region .block ul.block_tree li ul li ul li.collapsed p.branch span,
+	.block-region .block ul.block_tree li ul li ul li.collapsed p.branch a,
+	.block-region .block ul.block_tree li ul li ul li p.branch span,
+	.block-region .block ul.block_tree li ul li ul li p.branch a{
+		/* Third Level - Branch Toggle Span */
+		border-bottom: none;
+		font-weight: normal;
+		text-indent: 15px;
+		}
+	
+	.block-region .block ul.block_tree li ul li ul li.collapsed p.tree_item.branch,
+	.block-region .block ul.block_tree li ul li ul li p.tree_item.branch{
+		transition: background-color 0.2s linear 0s;
+		}
+
+	.block-region .block ul.block_tree li ul li ul li.collapsed p.tree_item.branch:hover,
+	.block-region .block ul.block_tree li ul li ul li p.tree_item.branch:hover{
+		background-color: #F6F6F6;
+		}
+	
+		.block-region .block ul.block_tree li ul li ul li.collapsed p.tree_item.branch{
+			background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% -20%;
+			}
+	
+		.block-region .block ul.block_tree li ul li ul li p.tree_item.branch{
+			background: transparent url("[[pix:theme|menu_branch_state]]") no-repeat 95% 108%;
+			}
+
+	.block-region .block ul.block_tree li ul li ul li ul{
+		/* Third Level - Drop Down Panel */
+		border: 0;
+		display: block;
+		margin: 0 15px 10px;
+		}
+		
+	.block-region .block ul.block_tree li ul li ul li ul p.leaf a{
+		/* Third Level - Leafs */
+		display: block;
+		line-height: 230%;
+		text-indent: 15px;
+		}	
+	
+	.block-region .block ul.block_tree li ul li ul li ul p.leaf a:before{
+		content: "-";
+		left: -15px;
+		position: absolute;
+		}
+
+		
+		
+/*-----------------------------------------------------------------------------------*/
+/* Navigation Menu Settings
+/*-----------------------------------------------------------------------------------*/
+
+	
+	.block-region .block ul.block_tree li p.navigation_node{
+		/* Navigation Block - Top Level Home Button */
+		color: #333;
+		}
+		
+	.block-region .block ul.block_tree li p.navigation_node a{
+		/* Navigation Block - Top Level Branch Toggle */
+		color: inherit;
+		display: block;
+		line-height: 280%;
+		padding: 0;
+		}
+
+.block-region .block_navigation.block ul.block_tree li.depth_1>p.branch,
+.block-region .block_navigation.block ul.block_tree li.type_setting.depth_2 p.leaf a{
+	background: url("[[pix:theme|menu_tree_home]]") no-repeat 95% center #FEFEFE;
+	border: 1px dotted #CCC;
+    display: block;
+	line-height: 44px;
+    text-indent: 15px;
+	transition: background-color 0.3s linear 0s;
+	}
+	
+.block-region .block_navigation.block ul.block_tree li.type_setting.depth_2 p.leaf a{
+	background: url("[[pix:theme|menu_tree_my_home]]") no-repeat 95% center #FEFEFE;
+	}
+
+	.block-region .block_navigation.block ul.block_tree li.depth_1>p,
+	.block-region .block_navigation.block ul.block_tree li.type_setting.depth_2 p.leaf a:hover{
+		background-color: #F6F6F6;
+		}
+	
+/* Top Level Menu items ***********************/
+
+.block-region .block_navigation.block ul.block_tree li.depth_1>p,
+.block-region .block_navigation.block ul.block_tree li.depth_2{
+    margin: 0 0 10px;
+    padding: 0;
+	}
+	
+.block-region .block_navigation.block ul.block_tree li ul li.depth_2>p.branch,
+.block-region .block_navigation.block ul.block_tree li ul li.depth_2>p.emptybranch a,
+.block-region .block_navigation.block ul.block_tree li ul li.depth_2>p.branch a{
+    display: block;
+	line-height: 44px;
+    text-indent: 15px;
+	}
+		
+.block-region .block_navigation.block ul.block_tree li ul li.collapsed p.branch span,	
+.block-region .block_navigation.block ul.block_tree li p.branch span{
+	margin: 0;
+	}
+
+.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_2 p.tree_item.branch,
+.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_2 p.tree_item.emptybranch
+{
+    background: url("[[pix:theme|menu_tree_state]]") no-repeat 95% 138% #FEFEFE;
+    border: 1px solid #F0F0F0;
+	}
+	
+.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_2 p.tree_item.branch,
+.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_2 p.tree_item.emptybranch{
+    background: url("[[pix:theme|menu_tree_state]]") no-repeat 95% -58% #FEFEFE;
+    border: 1px dotted #CCC;
+	}
+	
+	.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_2 p.tree_item.branch:hover,
+	.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_2 p.tree_item.branch:hover{
+		background-color: #F6F6F6;
+		}
+	
+/* Second Level Menu items ***********************/
+
+.block-region .block_navigation.block ul.block_tree li ul li ul li p.branch{
+	/* Second Level - Branch Toggle */
+	border: none;
+	color: #999;
+	display: block;
+	text-indent: 0;
+	}
+	
+	.block-region .block_navigation.block ul.block_tree li ul li ul li p.branch span,
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.collapsed p.branch span{
+		/* Second Level - Branch Toggle Span */
+		display: block;
+		margin: 0;
+		}
+	
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.collapsed p.branch a{
+		text-indent: 15px;
+		}
+		
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.collapsed p.tree_item.branch,
+	.block-region .block_navigation.block ul.block_tree li ul li ul li p.tree_item.branch{
+		transition: background-color 0.2s linear 0s;
+		}
+
+		.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_3 p.tree_item.branch{
+			background: url("[[pix:theme|menu_branch_state]]") no-repeat 95% 109% #FEFEFE;
+			border: none;
+			}
+		
+		.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_3 p.tree_item.branch{
+			background: url("[[pix:theme|menu_branch_state]]") no-repeat 95% -20% #FEFEFE;
+			border: none;
+			}
+			.block-region .block_navigation.block ul.block_tree ul li.contains_branch.depth_3 p.tree_item.branch:hover,
+			.block-region .block_navigation.block ul.block_tree ul li.collapsed.contains_branch.depth_3 p.tree_item.branch:hover{
+			background-color: #F6F6F6;
+			}
+		
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.depth_3 ul{
+		/* Second Level - Drop Down Panel */
+		border-bottom: 1px dashed #E6E6E6;
+		border-top: 1px dashed #E6E6E6;
+		display: block;
+		margin: 0 15px;
+		}	
+					
+	.block-region .block_navigation.block ul.block_tree li ul li ul li.depth_3.collapsed ul{
+		display: none;
+		}

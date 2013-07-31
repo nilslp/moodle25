@@ -962,7 +962,7 @@ function renderSupportWidget() {
 	$html .= '<ul class="support-details">';
 	$html .= '<li class="support lp-site"><a href="http://www.learningpool.com" title="Learning Pool" class="lp-logo" target="_blank">Learning Pool</a></li>';
 	$html .= '<li class="support site"><span>Support</span><a href="'.$CFG->supportpage.'" target="_blank">Web</a></li>';
-	$html .= '<li class="support email"><a href="mailto:'.$CFG->supportemail.'">Email '.$CFG->supportname.'</a></li>';
+	$html .= '<li class="support email"><a href="mailto:'.$CFG->supportemail.'">Email</a></li>';
 	$html .= '<li class="support phone"><a href="tel:08455436033">0845 543 6033</a></li>';
     $html .= '</ul>';
     $html .= '<ul class="tests">';

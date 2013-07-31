@@ -1,8 +1,6 @@
 /*-----------------------------------------------------------------------------------*/
-/* Support Widget
+/* Global Styles
 /*-----------------------------------------------------------------------------------*/
-
-/* Gobal ***********************/
 
 #support-widget{
 	background: #333;
@@ -18,16 +16,18 @@
 		width: 50%;
 		}
 			
-	/* Responsive Setting - Narrow/Mobile */
-			
-	.narrow #support-widget ul,
+	/* Responsive Setting - Normal/Narrow/Mobile */
+	.normal #support-widget ul{
+		width: 40%;
+		}
+	
+	.narrow #support-widget ul,	
 	.mobile #support-widget ul{
 		display: inline-block;
 		text-align: center;
 		width: 100%;
 		}
-	
-	/* Responsive Setting - Narrow/Mobile - End */
+		/* End */
 		
 		#support-widget li{
 			color: #CCC;
@@ -52,8 +52,28 @@
 			#support-widget li a:hover{
 				background-color: #222;
 				}
-	
-/* Support Details ***********************/	
+				
+			/* Responsive Setting - Mobile */
+			.mobile #support-widget ul li,
+			.mobile #support-widget ul li a{
+				display: block;
+				padding: 0;
+				text-align: center;
+				width: 100%;
+				}
+				/*  End */
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Support Details 
+/*-----------------------------------------------------------------------------------*/
+
+/* Responsive Setting - Mobile */
+.mobile #support-widget ul li,
+.mobile #support-widget ul li span + a{
+	border-top: 1px dotted #222;
+	}
+	/* End */	
 
 #support-widget a.lp-logo{
 	background: transparent url("[[pix:theme|footer/support-widget/support-logo]]") no-repeat center center;
@@ -72,24 +92,43 @@
 	margin-right: 5px;
 	}
 
-/* Support Test ***********************/
+
+/*-----------------------------------------------------------------------------------*/
+/* Support Tests
+/*-----------------------------------------------------------------------------------*/
 
 #support-widget ul.tests{
 	text-align: right;
-	}			
-		
-	#support-widget ul.tests li{
+	}	
+	
+/* Responsive Setting - Normal/Narrow/Mobile */
+.normal #support-widget ul.tests{
+	width: 60%;
+	}
+	
+.narrow #support-widget ul.tests,
+.mobile #support-widget ul.tests{
+	text-align: center;
+	}		
+	/* End */	
+	
+	/* Responsive Setting - Mobile */
+	.mobile #support-widget ul.tests li{
+		vertical-align: bottom;
+		}
+
+	.mobile #support-widget ul.tests li span{
+		margin-right: 0;
+		}
+		/* End */	
+	
+	#support-widget ul.tests li span{
 		margin-right: 10px;
 		padding-right: 25px;
 		}
-		
-	#support-widget ul.tests li:last-child{
-		margin-right: 0;
-		padding-right: 0;
-		}
-	
-	#support-widget ul.tests li.failed,
-	#support-widget ul.tests li.passed{
+
+	#support-widget ul.tests li.failed span,
+	#support-widget ul.tests li.passed span{
 		background: url("[[pix:theme|footer/support-widget/not-enabled]]") no-repeat right center;
 		}
 	
@@ -102,6 +141,19 @@
 			background-position: 18px center;
 			padding: 0;
 			text-indent: -9999px;
+			transition: background-color 0.3s linear 0s;
 			vertical-align: top;
 			width: 40px;
 			}
+			
+		#support-widget ul.tests li button:hover{
+			background-color: #222;
+			}
+			
+		/* Responsive Setting - Mobile */
+		.mobile #support-widget ul.tests li button{
+			background-position: center center;
+			width: 100%;
+			}
+			/* End */	
+

@@ -83,7 +83,7 @@ class theme_ubertheme_block_settings_renderer extends block_settings_renderer {
 			$content .= html_writer::start_tag('div');
 			$content .= html_writer::tag('label', s(get_string('searchinsettings', 'admin')), array('for'=>'adminsearchquery', 'class'=>'accesshide'));
 			$content .= html_writer::empty_tag('input', array('id'=>'adminsearchquery', 'placeholder'=>'Search Settings', 'type'=>'text', 'name'=>'query', 'value'=>s($searchvalue)));
-			$content .= html_writer::tag('button', html_writer::tag('span', s(get_string('search')), array('type'=>'submit', 'value'=>s(get_string('search')))));
+			$content .= html_writer::tag('button', html_writer::tag('span', s(get_string('search')), array('type'=>'submit', 'value'=>s(get_string('search')))), array('class'=>'btn search'));
 			$content .= html_writer::end_tag('div');
 			$content .= html_writer::end_tag('form');
 			return $content;
