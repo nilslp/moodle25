@@ -1,7 +1,184 @@
 /*-----------------------------------------------------------------------------------*/
-/* Section Comment
+/* Global Calendar Styles
 /*-----------------------------------------------------------------------------------*/
 
-/* Sub-Section Comment ***********************/
+/* Calendar Controls  ***********************/
 
-/* Standard Comment */
+.calendar-controls{
+	background-color: #F0F0F0;
+	padding: 4% 4% 0;
+	}
+	
+.calendar-controls *{
+	display: inline-block;
+	font-size: 100%;
+	vertical-align: middle;
+	}
+	
+.calendar-controls .hide{
+	display: none;
+	}
+
+.calendar-controls h1{
+	font-weight: bold;
+	text-align: center;
+	width: 40%;
+	}
+
+.calendar-controls > a{
+	width: 30%;
+	}
+	
+.calendar-controls a.previous{
+	text-align: left;
+	}
+	
+.calendar-controls a.next{
+	text-align: right;
+	}
+
+	.calendar-controls a.previous span.arrow_text{
+		padding-left: 5px;
+		}
+
+	.calendar-controls a.next span.arrow_text{
+		padding-right: 5px;
+		}
+		
+	.calendar-controls a span.arrow{
+		background: #333 url("[[pix:theme|bg_white-chevron]]") no-repeat 58% center;
+		border-radius: 10px;
+		display: inline-block;
+		height: 20px;
+		position: relative;
+		text-align: left;
+		text-indent: -9999px;
+		transition: background-color 0.2s linear 0s;
+		width: 20px;
+		}
+	
+	.calendar-controls a.previous span.arrow{
+		text-align: right;
+		text-indent: 9999px;
+		transform: rotate(180deg);
+		}
+
+	.calendar-controls a:hover span.arrow{
+		background-color: #999;
+		}
+		
+					
+	/* Responsive Setting - Mobile */
+	
+	.mobile .calendar-controls a span.arrow{
+		background-position: center center;
+		border-radius: 20px;
+		height: 30px;
+		width: 30px;
+		}
+	
+	.mobile .calendar-controls a span.arrow_text{
+		display: none;
+		}
+		/* End */
+
+
+/* Calendar Body ***********************/
+
+table.calendartable{
+    background-color: #F0F0F0;
+	border-bottom: 3px solid #F0F0F0;
+    border-collapse: collapse;
+    border-spacing: 0;
+	border-top: 3px solid #F0F0F0;
+	margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+    }
+
+   	table.calendartable th,
+    table.calendartable td{
+		border: none;
+        line-height: inherit;
+        padding: 5% 0;
+        text-align: center;
+		transition: 0.3s linear 0s;
+        vertical-align: top;
+		width: 14.2%;
+        }
+		
+	table.calendartable thead tr th{
+		border: none;
+		font-weight: bold;
+		padding-bottom: 0;
+        vertical-align: bottom
+        }
+	
+	table.calendartable td:not(.dayblank):hover{
+		background: #DDD;
+		}
+	
+	table.calendartable td.today,
+	table.calendartable td.today a,
+	table.calendartable td.today:hover{
+		background: #333;
+		color: #FFF;
+		}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Block Calendar Styles
+/*-----------------------------------------------------------------------------------*/
+
+table.minicalendar{
+	background-color: transparent;
+	border-bottom: 1px dotted #CCC;
+	border-top: 1px dotted #CCC;
+	-moz-box-sizing: border-box;
+	}
+	
+	table.minicalendar .calendar-controls{
+		background-color: transparent;
+		padding: 10px 0;
+		}
+	
+	table.minicalendar .calendar-controls > a{
+		width: 20%; 
+		}
+	
+	table.minicalendar .calendar-controls span.current{
+		width: 60%; 
+		}
+	
+	table.minicalendar caption{
+		margin: 0;
+		}
+
+	table.minicalendar th,
+	table.minicalendar td{
+		border: none;
+		line-height: inherit;
+		padding: 3% 0;
+		text-align: center;
+		transition: 0.3s linear 0s;
+		vertical-align: top;
+		width: 14.2%;
+		}
+	
+	table.calendartable thead tr th{
+		border: none;
+		font-weight: bold;
+		padding-bottom: 0;
+		vertical-align: bottom
+		}
+
+	table.minicalendar abbr{
+		border: none;
+		cursor: default;
+		display: block;
+		letter-spacing: 18px;
+		margin: 0 auto;
+		overflow: hidden;
+		text-indent: 5px;
+		width: 20px;
+		}

@@ -5,6 +5,7 @@
 /* Block Containers ***********************/
 
 .block{
+	background: #F0F0F0;
 	margin: 0 0 10px;
 	position: relative;
 	}
@@ -21,24 +22,37 @@
 	margin: 15px 0;
 	}
 	
-.block  .urlselect form{
+.block form{
 	margin: 0;
 	padding: 0;
 	}
+	
+.block form .helptooltip{
+	display: inline-block;
+	padding: 0;
+	width: 12%;
+	}
+	
+.block select{
+		width: 100%;
+		}
+			
+		.block span.helptooltip + input + select{
+			width: 88%;
+			}
+	
+	
 
 /* Block header ***********************/
 
 .block .header{
 	/*background-color: [[setting:sbbgc]];
 	color: [[setting:sbtc]];*/
-	background-color: #F0F0F0;
 	margin: 0;
 	padding: 4%;
 	position: relative;
 	z-index: 2;
 	}
-	
-	/* Responsive Setting - Wide/Normal/Narrow */
 	
 	.block .header h2{
 		display: inline-block;
@@ -54,9 +68,10 @@
 		}
 		
 		.editing .block .header h2{
-			width: 172px;
+			width: 179px;
 			}
-			
+
+		/* Responsive Setting - Wide/Normal/Narrow/Mobile */	
 		body:not(.wide) .block .header h2{
 			margin-right: 0;
 			width: 100%;
@@ -69,13 +84,14 @@
 			
 		body.mobile .actions-commands{
 			position: absolute;
-			right: 15px;
+			right: 4%;
 			width: auto;
 			}
 			
 			body.mobile	.actions-commands input.moveto{
 				display: none;
 				}
+				/* End */
 
 
 /* Block Content ***********************/
@@ -85,9 +101,8 @@
 	}
 
 	.block .content{
-		background-color: [[setting:sbbgc]];
+		/*background-color: [[setting:sbbgc]];*/
 		color: [[setting:sbtc]];
-		background-color: #F0F0F0; /* Development Only */
 		height: 100%;
 		margin-top: 0;
 		padding: 0 4% 4%;
@@ -125,13 +140,21 @@
 	.wide .actions-commands{
 		text-align: right;
 		}
+	
+	body:not(.wide) .actions-commands{
+		width: auto;
+		}
+		
 		/* End */
 	
 	.editing .actions-commands{
 		width: 72px;
 		}
 		
-	
+	.editing .actions-commands .block_action:empty{
+		display: none;
+		}
+
 /* Controls the Move Block, Edit Admin etc button ***********************/
 
 	.commands{

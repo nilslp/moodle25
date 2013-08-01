@@ -23,7 +23,7 @@ M.theme_ubertheme.misc = function(Y) {
 		var mobile_menu = Y.all('#custommenu li, #custommenu li a');
 		// console.log('Pure Javascript - Width: ' + x);
 		
-		if (x <= 780) {
+		if (x <= 980) {
 			b.removeClass('narrow').removeClass('normal').removeClass('wide').addClass('mobile');
 			mobile_menu && mobile_menu.removeClass('yui3-menu-label').addClass('mobile');
 		/*} else if (x <= 980) {
