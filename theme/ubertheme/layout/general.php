@@ -19,7 +19,6 @@ $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
 $showbreadcrumb = (isset($PAGE->theme->settings->showbreadcrumb)) ? $PAGE->theme->settings->showbreadcrumb : true;
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
-$collapsecourselist = (isset($PAGE->theme->settings->collapsecourselist)) ? $PAGE->theme->settings->collapsecourselist : 'false';
 
 ////////////////////////////////////
 
@@ -113,13 +112,13 @@ echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
 	<title><?php echo $page_title ?></title>
-    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=0;" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="shortcut icon" href="<?php echo $favicon ?>" />
 	<?php 
 	theme_ubertheme_init_yui();
 	echo $OUTPUT->standard_head_html();
 	?>
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=1;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />	
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 
@@ -138,19 +137,21 @@ echo $OUTPUT->doctype() ?>
 				<?php if ($hasheading) { ?>
 
 				<div class="meta">
-					<h1 class="headermain"><?php echo $PAGE->heading ?></h1>
-					<div class="headermenu">
-						<?php
-						if ($haslogininfo) {
-							echo $OUTPUT->login_info();
-						}
-						if (!empty($PAGE->layout_options['langmenu'])) {
-							echo $OUTPUT->lang_menu();
-						}
-						echo $PAGE->headingmenu
-						?>
+					<div class="meta-wrapper">
+						<h1 class="headermain"><?php echo $PAGE->heading ?></h1>
+						<div class="headermenu">
+							<?php
+							if ($haslogininfo) {
+								echo $OUTPUT->login_info();
+							}
+							if (!empty($PAGE->layout_options['langmenu'])) {
+								echo $OUTPUT->lang_menu();
+							}
+							echo $PAGE->headingmenu
+							?>
+						</div>
+						<div id="menu-tray"></div>
 					</div>
-					<div id="menu-tray"></div>
 				</div>
 
 				<?php echo ubertheme_customBanner(); ?>
@@ -186,7 +187,9 @@ echo $OUTPUT->doctype() ?>
 				}
 				?>
 
-				<?php echo makeTicker(); ?>
+				<?php echo ubertheme_searchWidget(); ?>
+
+				<?php echo ubertheme_makeTicker(); ?>
 
 				<?php if ($hasnavbar) { ?>
 
@@ -231,7 +234,6 @@ echo $OUTPUT->doctype() ?>
 
 								</div>
 							</div>
-						
     
                             <?php if ($hassidepre OR (right_to_left() AND $hassidepost)) { ?>
     
@@ -285,20 +287,22 @@ echo $OUTPUT->doctype() ?>
 			<div id="course-footer"><?php echo $coursefooter; ?></div>
 			<?php } ?>
 
-			<?php if (!empty($PAGE->theme->settings->customhtmlbottom)) echo $PAGE->theme->settings->customhtmlbottom; ?>
-			<?php if ($hasfooter) { echo renderSupportWidget();} ?>
-			
 			<?php if ($hasfooter) { ?>
 			<div id="page-footer" class="clearfix">
 				<p class="helplink"><?php echo page_doc_link(get_string('moodledocslink')) ?></p>
 				<?php
-				echo $OUTPUT->standard_footer_html();
 				echo $OUTPUT->login_info();
+				echo $OUTPUT->home_link();
+				echo $OUTPUT->standard_footer_html();
 				?>
 			</div>
 			<?php } ?>
 
-		
+			<?php if (!empty($PAGE->theme->settings->customhtmlbottom)) echo $PAGE->theme->settings->customhtmlbottom; ?>
+			<?php if ($hasfooter) { echo ubertheme_renderSupportWidget();} ?>
+
+			<div class="clearfix"></div>
+
 		</div>
 	</section>
 
